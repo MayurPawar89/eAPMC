@@ -1,0 +1,9 @@
+Width: 810
+Height: 630
+
+247, 229, 255
+
+Register Farmer
+Reigster Driver
+Register Saller
+Reports
