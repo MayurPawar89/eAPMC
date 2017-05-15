@@ -149,6 +149,7 @@
             this.btnCancel.Text = "&Cancel";
             this.btnCancel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnLogin
             // 
@@ -170,6 +171,7 @@
             this.btnLogin.Text = "&Login";
             this.btnLogin.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // frmSplashScreen
             // 
