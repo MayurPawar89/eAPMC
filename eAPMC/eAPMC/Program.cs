@@ -16,7 +16,7 @@ namespace eAPMC
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmSplashScreen());
+            Application.Run(new Dashbaord());
         }
     }
 }

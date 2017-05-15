@@ -16,6 +16,14 @@ namespace eAPMC.Forms
             InitializeComponent();
         }
 
+        private void btnRegisterFarmer_Click(object sender, EventArgs e)
+        {
+            frmPersonRegistration ofrmPersonRegistration = new frmPersonRegistration();
+            ofrmPersonRegistration.ShowDialog(this);
+            //ofrmPersonRegistration.Dispose();
+            //ofrmPersonRegistration = null;
+        }
+
         
     }
 }

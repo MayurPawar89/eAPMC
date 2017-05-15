@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>eAPMC</RootNamespace>
     <AssemblyName>eAPMC</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
@@ -67,11 +67,23 @@
     <Compile Include="Forms\frmFarmerDetails.Designer.cs">
       <DependentUpon>frmFarmerDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmPersonRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPersonRegistration.Designer.cs">
+      <DependentUpon>frmPersonRegistration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmSplashScreen.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\frmSplashScreen.Designer.cs">
       <DependentUpon>frmSplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmUserRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmUserRegistration.Designer.cs">
+      <DependentUpon>frmUserRegistration.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -84,8 +96,14 @@
     <EmbeddedResource Include="Forms\frmFarmerDetails.resx">
       <DependentUpon>frmFarmerDetails.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPersonRegistration.resx">
+      <DependentUpon>frmPersonRegistration.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmSplashScreen.resx">
       <DependentUpon>frmSplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmUserRegistration.resx">
+      <DependentUpon>frmUserRegistration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

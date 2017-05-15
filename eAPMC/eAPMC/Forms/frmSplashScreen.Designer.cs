@@ -38,9 +38,11 @@
             this.pnlLoginButton = new System.Windows.Forms.Panel();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.pnlLogin.SuspendLayout();
             this.pnlUser.SuspendLayout();
             this.pnlLoginButton.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlLogin
@@ -49,7 +51,7 @@
             this.pnlLogin.Controls.Add(this.pnlUser);
             this.pnlLogin.Controls.Add(this.pnlLoginButton);
             this.pnlLogin.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnlLogin.Location = new System.Drawing.Point(297, 201);
+            this.pnlLogin.Location = new System.Drawing.Point(113, 209);
             this.pnlLogin.Name = "pnlLogin";
             this.pnlLogin.Size = new System.Drawing.Size(221, 106);
             this.pnlLogin.TabIndex = 159;
@@ -173,6 +175,17 @@
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.pnlLogin);
+            this.panel1.Location = new System.Drawing.Point(196, 37);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(447, 360);
+            this.panel1.TabIndex = 160;
+            // 
             // frmSplashScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -180,7 +193,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(810, 630);
-            this.Controls.Add(this.pnlLogin);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmSplashScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -189,6 +202,7 @@
             this.pnlUser.ResumeLayout(false);
             this.pnlUser.PerformLayout();
             this.pnlLoginButton.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -204,5 +218,6 @@
         private System.Windows.Forms.Panel pnlLoginButton;
         internal System.Windows.Forms.Button btnCancel;
         internal System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.Panel panel1;
     }
 }
