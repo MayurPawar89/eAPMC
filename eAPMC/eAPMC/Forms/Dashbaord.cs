@@ -19,11 +19,43 @@ namespace eAPMC.Forms
         private void btnRegisterFarmer_Click(object sender, EventArgs e)
         {
             frmPersonRegistration ofrmPersonRegistration = new frmPersonRegistration();
+            ofrmPersonRegistration.PersonEntityType =0;
             ofrmPersonRegistration.ShowDialog(this);
-            //ofrmPersonRegistration.Dispose();
-            //ofrmPersonRegistration = null;
+            ofrmPersonRegistration.Dispose();
+            ofrmPersonRegistration = null;
         }
 
-        
+        private void btnRegisterDrive_Click(object sender, EventArgs e)
+        {
+            frmPersonRegistration ofrmPersonRegistration = new frmPersonRegistration();
+            ofrmPersonRegistration.PersonEntityType = 1;
+            ofrmPersonRegistration.ShowDialog(this);
+            ofrmPersonRegistration.Dispose();
+            ofrmPersonRegistration = null;
+        }
+
+        private void btnRegisterSaller_Click(object sender, EventArgs e)
+        {
+            frmPersonRegistration ofrmPersonRegistration = new frmPersonRegistration();
+            ofrmPersonRegistration.PersonEntityType = 2;
+            ofrmPersonRegistration.ShowDialog(this);
+            ofrmPersonRegistration.Dispose();
+            ofrmPersonRegistration = null;
+        }
+
+        private void btnReports_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRegisterOrganization_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnChallan_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

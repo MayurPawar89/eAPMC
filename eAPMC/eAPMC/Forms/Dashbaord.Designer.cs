@@ -30,9 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashbaord));
             this.btnRegisterFarmer = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnRegisterDrive = new System.Windows.Forms.Button();
+            this.btnReports = new System.Windows.Forms.Button();
+            this.btnRegisterSaller = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -47,6 +47,8 @@
             this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnRegisterOrganization = new System.Windows.Forms.Button();
+            this.btnChallan = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.pnlMainMenu.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -74,87 +76,92 @@
             this.btnRegisterFarmer.UseVisualStyleBackColor = false;
             this.btnRegisterFarmer.Click += new System.EventHandler(this.btnRegisterFarmer_Click);
             // 
-            // button1
+            // btnRegisterDrive
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(72)))), ((int)(((byte)(159)))));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
-            this.button1.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(30, 135);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(3);
-            this.button1.Size = new System.Drawing.Size(233, 90);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Register Driver";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnRegisterDrive.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(72)))), ((int)(((byte)(159)))));
+            this.btnRegisterDrive.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRegisterDrive.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRegisterDrive.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btnRegisterDrive.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
+            this.btnRegisterDrive.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
+            this.btnRegisterDrive.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
+            this.btnRegisterDrive.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
+            this.btnRegisterDrive.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegisterDrive.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegisterDrive.ForeColor = System.Drawing.Color.White;
+            this.btnRegisterDrive.Location = new System.Drawing.Point(30, 135);
+            this.btnRegisterDrive.Name = "btnRegisterDrive";
+            this.btnRegisterDrive.Padding = new System.Windows.Forms.Padding(3);
+            this.btnRegisterDrive.Size = new System.Drawing.Size(233, 90);
+            this.btnRegisterDrive.TabIndex = 6;
+            this.btnRegisterDrive.Text = "Register Driver";
+            this.btnRegisterDrive.UseVisualStyleBackColor = false;
+            this.btnRegisterDrive.Click += new System.EventHandler(this.btnRegisterDrive_Click);
             // 
-            // button2
+            // btnReports
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(72)))), ((int)(((byte)(159)))));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
-            this.button2.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(30, 327);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(3);
-            this.button2.Size = new System.Drawing.Size(233, 90);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Report";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnReports.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(72)))), ((int)(((byte)(159)))));
+            this.btnReports.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnReports.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReports.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btnReports.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
+            this.btnReports.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
+            this.btnReports.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
+            this.btnReports.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
+            this.btnReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReports.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReports.ForeColor = System.Drawing.Color.White;
+            this.btnReports.Location = new System.Drawing.Point(30, 519);
+            this.btnReports.Name = "btnReports";
+            this.btnReports.Padding = new System.Windows.Forms.Padding(3);
+            this.btnReports.Size = new System.Drawing.Size(233, 90);
+            this.btnReports.TabIndex = 8;
+            this.btnReports.Text = "Report";
+            this.btnReports.UseVisualStyleBackColor = false;
+            this.btnReports.Click += new System.EventHandler(this.btnReports_Click);
             // 
-            // button3
+            // btnRegisterSaller
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(72)))), ((int)(((byte)(159)))));
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
-            this.button3.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(30, 231);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(3);
-            this.button3.Size = new System.Drawing.Size(233, 90);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "Register Saller";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnRegisterSaller.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(72)))), ((int)(((byte)(159)))));
+            this.btnRegisterSaller.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRegisterSaller.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRegisterSaller.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btnRegisterSaller.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
+            this.btnRegisterSaller.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
+            this.btnRegisterSaller.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
+            this.btnRegisterSaller.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
+            this.btnRegisterSaller.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegisterSaller.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegisterSaller.ForeColor = System.Drawing.Color.White;
+            this.btnRegisterSaller.Location = new System.Drawing.Point(30, 231);
+            this.btnRegisterSaller.Name = "btnRegisterSaller";
+            this.btnRegisterSaller.Padding = new System.Windows.Forms.Padding(3);
+            this.btnRegisterSaller.Size = new System.Drawing.Size(233, 90);
+            this.btnRegisterSaller.TabIndex = 7;
+            this.btnRegisterSaller.Text = "Register Saller";
+            this.btnRegisterSaller.UseVisualStyleBackColor = false;
+            this.btnRegisterSaller.Click += new System.EventHandler(this.btnRegisterSaller_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.btnChallan);
+            this.panel1.Controls.Add(this.btnRegisterOrganization);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.btnReports);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.btnRegisterSaller);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.btnRegisterFarmer);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnRegisterDrive);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 24);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
-            this.panel1.Size = new System.Drawing.Size(720, 549);
+            this.panel1.Size = new System.Drawing.Size(720, 651);
             this.panel1.TabIndex = 9;
             // 
             // label4
@@ -164,7 +171,7 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
             this.label4.Location = new System.Drawing.Point(0, 4);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(1, 544);
+            this.label4.Size = new System.Drawing.Size(1, 646);
             this.label4.TabIndex = 3;
             this.label4.Text = "label4";
             // 
@@ -175,7 +182,7 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
             this.label3.Location = new System.Drawing.Point(719, 4);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(1, 544);
+            this.label3.Size = new System.Drawing.Size(1, 646);
             this.label3.TabIndex = 2;
             this.label3.Text = "label3";
             // 
@@ -184,7 +191,7 @@
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
             this.label2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
-            this.label2.Location = new System.Drawing.Point(0, 548);
+            this.label2.Location = new System.Drawing.Point(0, 650);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(720, 1);
             this.label2.TabIndex = 1;
@@ -285,11 +292,55 @@
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
             this.helpToolStripMenuItem.Text = "Help";
             // 
+            // btnRegisterOrganization
+            // 
+            this.btnRegisterOrganization.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(72)))), ((int)(((byte)(159)))));
+            this.btnRegisterOrganization.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRegisterOrganization.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRegisterOrganization.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btnRegisterOrganization.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
+            this.btnRegisterOrganization.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
+            this.btnRegisterOrganization.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
+            this.btnRegisterOrganization.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
+            this.btnRegisterOrganization.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegisterOrganization.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegisterOrganization.ForeColor = System.Drawing.Color.White;
+            this.btnRegisterOrganization.Location = new System.Drawing.Point(30, 327);
+            this.btnRegisterOrganization.Name = "btnRegisterOrganization";
+            this.btnRegisterOrganization.Padding = new System.Windows.Forms.Padding(3);
+            this.btnRegisterOrganization.Size = new System.Drawing.Size(233, 90);
+            this.btnRegisterOrganization.TabIndex = 9;
+            this.btnRegisterOrganization.Text = "Register Organization";
+            this.btnRegisterOrganization.UseVisualStyleBackColor = false;
+            this.btnRegisterOrganization.Click += new System.EventHandler(this.btnRegisterOrganization_Click);
+            // 
+            // btnChallan
+            // 
+            this.btnChallan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(72)))), ((int)(((byte)(159)))));
+            this.btnChallan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnChallan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnChallan.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btnChallan.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
+            this.btnChallan.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
+            this.btnChallan.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
+            this.btnChallan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
+            this.btnChallan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChallan.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChallan.ForeColor = System.Drawing.Color.White;
+            this.btnChallan.Location = new System.Drawing.Point(30, 423);
+            this.btnChallan.Name = "btnChallan";
+            this.btnChallan.Padding = new System.Windows.Forms.Padding(3);
+            this.btnChallan.Size = new System.Drawing.Size(233, 90);
+            this.btnChallan.TabIndex = 10;
+            this.btnChallan.Text = "Challan";
+            this.btnChallan.UseVisualStyleBackColor = false;
+            this.btnChallan.Click += new System.EventHandler(this.btnChallan_Click);
+            // 
             // Dashbaord
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(720, 573);
+            this.ClientSize = new System.Drawing.Size(720, 675);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlMainMenu);
             this.Font = new System.Drawing.Font("Arial", 8.25F);
@@ -311,9 +362,9 @@
         #endregion
 
         internal System.Windows.Forms.Button btnRegisterFarmer;
-        internal System.Windows.Forms.Button button1;
-        internal System.Windows.Forms.Button button2;
-        internal System.Windows.Forms.Button button3;
+        internal System.Windows.Forms.Button btnRegisterDrive;
+        internal System.Windows.Forms.Button btnReports;
+        internal System.Windows.Forms.Button btnRegisterSaller;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
@@ -328,5 +379,7 @@
         private System.Windows.Forms.ToolStripMenuItem toolsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
+        internal System.Windows.Forms.Button btnChallan;
+        internal System.Windows.Forms.Button btnRegisterOrganization;
     }
 }

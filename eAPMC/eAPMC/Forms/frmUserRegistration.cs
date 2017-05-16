@@ -16,5 +16,10 @@ namespace eAPMC.Forms
         {
             InitializeComponent();
         }
+
+        private void frmUserRegistration_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
