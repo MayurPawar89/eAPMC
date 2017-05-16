@@ -57,5 +57,18 @@ namespace eAPMC.Forms
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmUserRegistration frm = new frmUserRegistration();
+            frm.ShowDialog(this);
+
+        }
+
+        private void btnRegisterUser_Click(object sender, EventArgs e)
+        {
+            frmUserRegistration frm = new frmUserRegistration();
+            frm.ShowDialog(this);
+        }
     }
 }
