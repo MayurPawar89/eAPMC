@@ -38,6 +38,8 @@
             this.pnlPersonReg = new System.Windows.Forms.Panel();
             this.pnlPersonDetails = new System.Windows.Forms.Panel();
             this.grpbLoginDetails = new System.Windows.Forms.GroupBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.txtLoginName = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.textBox14 = new System.Windows.Forms.TextBox();
@@ -46,6 +48,8 @@
             this.label44 = new System.Windows.Forms.Label();
             this.label47 = new System.Windows.Forms.Label();
             this.grpbContactDetails = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.txtFaxNo = new System.Windows.Forms.TextBox();
             this.txtMobileNo = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -125,10 +129,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.pnlBottomButton.SuspendLayout();
             this.pnlPersonReg.SuspendLayout();
             this.pnlPersonDetails.SuspendLayout();
@@ -249,7 +249,6 @@
             // 
             // pnlPersonReg
             // 
-            this.pnlPersonReg.Controls.Add(this.pnlPersonDetails);
             this.pnlPersonReg.Controls.Add(this.pnlVerificationDoc);
             this.pnlPersonReg.Controls.Add(this.label12);
             this.pnlPersonReg.Controls.Add(this.label11);
@@ -270,8 +269,7 @@
             this.pnlPersonDetails.Controls.Add(this.grpbContactDetails);
             this.pnlPersonDetails.Controls.Add(this.grpbAddressDetails);
             this.pnlPersonDetails.Controls.Add(this.grpbPersonDetails);
-            this.pnlPersonDetails.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlPersonDetails.Location = new System.Drawing.Point(1, 32);
+            this.pnlPersonDetails.Location = new System.Drawing.Point(122, 11);
             this.pnlPersonDetails.Name = "pnlPersonDetails";
             this.pnlPersonDetails.Size = new System.Drawing.Size(658, 581);
             this.pnlPersonDetails.TabIndex = 44;
@@ -292,6 +290,30 @@
             this.grpbLoginDetails.TabStop = false;
             this.grpbLoginDetails.Text = "Login Details";
             this.grpbLoginDetails.Visible = false;
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.ForeColor = System.Drawing.Color.Black;
+            this.txtPassword.Location = new System.Drawing.Point(149, 52);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(347, 22);
+            this.txtPassword.TabIndex = 94;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoEllipsis = true;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
+            this.label1.Location = new System.Drawing.Point(47, 55);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(99, 14);
+            this.label1.TabIndex = 93;
+            this.label1.Text = "Login Password :";
             // 
             // txtLoginName
             // 
@@ -407,6 +429,30 @@
             this.grpbContactDetails.TabIndex = 43;
             this.grpbContactDetails.TabStop = false;
             this.grpbContactDetails.Text = "Contact Details";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.Color.Black;
+            this.textBox1.Location = new System.Drawing.Point(147, 50);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(139, 22);
+            this.textBox1.TabIndex = 95;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoEllipsis = true;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
+            this.label2.Location = new System.Drawing.Point(86, 54);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(60, 14);
+            this.label2.TabIndex = 94;
+            this.label2.Text = "Mobile 1 :";
             // 
             // txtFaxNo
             // 
@@ -969,6 +1015,7 @@
             // 
             // grpbPhotoDetails
             // 
+            this.grpbPhotoDetails.Controls.Add(this.pnlPersonDetails);
             this.grpbPhotoDetails.Controls.Add(this.btnWebCam);
             this.grpbPhotoDetails.Controls.Add(this.picbPhoto);
             this.grpbPhotoDetails.Controls.Add(this.btnScanPhoto);
@@ -1408,54 +1455,6 @@
             this.label9.Size = new System.Drawing.Size(660, 1);
             this.label9.TabIndex = 4;
             this.label9.Text = "label9";
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.ForeColor = System.Drawing.Color.Black;
-            this.txtPassword.Location = new System.Drawing.Point(149, 52);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(347, 22);
-            this.txtPassword.TabIndex = 94;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoEllipsis = true;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
-            this.label1.Location = new System.Drawing.Point(47, 55);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 14);
-            this.label1.TabIndex = 93;
-            this.label1.Text = "Login Password :";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.Black;
-            this.textBox1.Location = new System.Drawing.Point(147, 50);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(139, 22);
-            this.textBox1.TabIndex = 95;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoEllipsis = true;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
-            this.label2.Location = new System.Drawing.Point(86, 54);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 14);
-            this.label2.TabIndex = 94;
-            this.label2.Text = "Mobile 1 :";
             // 
             // frmUserRegistration
             // 
