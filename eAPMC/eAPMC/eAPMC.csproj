@@ -68,6 +68,12 @@
     <Compile Include="Forms\frmChallan.Designer.cs">
       <DependentUpon>frmChallan.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmChangePassword.Designer.cs">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmFarmerDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +126,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmChallan.resx">
       <DependentUpon>frmChallan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmChangePassword.resx">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmFarmerDetails.resx">
       <DependentUpon>frmFarmerDetails.cs</DependentUpon>

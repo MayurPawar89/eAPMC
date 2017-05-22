@@ -23,10 +23,36 @@ namespace eAPMC.Forms
         DataTable dtPincode;
         private void frmUserRegistration_Load(object sender, EventArgs e)
         {
-            
+            FillRoles();
         }
 
-        
+        private void FillRoles()
+        {
+            bool _result = false;
+            DBAccess dbAccess = null;
+            DataTable dtRoles = null;
+            try
+            {
+                dbAccess = new DBAccess();
+                dtRoles = dbAccess.GetRoles();
+                if (dtRoles != null && dtRoles.Rows.Count > 0)
+                {
+                    cmbRolesMst.DataSource = dtRoles;
+                    cmbRolesMst.DisplayMember = "RoleName";
+                    cmbRolesMst.ValueMember = "RoleId";
+
+                    cmbRolesMst.SelectedIndex = -1;
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+        }
+
+
 
         private void btnSave_Click(object sender, EventArgs e)
         {
@@ -34,12 +60,11 @@ namespace eAPMC.Forms
             DataTable dtUser = null;
             try
             {
-                if (txtPassword.Text.Trim()!=txtConfirmPassword.Text.Trim())
+                if (ValidateControl())
                 {
-                    MessageBox.Show("Password and Confirm password should be match.");
                     return;
                 }
-
+                
                 dbAccess = new DBAccess();
                 Int64 nUserID = 0;
                 string sLoginName = txtLoginName.Text.ToString();
@@ -95,6 +120,73 @@ namespace eAPMC.Forms
 
         }
 
+
+        private bool ValidateControl()
+        {
+            bool result = false;
+            if (txtPersonFName.Text.Trim() == "")
+            {
+                MessageBox.Show("Please enter user first name.");
+                txtPersonFName.Focus();
+                result = true;
+            }
+            else if (txtPersonLName.Text.Trim() == "")
+            {
+                MessageBox.Show("Please enter user last name.");
+                txtPersonLName.Focus();
+                result = true;
+            }
+            else if (mskPersonDOB.MaskCompleted == false)
+            {
+                MessageBox.Show("Please enter user date of birth.");
+                mskPersonDOB.Focus();
+                result = true;
+            }
+            else if (cmbRolesMst.SelectedText == "")
+            {
+                MessageBox.Show("Please select user role.");
+                cmbRolesMst.Focus();
+                result = true;
+            }
+            else if (txtPincode.Text.Trim() == "")
+            {
+                MessageBox.Show("Please enter pincode.");
+                txtPincode.Focus();
+                result = true;
+            }
+            else if (txtMobileNo.Text.Trim()=="")
+            {
+                MessageBox.Show("Please enter Mobile no.");
+                txtMobileNo.Focus();
+                result = true;
+            }
+            else if (txtLoginName.Text.Trim()=="")
+            {
+                MessageBox.Show("Please enter user name.");
+                txtLoginName.Focus();
+                result = true;
+            }
+            else if (txtPassword.Text.Trim() == "")
+            {
+                MessageBox.Show("Please enter password.");
+                txtPassword.Focus();
+                result = true;
+            }
+            else if (txtConfirmPassword.Text.Trim() == "")
+            {
+                MessageBox.Show("Please enter confirm password.");
+                txtConfirmPassword.Focus();
+                result = true;
+            }
+            else if (txtPassword.Text.Trim() != txtConfirmPassword.Text.Trim())
+            {
+                MessageBox.Show("Password and Confirm password should be match.");
+                result = true;
+            }
+
+
+            return result;
+        }
         //private void dgvPincodes_SelectionChanged(object sender, EventArgs e)
         //{
         //    foreach (DataGridViewRow row in dgvPincodes.SelectedRows)
@@ -115,7 +207,7 @@ namespace eAPMC.Forms
                 if (pnlPincodeDetails.Visible == false)
                 {
                     ucPincodeFinder = new PincodeFinder();
-                    ucPincodeFinder.dgvPincodes.SelectionChanged+=dgvPincodes_SelectionChanged;
+                    ucPincodeFinder.dgvPincodes.SelectionChanged += dgvPincodes_SelectionChanged;
                     pnlPincodeDetails.BringToFront();
                     pnlPincodeDetails.Visible = true;
                     pnlPincodeDetails.Controls.Add(ucPincodeFinder);
@@ -128,10 +220,10 @@ namespace eAPMC.Forms
                     ucPincodeFinder.SearchPincode(sSearchText);
                     ucPincodeFinder.dgvPincodes.SelectionChanged += dgvPincodes_SelectionChanged;
                 }
-                
+
             }
         }
-        
+
         void dgvPincodes_SelectionChanged(object sender, EventArgs e)
         {
             if (ucPincodeFinder.oPincode.bIsPincodeSelected)
@@ -143,14 +235,14 @@ namespace eAPMC.Forms
                 txtState.Text = ucPincodeFinder.oPincode.State;
                 pnlPincodeDetails.Visible = false;
             }
-            
+
         }
 
         private void txtEmail_Validating(object sender, CancelEventArgs e)
         {
             Regex rEmail = new Regex(@"\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*");
 
-            if (txtEmail.Text.Length>0)
+            if (txtEmail.Text.Length > 0)
             {
                 if (!rEmail.IsMatch(txtEmail.Text.Trim()))
                 {
@@ -168,6 +260,11 @@ namespace eAPMC.Forms
             }
         }
 
-        
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+
     }
 }

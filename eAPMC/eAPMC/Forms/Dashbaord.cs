@@ -15,6 +15,9 @@ namespace eAPMC.Forms
         {
             InitializeComponent();
         }
+        public string UserName { get; set; }
+        public Int64 UserType { get; set; }
+        public Int64 UserID { get; set; }
 
         private void btnRegisterFarmer_Click(object sender, EventArgs e)
         {

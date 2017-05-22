@@ -486,5 +486,34 @@ namespace DBLayer
 
             return dt;
         }
+
+        public DataTable GetRoles()
+        {
+            DataSet ds = null;
+            DataTable dt = null;
+            string query_procedure_name = string.Empty;
+
+            try
+            {
+                query_procedure_name = "gsp_GetRoles";
+                ds = sqlDb.ExecuteDataSet(CommandType.StoredProcedure, query_procedure_name);
+                if (ds != null && ds.Tables != null && ds.Tables.Count > 0)
+                {
+                    dt = ds.Tables[0];
+                    dt.TableName = "Roles";
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                if (ds != null) { if (ds.Tables != null) { ds.Tables.Clear(); } ds.Dispose(); ds = null; }
+            }
+
+            return dt;
+        }
     }
 }

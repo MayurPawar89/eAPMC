@@ -38,6 +38,8 @@
             this.pnlPersonReg = new System.Windows.Forms.Panel();
             this.pnlPersonDetails = new System.Windows.Forms.Panel();
             this.grpbLoginDetails = new System.Windows.Forms.GroupBox();
+            this.txtConfirmPassword = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtLoginName = new System.Windows.Forms.TextBox();
@@ -48,8 +50,8 @@
             this.label44 = new System.Windows.Forms.Label();
             this.label47 = new System.Windows.Forms.Label();
             this.grpbContactDetails = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.txtMobileNo = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.txtMobileNo1 = new System.Windows.Forms.TextBox();
             this.txtPhoneNo = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -79,16 +81,12 @@
             this.label29 = new System.Windows.Forms.Label();
             this.grpbPersonDetails = new System.Windows.Forms.GroupBox();
             this.chkIsActiveUser = new System.Windows.Forms.CheckBox();
-            this.rdPersonOthers = new System.Windows.Forms.RadioButton();
-            this.rdPersonFemale = new System.Windows.Forms.RadioButton();
-            this.rdPersonMale = new System.Windows.Forms.RadioButton();
             this.label23 = new System.Windows.Forms.Label();
             this.lblGIPatName = new System.Windows.Forms.Label();
             this.lblGIDOB = new System.Windows.Forms.Label();
             this.lblGIFName = new System.Windows.Forms.Label();
             this.lblGIPatMName = new System.Windows.Forms.Label();
             this.lblGIPatLName = new System.Windows.Forms.Label();
-            this.grpboxGIGender = new System.Windows.Forms.GroupBox();
             this.txtPersonFName = new System.Windows.Forms.TextBox();
             this.mskPersonDOB = new System.Windows.Forms.MaskedTextBox();
             this.txtPersonLName = new System.Windows.Forms.TextBox();
@@ -131,8 +129,12 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.txtConfirmPassword = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.rdPersonOthers = new System.Windows.Forms.RadioButton();
+            this.rdPersonFemale = new System.Windows.Forms.RadioButton();
+            this.rdPersonMale = new System.Windows.Forms.RadioButton();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cmbRolesMst = new System.Windows.Forms.ComboBox();
             this.pnlBottomButton.SuspendLayout();
             this.pnlPersonReg.SuspendLayout();
             this.pnlPersonDetails.SuspendLayout();
@@ -142,7 +144,6 @@
             this.groupBox1.SuspendLayout();
             this.grpbAddressDetails.SuspendLayout();
             this.grpbPersonDetails.SuspendLayout();
-            this.grpboxGIGender.SuspendLayout();
             this.pnlVerificationDoc.SuspendLayout();
             this.grpbPhotoDetails.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picbPhoto)).BeginInit();
@@ -192,7 +193,6 @@
             this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
             this.btnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
             this.btnCancel.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
             this.btnCancel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
@@ -206,6 +206,7 @@
             this.btnCancel.TabIndex = 47;
             this.btnCancel.Text = "&Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // label16
             // 
@@ -296,6 +297,31 @@
             this.grpbLoginDetails.TabIndex = 44;
             this.grpbLoginDetails.TabStop = false;
             this.grpbLoginDetails.Text = "Login Details";
+            // 
+            // txtConfirmPassword
+            // 
+            this.txtConfirmPassword.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtConfirmPassword.ForeColor = System.Drawing.Color.Black;
+            this.txtConfirmPassword.Location = new System.Drawing.Point(149, 80);
+            this.txtConfirmPassword.Name = "txtConfirmPassword";
+            this.txtConfirmPassword.Size = new System.Drawing.Size(347, 22);
+            this.txtConfirmPassword.TabIndex = 96;
+            this.txtConfirmPassword.UseSystemPasswordChar = true;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoEllipsis = true;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
+            this.label3.Location = new System.Drawing.Point(35, 83);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(111, 14);
+            this.label3.TabIndex = 95;
+            this.label3.Text = "Confirm Password :";
             // 
             // txtPassword
             // 
@@ -437,6 +463,17 @@
             this.grpbContactDetails.TabStop = false;
             this.grpbContactDetails.Text = "Contact Details";
             // 
+            // txtMobileNo
+            // 
+            this.txtMobileNo.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMobileNo.ForeColor = System.Drawing.Color.Black;
+            this.txtMobileNo.Location = new System.Drawing.Point(147, 50);
+            this.txtMobileNo.MaxLength = 10;
+            this.txtMobileNo.Name = "txtMobileNo";
+            this.txtMobileNo.Size = new System.Drawing.Size(139, 22);
+            this.txtMobileNo.TabIndex = 95;
+            this.txtMobileNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhoneNo_KeyPress);
+            // 
             // label2
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -451,17 +488,6 @@
             this.label2.Size = new System.Drawing.Size(60, 14);
             this.label2.TabIndex = 94;
             this.label2.Text = "Mobile 1 :";
-            // 
-            // txtMobileNo
-            // 
-            this.txtMobileNo.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMobileNo.ForeColor = System.Drawing.Color.Black;
-            this.txtMobileNo.Location = new System.Drawing.Point(147, 50);
-            this.txtMobileNo.MaxLength = 10;
-            this.txtMobileNo.Name = "txtMobileNo";
-            this.txtMobileNo.Size = new System.Drawing.Size(139, 22);
-            this.txtMobileNo.TabIndex = 95;
-            this.txtMobileNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhoneNo_KeyPress);
             // 
             // txtMobileNo1
             // 
@@ -825,6 +851,12 @@
             // 
             // grpbPersonDetails
             // 
+            this.grpbPersonDetails.Controls.Add(this.cmbRolesMst);
+            this.grpbPersonDetails.Controls.Add(this.label6);
+            this.grpbPersonDetails.Controls.Add(this.rdPersonOthers);
+            this.grpbPersonDetails.Controls.Add(this.rdPersonFemale);
+            this.grpbPersonDetails.Controls.Add(this.rdPersonMale);
+            this.grpbPersonDetails.Controls.Add(this.label5);
             this.grpbPersonDetails.Controls.Add(this.chkIsActiveUser);
             this.grpbPersonDetails.Controls.Add(this.label23);
             this.grpbPersonDetails.Controls.Add(this.lblGIPatName);
@@ -832,7 +864,6 @@
             this.grpbPersonDetails.Controls.Add(this.lblGIFName);
             this.grpbPersonDetails.Controls.Add(this.lblGIPatMName);
             this.grpbPersonDetails.Controls.Add(this.lblGIPatLName);
-            this.grpbPersonDetails.Controls.Add(this.grpboxGIGender);
             this.grpbPersonDetails.Controls.Add(this.txtPersonFName);
             this.grpbPersonDetails.Controls.Add(this.mskPersonDOB);
             this.grpbPersonDetails.Controls.Add(this.txtPersonLName);
@@ -849,48 +880,12 @@
             // chkIsActiveUser
             // 
             this.chkIsActiveUser.AutoSize = true;
-            this.chkIsActiveUser.Location = new System.Drawing.Point(147, 155);
+            this.chkIsActiveUser.Location = new System.Drawing.Point(149, 121);
             this.chkIsActiveUser.Name = "chkIsActiveUser";
             this.chkIsActiveUser.Size = new System.Drawing.Size(109, 18);
             this.chkIsActiveUser.TabIndex = 73;
             this.chkIsActiveUser.Text = "Is Active User";
             this.chkIsActiveUser.UseVisualStyleBackColor = true;
-            // 
-            // rdPersonOthers
-            // 
-            this.rdPersonOthers.AutoSize = true;
-            this.rdPersonOthers.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdPersonOthers.Location = new System.Drawing.Point(137, 23);
-            this.rdPersonOthers.Name = "rdPersonOthers";
-            this.rdPersonOthers.Size = new System.Drawing.Size(57, 18);
-            this.rdPersonOthers.TabIndex = 9;
-            this.rdPersonOthers.TabStop = true;
-            this.rdPersonOthers.Text = "Other";
-            this.rdPersonOthers.UseVisualStyleBackColor = true;
-            // 
-            // rdPersonFemale
-            // 
-            this.rdPersonFemale.AutoSize = true;
-            this.rdPersonFemale.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdPersonFemale.Location = new System.Drawing.Point(68, 23);
-            this.rdPersonFemale.Name = "rdPersonFemale";
-            this.rdPersonFemale.Size = new System.Drawing.Size(63, 18);
-            this.rdPersonFemale.TabIndex = 8;
-            this.rdPersonFemale.TabStop = true;
-            this.rdPersonFemale.Text = "Female";
-            this.rdPersonFemale.UseVisualStyleBackColor = true;
-            // 
-            // rdPersonMale
-            // 
-            this.rdPersonMale.AutoSize = true;
-            this.rdPersonMale.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdPersonMale.Location = new System.Drawing.Point(12, 23);
-            this.rdPersonMale.Name = "rdPersonMale";
-            this.rdPersonMale.Size = new System.Drawing.Size(49, 18);
-            this.rdPersonMale.TabIndex = 7;
-            this.rdPersonMale.TabStop = true;
-            this.rdPersonMale.Text = "Male";
-            this.rdPersonMale.UseVisualStyleBackColor = true;
             // 
             // label23
             // 
@@ -981,20 +976,6 @@
             this.lblGIPatLName.Size = new System.Drawing.Size(55, 11);
             this.lblGIPatLName.TabIndex = 67;
             this.lblGIPatLName.Text = "(Last Name)";
-            // 
-            // grpboxGIGender
-            // 
-            this.grpboxGIGender.Controls.Add(this.rdPersonOthers);
-            this.grpboxGIGender.Controls.Add(this.rdPersonFemale);
-            this.grpboxGIGender.Controls.Add(this.rdPersonMale);
-            this.grpboxGIGender.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpboxGIGender.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
-            this.grpboxGIGender.Location = new System.Drawing.Point(149, 92);
-            this.grpboxGIGender.Name = "grpboxGIGender";
-            this.grpboxGIGender.Size = new System.Drawing.Size(205, 57);
-            this.grpboxGIGender.TabIndex = 63;
-            this.grpboxGIGender.TabStop = false;
-            this.grpboxGIGender.Text = "Gender";
             // 
             // txtPersonFName
             // 
@@ -1485,30 +1466,82 @@
             this.label9.TabIndex = 4;
             this.label9.Text = "label9";
             // 
-            // txtConfirmPassword
+            // label5
             // 
-            this.txtConfirmPassword.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtConfirmPassword.ForeColor = System.Drawing.Color.Black;
-            this.txtConfirmPassword.Location = new System.Drawing.Point(149, 80);
-            this.txtConfirmPassword.Name = "txtConfirmPassword";
-            this.txtConfirmPassword.Size = new System.Drawing.Size(347, 22);
-            this.txtConfirmPassword.TabIndex = 96;
-            this.txtConfirmPassword.UseSystemPasswordChar = true;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoEllipsis = true;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
-            this.label3.Location = new System.Drawing.Point(35, 83);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(111, 14);
-            this.label3.TabIndex = 95;
-            this.label3.Text = "Confirm Password :";
+            this.label5.AutoEllipsis = true;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
+            this.label5.Location = new System.Drawing.Point(91, 100);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(55, 14);
+            this.label5.TabIndex = 74;
+            this.label5.Text = "Gender :";
+            // 
+            // rdPersonOthers
+            // 
+            this.rdPersonOthers.AutoSize = true;
+            this.rdPersonOthers.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdPersonOthers.Location = new System.Drawing.Point(276, 96);
+            this.rdPersonOthers.Name = "rdPersonOthers";
+            this.rdPersonOthers.Size = new System.Drawing.Size(57, 18);
+            this.rdPersonOthers.TabIndex = 77;
+            this.rdPersonOthers.TabStop = true;
+            this.rdPersonOthers.Text = "Other";
+            this.rdPersonOthers.UseVisualStyleBackColor = true;
+            // 
+            // rdPersonFemale
+            // 
+            this.rdPersonFemale.AutoSize = true;
+            this.rdPersonFemale.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdPersonFemale.Location = new System.Drawing.Point(207, 96);
+            this.rdPersonFemale.Name = "rdPersonFemale";
+            this.rdPersonFemale.Size = new System.Drawing.Size(63, 18);
+            this.rdPersonFemale.TabIndex = 76;
+            this.rdPersonFemale.TabStop = true;
+            this.rdPersonFemale.Text = "Female";
+            this.rdPersonFemale.UseVisualStyleBackColor = true;
+            // 
+            // rdPersonMale
+            // 
+            this.rdPersonMale.AutoSize = true;
+            this.rdPersonMale.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdPersonMale.Location = new System.Drawing.Point(149, 96);
+            this.rdPersonMale.Name = "rdPersonMale";
+            this.rdPersonMale.Size = new System.Drawing.Size(49, 18);
+            this.rdPersonMale.TabIndex = 75;
+            this.rdPersonMale.TabStop = true;
+            this.rdPersonMale.Text = "Male";
+            this.rdPersonMale.UseVisualStyleBackColor = true;
+            // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.AutoEllipsis = true;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
+            this.label6.Location = new System.Drawing.Point(108, 148);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(38, 14);
+            this.label6.TabIndex = 78;
+            this.label6.Text = "Role :";
+            // 
+            // cmbRolesMst
+            // 
+            this.cmbRolesMst.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbRolesMst.FormattingEnabled = true;
+            this.cmbRolesMst.Items.AddRange(new object[] {
+            ""});
+            this.cmbRolesMst.Location = new System.Drawing.Point(149, 146);
+            this.cmbRolesMst.Name = "cmbRolesMst";
+            this.cmbRolesMst.Size = new System.Drawing.Size(121, 22);
+            this.cmbRolesMst.TabIndex = 79;
             // 
             // frmUserRegistration
             // 
@@ -1540,8 +1573,6 @@
             this.grpbAddressDetails.PerformLayout();
             this.grpbPersonDetails.ResumeLayout(false);
             this.grpbPersonDetails.PerformLayout();
-            this.grpboxGIGender.ResumeLayout(false);
-            this.grpboxGIGender.PerformLayout();
             this.pnlVerificationDoc.ResumeLayout(false);
             this.grpbPhotoDetails.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picbPhoto)).EndInit();
@@ -1610,10 +1641,6 @@
         private System.Windows.Forms.Label lblGIFName;
         private System.Windows.Forms.Label lblGIPatMName;
         private System.Windows.Forms.Label lblGIPatLName;
-        private System.Windows.Forms.GroupBox grpboxGIGender;
-        private System.Windows.Forms.RadioButton rdPersonOthers;
-        private System.Windows.Forms.RadioButton rdPersonFemale;
-        private System.Windows.Forms.RadioButton rdPersonMale;
         private System.Windows.Forms.TextBox txtPersonFName;
         private System.Windows.Forms.MaskedTextBox mskPersonDOB;
         private System.Windows.Forms.TextBox txtPersonLName;
@@ -1667,6 +1694,12 @@
         private System.Windows.Forms.TextBox txtDistrict;
         private System.Windows.Forms.TextBox txtConfirmPassword;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox cmbRolesMst;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.RadioButton rdPersonOthers;
+        private System.Windows.Forms.RadioButton rdPersonFemale;
+        private System.Windows.Forms.RadioButton rdPersonMale;
+        private System.Windows.Forms.Label label5;
 
     }
 }

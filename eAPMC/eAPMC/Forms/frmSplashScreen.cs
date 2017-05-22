@@ -22,7 +22,8 @@ namespace eAPMC.Forms
         {
             this.Close();
         }
-
+        string sUserName = string.Empty;
+        Int64 nUserID = 0, nUserType = 0;
         private void btnLogin_Click(object sender, EventArgs e)
         {
             string sLoginName = string.Empty;
@@ -33,6 +34,7 @@ namespace eAPMC.Forms
 
             if (Login(sLoginName,sPaasword))
             {
+                this.Hide();
                 Dashbaord frmDashboard = new Dashbaord();
                 frmDashboard.ShowDialog(this);
                 frmDashboard.Dispose();
@@ -57,6 +59,9 @@ namespace eAPMC.Forms
                         string sDecryptedPassword = Encryption.DecryptFromBase64String(sEncryptedPassword);
                         if (sDecryptedPassword==Password)
                         {
+                            sUserName = Convert.ToString(dr["FirstName"]) + Convert.ToString(dr["LastName"]);
+                            nUserID = Convert.ToInt64(dr["UserID"]);
+                            //nUserType = Convert.ToInt64(dr["UserType"]);
                             _result = true;
                             break;
                         }
