@@ -62,11 +62,23 @@
     <Compile Include="Forms\Dashbaord.Designer.cs">
       <DependentUpon>Dashbaord.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmChallan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmChallan.Designer.cs">
+      <DependentUpon>frmChallan.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmFarmerDetails.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\frmFarmerDetails.Designer.cs">
       <DependentUpon>frmFarmerDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmLockScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmLockScreen.Designer.cs">
+      <DependentUpon>frmLockScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmPersonRegistration.cs">
       <SubType>Form</SubType>
@@ -106,8 +118,14 @@
     <EmbeddedResource Include="Forms\Dashbaord.resx">
       <DependentUpon>Dashbaord.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmChallan.resx">
+      <DependentUpon>frmChallan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmFarmerDetails.resx">
       <DependentUpon>frmFarmerDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmLockScreen.resx">
+      <DependentUpon>frmLockScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmPersonRegistration.resx">
       <DependentUpon>frmPersonRegistration.cs</DependentUpon>

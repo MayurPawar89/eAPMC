@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPersonRegistration));
             this.pnlPersonType = new System.Windows.Forms.Panel();
             this.radioButton7 = new System.Windows.Forms.RadioButton();
             this.radioButton6 = new System.Windows.Forms.RadioButton();
@@ -40,6 +41,14 @@
             this.label5 = new System.Windows.Forms.Label();
             this.pnlPersonReg = new System.Windows.Forms.Panel();
             this.pnlPersonDetails = new System.Windows.Forms.Panel();
+            this.grpbOrganizationDetails = new System.Windows.Forms.GroupBox();
+            this.txtOrganizationName = new System.Windows.Forms.TextBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
             this.grpbContactDetails = new System.Windows.Forms.GroupBox();
             this.txtFaxNo = new System.Windows.Forms.TextBox();
             this.txtMobileNo = new System.Windows.Forms.TextBox();
@@ -53,6 +62,10 @@
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.grpbAddressDetails = new System.Windows.Forms.GroupBox();
+            this.cmbState = new System.Windows.Forms.ComboBox();
+            this.label46 = new System.Windows.Forms.Label();
+            this.cmbTaluka = new System.Windows.Forms.ComboBox();
+            this.label45 = new System.Windows.Forms.Label();
             this.cmbDistrict = new System.Windows.Forms.ComboBox();
             this.label21 = new System.Windows.Forms.Label();
             this.txtPincode = new System.Windows.Forms.TextBox();
@@ -89,6 +102,20 @@
             this.label36 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
             this.grpbVerificationDetails = new System.Windows.Forms.GroupBox();
+            this.pnlOtherDocumentDetails = new System.Windows.Forms.Panel();
+            this.label41 = new System.Windows.Forms.Label();
+            this.txtOtherDocumentID = new System.Windows.Forms.TextBox();
+            this.label40 = new System.Windows.Forms.Label();
+            this.txtOtherDocumentName = new System.Windows.Forms.TextBox();
+            this.chkAadhaarNo = new System.Windows.Forms.CheckBox();
+            this.txtAadhaarNo = new System.Windows.Forms.TextBox();
+            this.label34 = new System.Windows.Forms.Label();
+            this.chkOtherID = new System.Windows.Forms.CheckBox();
+            this.chkPANNo = new System.Windows.Forms.CheckBox();
+            this.chkDrivingLicenceNo = new System.Windows.Forms.CheckBox();
+            this.label39 = new System.Windows.Forms.Label();
+            this.txtPANNo = new System.Windows.Forms.TextBox();
+            this.label38 = new System.Windows.Forms.Label();
             this.txtDrivingLicenceNo = new System.Windows.Forms.TextBox();
             this.label33 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
@@ -97,12 +124,11 @@
             this.label31 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.lblRegistration = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.pnlBottomButton = new System.Windows.Forms.Panel();
+            this.btnPreviewNSave = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnNext = new System.Windows.Forms.Button();
@@ -110,36 +136,21 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
-            this.txtPANNo = new System.Windows.Forms.TextBox();
-            this.label38 = new System.Windows.Forms.Label();
-            this.label39 = new System.Windows.Forms.Label();
-            this.chkDrivingLicenceNo = new System.Windows.Forms.CheckBox();
-            this.chkPANNo = new System.Windows.Forms.CheckBox();
-            this.chkOtherID = new System.Windows.Forms.CheckBox();
-            this.chkAadhaarNo = new System.Windows.Forms.CheckBox();
-            this.txtAadhaarNo = new System.Windows.Forms.TextBox();
-            this.label34 = new System.Windows.Forms.Label();
-            this.pnlOtherDocumentDetails = new System.Windows.Forms.Panel();
-            this.label41 = new System.Windows.Forms.Label();
-            this.txtOtherDocumentID = new System.Windows.Forms.TextBox();
-            this.label40 = new System.Windows.Forms.Label();
-            this.txtOtherDocumentName = new System.Windows.Forms.TextBox();
-            this.grpbOrganizationDetails = new System.Windows.Forms.GroupBox();
-            this.txtOrganizationName = new System.Windows.Forms.TextBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.label42 = new System.Windows.Forms.Label();
-            this.label43 = new System.Windows.Forms.Label();
-            this.label44 = new System.Windows.Forms.Label();
-            this.label47 = new System.Windows.Forms.Label();
-            this.cmbTaluka = new System.Windows.Forms.ComboBox();
-            this.label45 = new System.Windows.Forms.Label();
-            this.cmbState = new System.Windows.Forms.ComboBox();
-            this.label46 = new System.Windows.Forms.Label();
-            this.btnPreviewNSave = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.lblRegistration = new System.Windows.Forms.Label();
             this.pnlPersonType.SuspendLayout();
             this.pnlPersonReg.SuspendLayout();
             this.pnlPersonDetails.SuspendLayout();
+            this.grpbOrganizationDetails.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.grpbContactDetails.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.grpbAddressDetails.SuspendLayout();
@@ -150,11 +161,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.picbPhoto)).BeginInit();
             this.groupBox8.SuspendLayout();
             this.grpbVerificationDetails.SuspendLayout();
+            this.pnlOtherDocumentDetails.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.pnlBottomButton.SuspendLayout();
-            this.pnlOtherDocumentDetails.SuspendLayout();
-            this.grpbOrganizationDetails.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlPersonType
@@ -168,10 +181,9 @@
             this.pnlPersonType.Controls.Add(this.label2);
             this.pnlPersonType.Controls.Add(this.label3);
             this.pnlPersonType.Controls.Add(this.label5);
-            this.pnlPersonType.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlPersonType.Location = new System.Drawing.Point(0, 0);
+            this.pnlPersonType.Location = new System.Drawing.Point(197, 41);
             this.pnlPersonType.Name = "pnlPersonType";
-            this.pnlPersonType.Size = new System.Drawing.Size(663, 76);
+            this.pnlPersonType.Size = new System.Drawing.Size(267, 35);
             this.pnlPersonType.TabIndex = 56;
             this.pnlPersonType.Visible = false;
             // 
@@ -230,7 +242,7 @@
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
             this.label6.Location = new System.Drawing.Point(1, 32);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(661, 1);
+            this.label6.Size = new System.Drawing.Size(265, 1);
             this.label6.TabIndex = 45;
             this.label6.Text = "label6";
             // 
@@ -244,7 +256,7 @@
             this.label1.Location = new System.Drawing.Point(1, 0);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.label1.Size = new System.Drawing.Size(661, 32);
+            this.label1.Size = new System.Drawing.Size(265, 32);
             this.label1.TabIndex = 40;
             this.label1.Text = "Person Type";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -256,7 +268,7 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
             this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(1, 75);
+            this.label2.Size = new System.Drawing.Size(1, 34);
             this.label2.TabIndex = 44;
             this.label2.Text = "label2";
             // 
@@ -265,9 +277,9 @@
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
             this.label3.Dock = System.Windows.Forms.DockStyle.Right;
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
-            this.label3.Location = new System.Drawing.Point(662, 0);
+            this.label3.Location = new System.Drawing.Point(266, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(1, 75);
+            this.label3.Size = new System.Drawing.Size(1, 34);
             this.label3.TabIndex = 43;
             this.label3.Text = "label3";
             // 
@@ -276,9 +288,9 @@
             this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
             this.label5.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
-            this.label5.Location = new System.Drawing.Point(0, 75);
+            this.label5.Location = new System.Drawing.Point(0, 34);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(663, 1);
+            this.label5.Size = new System.Drawing.Size(267, 1);
             this.label5.TabIndex = 42;
             this.label5.Text = "label5";
             // 
@@ -287,16 +299,13 @@
             this.pnlPersonReg.Controls.Add(this.pnlPersonDetails);
             this.pnlPersonReg.Controls.Add(this.pnlVerificationDoc);
             this.pnlPersonReg.Controls.Add(this.label12);
-            this.pnlPersonReg.Controls.Add(this.lblRegistration);
             this.pnlPersonReg.Controls.Add(this.label4);
             this.pnlPersonReg.Controls.Add(this.label7);
             this.pnlPersonReg.Controls.Add(this.label8);
-            this.pnlPersonReg.Controls.Add(this.label9);
             this.pnlPersonReg.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlPersonReg.Location = new System.Drawing.Point(0, 76);
+            this.pnlPersonReg.Location = new System.Drawing.Point(3, 0);
             this.pnlPersonReg.Name = "pnlPersonReg";
-            this.pnlPersonReg.Padding = new System.Windows.Forms.Padding(0, 3, 0, 3);
-            this.pnlPersonReg.Size = new System.Drawing.Size(663, 601);
+            this.pnlPersonReg.Size = new System.Drawing.Size(657, 641);
             this.pnlPersonReg.TabIndex = 57;
             // 
             // pnlPersonDetails
@@ -306,10 +315,120 @@
             this.pnlPersonDetails.Controls.Add(this.grpbAddressDetails);
             this.pnlPersonDetails.Controls.Add(this.grpbPersonDetails);
             this.pnlPersonDetails.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlPersonDetails.Location = new System.Drawing.Point(1, 32);
+            this.pnlPersonDetails.Location = new System.Drawing.Point(1, 1);
             this.pnlPersonDetails.Name = "pnlPersonDetails";
-            this.pnlPersonDetails.Size = new System.Drawing.Size(661, 565);
+            this.pnlPersonDetails.Size = new System.Drawing.Size(655, 639);
             this.pnlPersonDetails.TabIndex = 44;
+            // 
+            // grpbOrganizationDetails
+            // 
+            this.grpbOrganizationDetails.Controls.Add(this.txtOrganizationName);
+            this.grpbOrganizationDetails.Controls.Add(this.groupBox3);
+            this.grpbOrganizationDetails.Controls.Add(this.label47);
+            this.grpbOrganizationDetails.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpbOrganizationDetails.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
+            this.grpbOrganizationDetails.Location = new System.Drawing.Point(13, 471);
+            this.grpbOrganizationDetails.Name = "grpbOrganizationDetails";
+            this.grpbOrganizationDetails.Size = new System.Drawing.Size(632, 73);
+            this.grpbOrganizationDetails.TabIndex = 44;
+            this.grpbOrganizationDetails.TabStop = false;
+            this.grpbOrganizationDetails.Text = "   Organization Details  ";
+            this.grpbOrganizationDetails.Visible = false;
+            // 
+            // txtOrganizationName
+            // 
+            this.txtOrganizationName.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtOrganizationName.ForeColor = System.Drawing.Color.Black;
+            this.txtOrganizationName.Location = new System.Drawing.Point(148, 24);
+            this.txtOrganizationName.Name = "txtOrganizationName";
+            this.txtOrganizationName.Size = new System.Drawing.Size(347, 22);
+            this.txtOrganizationName.TabIndex = 92;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.textBox14);
+            this.groupBox3.Controls.Add(this.label42);
+            this.groupBox3.Controls.Add(this.label43);
+            this.groupBox3.Controls.Add(this.label44);
+            this.groupBox3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
+            this.groupBox3.Location = new System.Drawing.Point(15, 379);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(632, 116);
+            this.groupBox3.TabIndex = 91;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Contact Details";
+            // 
+            // textBox14
+            // 
+            this.textBox14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
+            this.textBox14.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox14.ForeColor = System.Drawing.Color.Black;
+            this.textBox14.Location = new System.Drawing.Point(148, 73);
+            this.textBox14.MaxLength = 50;
+            this.textBox14.Name = "textBox14";
+            this.textBox14.Size = new System.Drawing.Size(347, 22);
+            this.textBox14.TabIndex = 88;
+            // 
+            // label42
+            // 
+            this.label42.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label42.AutoEllipsis = true;
+            this.label42.AutoSize = true;
+            this.label42.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label42.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
+            this.label42.Location = new System.Drawing.Point(104, 77);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(42, 14);
+            this.label42.TabIndex = 90;
+            this.label42.Text = "Email :";
+            // 
+            // label43
+            // 
+            this.label43.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label43.AutoEllipsis = true;
+            this.label43.AutoSize = true;
+            this.label43.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label43.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
+            this.label43.Location = new System.Drawing.Point(113, 50);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(33, 14);
+            this.label43.TabIndex = 89;
+            this.label43.Text = "Fax :";
+            // 
+            // label44
+            // 
+            this.label44.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label44.AutoEllipsis = true;
+            this.label44.AutoSize = true;
+            this.label44.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label44.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
+            this.label44.Location = new System.Drawing.Point(97, 27);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(49, 14);
+            this.label44.TabIndex = 87;
+            this.label44.Text = "Mobile :";
+            // 
+            // label47
+            // 
+            this.label47.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label47.AutoEllipsis = true;
+            this.label47.AutoSize = true;
+            this.label47.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label47.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
+            this.label47.Location = new System.Drawing.Point(29, 27);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(117, 14);
+            this.label47.TabIndex = 87;
+            this.label47.Text = "Organization Name :";
             // 
             // grpbContactDetails
             // 
@@ -322,12 +441,12 @@
             this.grpbContactDetails.Controls.Add(this.label20);
             this.grpbContactDetails.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpbContactDetails.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
-            this.grpbContactDetails.Location = new System.Drawing.Point(13, 357);
+            this.grpbContactDetails.Location = new System.Drawing.Point(13, 350);
             this.grpbContactDetails.Name = "grpbContactDetails";
             this.grpbContactDetails.Size = new System.Drawing.Size(632, 116);
             this.grpbContactDetails.TabIndex = 43;
             this.grpbContactDetails.TabStop = false;
-            this.grpbContactDetails.Text = "Contact Details";
+            this.grpbContactDetails.Text = "   Contact Details  ";
             // 
             // txtFaxNo
             // 
@@ -492,12 +611,65 @@
             this.grpbAddressDetails.Controls.Add(this.label29);
             this.grpbAddressDetails.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpbAddressDetails.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
-            this.grpbAddressDetails.Location = new System.Drawing.Point(13, 174);
+            this.grpbAddressDetails.Location = new System.Drawing.Point(13, 168);
             this.grpbAddressDetails.Name = "grpbAddressDetails";
             this.grpbAddressDetails.Size = new System.Drawing.Size(632, 177);
             this.grpbAddressDetails.TabIndex = 43;
             this.grpbAddressDetails.TabStop = false;
-            this.grpbAddressDetails.Text = "Address Details";
+            this.grpbAddressDetails.Text = "   Address Details  ";
+            // 
+            // cmbState
+            // 
+            this.cmbState.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbState.FormattingEnabled = true;
+            this.cmbState.Location = new System.Drawing.Point(149, 149);
+            this.cmbState.MaxLength = 20;
+            this.cmbState.Name = "cmbState";
+            this.cmbState.Size = new System.Drawing.Size(98, 22);
+            this.cmbState.TabIndex = 86;
+            // 
+            // label46
+            // 
+            this.label46.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label46.AutoEllipsis = true;
+            this.label46.AutoSize = true;
+            this.label46.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label46.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
+            this.label46.Location = new System.Drawing.Point(101, 153);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(45, 14);
+            this.label46.TabIndex = 85;
+            this.label46.Text = "State :";
+            // 
+            // cmbTaluka
+            // 
+            this.cmbTaluka.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTaluka.FormattingEnabled = true;
+            this.cmbTaluka.Items.AddRange(new object[] {
+            "US"});
+            this.cmbTaluka.Location = new System.Drawing.Point(345, 123);
+            this.cmbTaluka.MaxDropDownItems = 3;
+            this.cmbTaluka.MaxLength = 20;
+            this.cmbTaluka.Name = "cmbTaluka";
+            this.cmbTaluka.Size = new System.Drawing.Size(118, 22);
+            this.cmbTaluka.TabIndex = 83;
+            // 
+            // label45
+            // 
+            this.label45.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label45.AutoEllipsis = true;
+            this.label45.AutoSize = true;
+            this.label45.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label45.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
+            this.label45.Location = new System.Drawing.Point(289, 127);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(50, 14);
+            this.label45.TabIndex = 84;
+            this.label45.Text = "Taluka :";
             // 
             // cmbDistrict
             // 
@@ -630,6 +802,7 @@
             // 
             this.grpbPersonDetails.Controls.Add(this.label23);
             this.grpbPersonDetails.Controls.Add(this.lblGIPatName);
+            this.grpbPersonDetails.Controls.Add(this.lblRegistration);
             this.grpbPersonDetails.Controls.Add(this.lblGIDOB);
             this.grpbPersonDetails.Controls.Add(this.lblGIFName);
             this.grpbPersonDetails.Controls.Add(this.lblGIPatMName);
@@ -646,7 +819,7 @@
             this.grpbPersonDetails.Size = new System.Drawing.Size(632, 159);
             this.grpbPersonDetails.TabIndex = 43;
             this.grpbPersonDetails.TabStop = false;
-            this.grpbPersonDetails.Text = "Person Details";
+            this.grpbPersonDetails.Text = "   Person Details  ";
             // 
             // label23
             // 
@@ -830,9 +1003,9 @@
             this.pnlVerificationDoc.Controls.Add(this.grpbPhotoDetails);
             this.pnlVerificationDoc.Controls.Add(this.grpbVerificationDetails);
             this.pnlVerificationDoc.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlVerificationDoc.Location = new System.Drawing.Point(1, 32);
+            this.pnlVerificationDoc.Location = new System.Drawing.Point(1, 1);
             this.pnlVerificationDoc.Name = "pnlVerificationDoc";
-            this.pnlVerificationDoc.Size = new System.Drawing.Size(661, 565);
+            this.pnlVerificationDoc.Size = new System.Drawing.Size(655, 639);
             this.pnlVerificationDoc.TabIndex = 44;
             // 
             // grpbPhotoDetails
@@ -994,6 +1167,133 @@
             this.grpbVerificationDetails.TabStop = false;
             this.grpbVerificationDetails.Text = "Verification Details";
             // 
+            // pnlOtherDocumentDetails
+            // 
+            this.pnlOtherDocumentDetails.Controls.Add(this.label41);
+            this.pnlOtherDocumentDetails.Controls.Add(this.txtOtherDocumentID);
+            this.pnlOtherDocumentDetails.Controls.Add(this.label40);
+            this.pnlOtherDocumentDetails.Controls.Add(this.txtOtherDocumentName);
+            this.pnlOtherDocumentDetails.Location = new System.Drawing.Point(190, 132);
+            this.pnlOtherDocumentDetails.Name = "pnlOtherDocumentDetails";
+            this.pnlOtherDocumentDetails.Size = new System.Drawing.Size(405, 65);
+            this.pnlOtherDocumentDetails.TabIndex = 114;
+            this.pnlOtherDocumentDetails.Visible = false;
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Location = new System.Drawing.Point(39, 38);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(92, 14);
+            this.label41.TabIndex = 114;
+            this.label41.Text = "Document ID:";
+            // 
+            // txtOtherDocumentID
+            // 
+            this.txtOtherDocumentID.Location = new System.Drawing.Point(136, 35);
+            this.txtOtherDocumentID.Name = "txtOtherDocumentID";
+            this.txtOtherDocumentID.Size = new System.Drawing.Size(237, 22);
+            this.txtOtherDocumentID.TabIndex = 8;
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(20, 11);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(111, 14);
+            this.label40.TabIndex = 112;
+            this.label40.Text = "Document Name:";
+            // 
+            // txtOtherDocumentName
+            // 
+            this.txtOtherDocumentName.Location = new System.Drawing.Point(136, 8);
+            this.txtOtherDocumentName.Name = "txtOtherDocumentName";
+            this.txtOtherDocumentName.Size = new System.Drawing.Size(237, 22);
+            this.txtOtherDocumentName.TabIndex = 7;
+            // 
+            // chkAadhaarNo
+            // 
+            this.chkAadhaarNo.AutoSize = true;
+            this.chkAadhaarNo.Location = new System.Drawing.Point(35, 30);
+            this.chkAadhaarNo.Name = "chkAadhaarNo";
+            this.chkAadhaarNo.Size = new System.Drawing.Size(15, 14);
+            this.chkAadhaarNo.TabIndex = 0;
+            this.chkAadhaarNo.UseVisualStyleBackColor = true;
+            this.chkAadhaarNo.CheckedChanged += new System.EventHandler(this.chkAadhaarNo_CheckedChanged);
+            // 
+            // txtAadhaarNo
+            // 
+            this.txtAadhaarNo.Enabled = false;
+            this.txtAadhaarNo.Location = new System.Drawing.Point(190, 26);
+            this.txtAadhaarNo.Name = "txtAadhaarNo";
+            this.txtAadhaarNo.Size = new System.Drawing.Size(405, 22);
+            this.txtAadhaarNo.TabIndex = 1;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(100, 30);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(82, 14);
+            this.label34.TabIndex = 111;
+            this.label34.Text = "Aadhaar No:";
+            // 
+            // chkOtherID
+            // 
+            this.chkOtherID.AutoSize = true;
+            this.chkOtherID.Location = new System.Drawing.Point(35, 143);
+            this.chkOtherID.Name = "chkOtherID";
+            this.chkOtherID.Size = new System.Drawing.Size(15, 14);
+            this.chkOtherID.TabIndex = 6;
+            this.chkOtherID.UseVisualStyleBackColor = true;
+            this.chkOtherID.CheckedChanged += new System.EventHandler(this.chkOtherID_CheckedChanged);
+            // 
+            // chkPANNo
+            // 
+            this.chkPANNo.AutoSize = true;
+            this.chkPANNo.Location = new System.Drawing.Point(35, 101);
+            this.chkPANNo.Name = "chkPANNo";
+            this.chkPANNo.Size = new System.Drawing.Size(15, 14);
+            this.chkPANNo.TabIndex = 4;
+            this.chkPANNo.UseVisualStyleBackColor = true;
+            this.chkPANNo.CheckedChanged += new System.EventHandler(this.chkPANNo_CheckedChanged);
+            // 
+            // chkDrivingLicenceNo
+            // 
+            this.chkDrivingLicenceNo.AutoSize = true;
+            this.chkDrivingLicenceNo.Location = new System.Drawing.Point(35, 64);
+            this.chkDrivingLicenceNo.Name = "chkDrivingLicenceNo";
+            this.chkDrivingLicenceNo.Size = new System.Drawing.Size(15, 14);
+            this.chkDrivingLicenceNo.TabIndex = 2;
+            this.chkDrivingLicenceNo.UseVisualStyleBackColor = true;
+            this.chkDrivingLicenceNo.CheckedChanged += new System.EventHandler(this.chkDrivingLicenceNo_CheckedChanged);
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(118, 143);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(64, 14);
+            this.label39.TabIndex = 102;
+            this.label39.Text = "Other ID:";
+            // 
+            // txtPANNo
+            // 
+            this.txtPANNo.Enabled = false;
+            this.txtPANNo.Location = new System.Drawing.Point(190, 97);
+            this.txtPANNo.Name = "txtPANNo";
+            this.txtPANNo.Size = new System.Drawing.Size(405, 22);
+            this.txtPANNo.TabIndex = 5;
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(126, 101);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(56, 14);
+            this.label38.TabIndex = 100;
+            this.label38.Text = "PAN No:";
+            // 
             // txtDrivingLicenceNo
             // 
             this.txtDrivingLicenceNo.Enabled = false;
@@ -1089,35 +1389,20 @@
             this.label12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label12.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(1, 31);
+            this.label12.Location = new System.Drawing.Point(1, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(661, 1);
+            this.label12.Size = new System.Drawing.Size(655, 1);
             this.label12.TabIndex = 42;
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblRegistration
-            // 
-            this.lblRegistration.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(229)))));
-            this.lblRegistration.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblRegistration.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblRegistration.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRegistration.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
-            this.lblRegistration.Location = new System.Drawing.Point(1, 4);
-            this.lblRegistration.Name = "lblRegistration";
-            this.lblRegistration.Padding = new System.Windows.Forms.Padding(2);
-            this.lblRegistration.Size = new System.Drawing.Size(661, 27);
-            this.lblRegistration.TabIndex = 41;
-            this.lblRegistration.Text = "Person Registration";
-            this.lblRegistration.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label4
             // 
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
             this.label4.Dock = System.Windows.Forms.DockStyle.Left;
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
-            this.label4.Location = new System.Drawing.Point(0, 4);
+            this.label4.Location = new System.Drawing.Point(0, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(1, 593);
+            this.label4.Size = new System.Drawing.Size(1, 640);
             this.label4.TabIndex = 7;
             this.label4.Text = "label4";
             // 
@@ -1126,9 +1411,9 @@
             this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
             this.label7.Dock = System.Windows.Forms.DockStyle.Right;
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
-            this.label7.Location = new System.Drawing.Point(662, 4);
+            this.label7.Location = new System.Drawing.Point(656, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(1, 593);
+            this.label7.Size = new System.Drawing.Size(1, 640);
             this.label7.TabIndex = 6;
             this.label7.Text = "label7";
             // 
@@ -1137,26 +1422,17 @@
             this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
             this.label8.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
-            this.label8.Location = new System.Drawing.Point(0, 597);
+            this.label8.Location = new System.Drawing.Point(0, 640);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(663, 1);
+            this.label8.Size = new System.Drawing.Size(657, 1);
             this.label8.TabIndex = 5;
             this.label8.Text = "label8";
-            // 
-            // label9
-            // 
-            this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
-            this.label9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
-            this.label9.Location = new System.Drawing.Point(0, 3);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(663, 1);
-            this.label9.TabIndex = 4;
-            this.label9.Text = "label9";
             // 
             // pnlBottomButton
             // 
             this.pnlBottomButton.BackColor = System.Drawing.Color.Transparent;
+            this.pnlBottomButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlBottomButton.BackgroundImage")));
+            this.pnlBottomButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlBottomButton.Controls.Add(this.btnPreviewNSave);
             this.pnlBottomButton.Controls.Add(this.btnBack);
             this.pnlBottomButton.Controls.Add(this.btnCancel);
@@ -1165,11 +1441,31 @@
             this.pnlBottomButton.Controls.Add(this.label18);
             this.pnlBottomButton.Controls.Add(this.label22);
             this.pnlBottomButton.Controls.Add(this.label30);
-            this.pnlBottomButton.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlBottomButton.Location = new System.Drawing.Point(0, 677);
+            this.pnlBottomButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlBottomButton.Location = new System.Drawing.Point(3, 0);
             this.pnlBottomButton.Name = "pnlBottomButton";
-            this.pnlBottomButton.Size = new System.Drawing.Size(663, 49);
+            this.pnlBottomButton.Size = new System.Drawing.Size(657, 43);
             this.pnlBottomButton.TabIndex = 58;
+            // 
+            // btnPreviewNSave
+            // 
+            this.btnPreviewNSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
+            this.btnPreviewNSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPreviewNSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPreviewNSave.Enabled = false;
+            this.btnPreviewNSave.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
+            this.btnPreviewNSave.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
+            this.btnPreviewNSave.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
+            this.btnPreviewNSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
+            this.btnPreviewNSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPreviewNSave.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnPreviewNSave.ForeColor = System.Drawing.Color.White;
+            this.btnPreviewNSave.Location = new System.Drawing.Point(463, 9);
+            this.btnPreviewNSave.Name = "btnPreviewNSave";
+            this.btnPreviewNSave.Size = new System.Drawing.Size(109, 28);
+            this.btnPreviewNSave.TabIndex = 49;
+            this.btnPreviewNSave.Text = "&Preview && Save";
+            this.btnPreviewNSave.UseVisualStyleBackColor = false;
             // 
             // btnBack
             // 
@@ -1239,7 +1535,7 @@
             this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
             this.label16.Location = new System.Drawing.Point(1, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(661, 1);
+            this.label16.Size = new System.Drawing.Size(655, 1);
             this.label16.TabIndex = 45;
             this.label16.Text = "label16";
             // 
@@ -1250,7 +1546,7 @@
             this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
             this.label18.Location = new System.Drawing.Point(0, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(1, 48);
+            this.label18.Size = new System.Drawing.Size(1, 42);
             this.label18.TabIndex = 44;
             this.label18.Text = "label18";
             // 
@@ -1259,9 +1555,9 @@
             this.label22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
             this.label22.Dock = System.Windows.Forms.DockStyle.Right;
             this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
-            this.label22.Location = new System.Drawing.Point(662, 0);
+            this.label22.Location = new System.Drawing.Point(656, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(1, 48);
+            this.label22.Size = new System.Drawing.Size(1, 42);
             this.label22.TabIndex = 43;
             this.label22.Text = "label22";
             // 
@@ -1270,321 +1566,132 @@
             this.label30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
             this.label30.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
-            this.label30.Location = new System.Drawing.Point(0, 48);
+            this.label30.Location = new System.Drawing.Point(0, 42);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(663, 1);
+            this.label30.Size = new System.Drawing.Size(657, 1);
             this.label30.TabIndex = 42;
             this.label30.Text = "label30";
             // 
-            // txtPANNo
+            // panel3
             // 
-            this.txtPANNo.Enabled = false;
-            this.txtPANNo.Location = new System.Drawing.Point(190, 97);
-            this.txtPANNo.Name = "txtPANNo";
-            this.txtPANNo.Size = new System.Drawing.Size(405, 22);
-            this.txtPANNo.TabIndex = 5;
+            this.panel3.Controls.Add(this.pnlBottomButton);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(0, 680);
+            this.panel3.Name = "panel3";
+            this.panel3.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
+            this.panel3.Size = new System.Drawing.Size(663, 46);
+            this.panel3.TabIndex = 63;
             // 
-            // label38
+            // panel2
             // 
-            this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(126, 101);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(56, 14);
-            this.label38.TabIndex = 100;
-            this.label38.Text = "PAN No:";
+            this.panel2.AutoSize = true;
+            this.panel2.Controls.Add(this.panel1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Padding = new System.Windows.Forms.Padding(3);
+            this.panel2.Size = new System.Drawing.Size(663, 36);
+            this.panel2.TabIndex = 64;
             // 
-            // label39
+            // panel1
             // 
-            this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(118, 143);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(64, 14);
-            this.label39.TabIndex = 102;
-            this.label39.Text = "Other ID:";
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.label11);
+            this.panel1.Controls.Add(this.label25);
+            this.panel1.Controls.Add(this.label26);
+            this.panel1.Controls.Add(this.label48);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(657, 30);
+            this.panel1.TabIndex = 61;
             // 
-            // chkDrivingLicenceNo
+            // label9
             // 
-            this.chkDrivingLicenceNo.AutoSize = true;
-            this.chkDrivingLicenceNo.Location = new System.Drawing.Point(35, 64);
-            this.chkDrivingLicenceNo.Name = "chkDrivingLicenceNo";
-            this.chkDrivingLicenceNo.Size = new System.Drawing.Size(15, 14);
-            this.chkDrivingLicenceNo.TabIndex = 2;
-            this.chkDrivingLicenceNo.UseVisualStyleBackColor = true;
-            this.chkDrivingLicenceNo.CheckedChanged += new System.EventHandler(this.chkDrivingLicenceNo_CheckedChanged);
+            this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
+            this.label9.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
+            this.label9.Location = new System.Drawing.Point(0, 1);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(1, 28);
+            this.label9.TabIndex = 7;
+            this.label9.Text = "label4";
             // 
-            // chkPANNo
+            // label11
             // 
-            this.chkPANNo.AutoSize = true;
-            this.chkPANNo.Location = new System.Drawing.Point(35, 101);
-            this.chkPANNo.Name = "chkPANNo";
-            this.chkPANNo.Size = new System.Drawing.Size(15, 14);
-            this.chkPANNo.TabIndex = 4;
-            this.chkPANNo.UseVisualStyleBackColor = true;
-            this.chkPANNo.CheckedChanged += new System.EventHandler(this.chkPANNo_CheckedChanged);
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label11.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(9, 5);
+            this.label11.Name = "label11";
+            this.label11.Padding = new System.Windows.Forms.Padding(2);
+            this.label11.Size = new System.Drawing.Size(98, 18);
+            this.label11.TabIndex = 41;
+            this.label11.Text = "Person Details";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // chkOtherID
+            // label25
             // 
-            this.chkOtherID.AutoSize = true;
-            this.chkOtherID.Location = new System.Drawing.Point(35, 143);
-            this.chkOtherID.Name = "chkOtherID";
-            this.chkOtherID.Size = new System.Drawing.Size(15, 14);
-            this.chkOtherID.TabIndex = 6;
-            this.chkOtherID.UseVisualStyleBackColor = true;
-            this.chkOtherID.CheckedChanged += new System.EventHandler(this.chkOtherID_CheckedChanged);
+            this.label25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
+            this.label25.Dock = System.Windows.Forms.DockStyle.Right;
+            this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
+            this.label25.Location = new System.Drawing.Point(656, 1);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(1, 28);
+            this.label25.TabIndex = 6;
+            this.label25.Text = "label7";
             // 
-            // chkAadhaarNo
+            // label26
             // 
-            this.chkAadhaarNo.AutoSize = true;
-            this.chkAadhaarNo.Location = new System.Drawing.Point(35, 30);
-            this.chkAadhaarNo.Name = "chkAadhaarNo";
-            this.chkAadhaarNo.Size = new System.Drawing.Size(15, 14);
-            this.chkAadhaarNo.TabIndex = 0;
-            this.chkAadhaarNo.UseVisualStyleBackColor = true;
-            this.chkAadhaarNo.CheckedChanged += new System.EventHandler(this.chkAadhaarNo_CheckedChanged);
+            this.label26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
+            this.label26.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
+            this.label26.Location = new System.Drawing.Point(0, 29);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(657, 1);
+            this.label26.TabIndex = 5;
+            this.label26.Text = "label8";
             // 
-            // txtAadhaarNo
+            // label48
             // 
-            this.txtAadhaarNo.Enabled = false;
-            this.txtAadhaarNo.Location = new System.Drawing.Point(190, 26);
-            this.txtAadhaarNo.Name = "txtAadhaarNo";
-            this.txtAadhaarNo.Size = new System.Drawing.Size(405, 22);
-            this.txtAadhaarNo.TabIndex = 1;
+            this.label48.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
+            this.label48.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label48.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
+            this.label48.Location = new System.Drawing.Point(0, 0);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(657, 1);
+            this.label48.TabIndex = 4;
+            this.label48.Text = "label9";
             // 
-            // label34
+            // panel4
             // 
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(100, 30);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(82, 14);
-            this.label34.TabIndex = 111;
-            this.label34.Text = "Aadhaar No:";
+            this.panel4.Controls.Add(this.pnlPersonReg);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(0, 36);
+            this.panel4.Name = "panel4";
+            this.panel4.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
+            this.panel4.Size = new System.Drawing.Size(663, 644);
+            this.panel4.TabIndex = 65;
             // 
-            // pnlOtherDocumentDetails
+            // lblRegistration
             // 
-            this.pnlOtherDocumentDetails.Controls.Add(this.label41);
-            this.pnlOtherDocumentDetails.Controls.Add(this.txtOtherDocumentID);
-            this.pnlOtherDocumentDetails.Controls.Add(this.label40);
-            this.pnlOtherDocumentDetails.Controls.Add(this.txtOtherDocumentName);
-            this.pnlOtherDocumentDetails.Location = new System.Drawing.Point(190, 132);
-            this.pnlOtherDocumentDetails.Name = "pnlOtherDocumentDetails";
-            this.pnlOtherDocumentDetails.Size = new System.Drawing.Size(405, 65);
-            this.pnlOtherDocumentDetails.TabIndex = 114;
-            this.pnlOtherDocumentDetails.Visible = false;
-            // 
-            // label41
-            // 
-            this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(39, 38);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(92, 14);
-            this.label41.TabIndex = 114;
-            this.label41.Text = "Document ID:";
-            // 
-            // txtOtherDocumentID
-            // 
-            this.txtOtherDocumentID.Location = new System.Drawing.Point(136, 35);
-            this.txtOtherDocumentID.Name = "txtOtherDocumentID";
-            this.txtOtherDocumentID.Size = new System.Drawing.Size(237, 22);
-            this.txtOtherDocumentID.TabIndex = 8;
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(20, 11);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(111, 14);
-            this.label40.TabIndex = 112;
-            this.label40.Text = "Document Name:";
-            // 
-            // txtOtherDocumentName
-            // 
-            this.txtOtherDocumentName.Location = new System.Drawing.Point(136, 8);
-            this.txtOtherDocumentName.Name = "txtOtherDocumentName";
-            this.txtOtherDocumentName.Size = new System.Drawing.Size(237, 22);
-            this.txtOtherDocumentName.TabIndex = 7;
-            // 
-            // grpbOrganizationDetails
-            // 
-            this.grpbOrganizationDetails.Controls.Add(this.txtOrganizationName);
-            this.grpbOrganizationDetails.Controls.Add(this.groupBox3);
-            this.grpbOrganizationDetails.Controls.Add(this.label47);
-            this.grpbOrganizationDetails.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpbOrganizationDetails.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
-            this.grpbOrganizationDetails.Location = new System.Drawing.Point(13, 484);
-            this.grpbOrganizationDetails.Name = "grpbOrganizationDetails";
-            this.grpbOrganizationDetails.Size = new System.Drawing.Size(632, 73);
-            this.grpbOrganizationDetails.TabIndex = 44;
-            this.grpbOrganizationDetails.TabStop = false;
-            this.grpbOrganizationDetails.Text = "Organization Details";
-            this.grpbOrganizationDetails.Visible = false;
-            // 
-            // txtOrganizationName
-            // 
-            this.txtOrganizationName.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOrganizationName.ForeColor = System.Drawing.Color.Black;
-            this.txtOrganizationName.Location = new System.Drawing.Point(148, 24);
-            this.txtOrganizationName.Name = "txtOrganizationName";
-            this.txtOrganizationName.Size = new System.Drawing.Size(347, 22);
-            this.txtOrganizationName.TabIndex = 92;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.textBox14);
-            this.groupBox3.Controls.Add(this.label42);
-            this.groupBox3.Controls.Add(this.label43);
-            this.groupBox3.Controls.Add(this.label44);
-            this.groupBox3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
-            this.groupBox3.Location = new System.Drawing.Point(15, 379);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(632, 116);
-            this.groupBox3.TabIndex = 91;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Contact Details";
-            // 
-            // textBox14
-            // 
-            this.textBox14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
-            this.textBox14.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox14.ForeColor = System.Drawing.Color.Black;
-            this.textBox14.Location = new System.Drawing.Point(148, 73);
-            this.textBox14.MaxLength = 50;
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(347, 22);
-            this.textBox14.TabIndex = 88;
-            // 
-            // label42
-            // 
-            this.label42.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lblRegistration.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label42.AutoEllipsis = true;
-            this.label42.AutoSize = true;
-            this.label42.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label42.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
-            this.label42.Location = new System.Drawing.Point(104, 77);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(42, 14);
-            this.label42.TabIndex = 90;
-            this.label42.Text = "Email :";
-            // 
-            // label43
-            // 
-            this.label43.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label43.AutoEllipsis = true;
-            this.label43.AutoSize = true;
-            this.label43.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label43.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
-            this.label43.Location = new System.Drawing.Point(113, 50);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(33, 14);
-            this.label43.TabIndex = 89;
-            this.label43.Text = "Fax :";
-            // 
-            // label44
-            // 
-            this.label44.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label44.AutoEllipsis = true;
-            this.label44.AutoSize = true;
-            this.label44.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label44.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
-            this.label44.Location = new System.Drawing.Point(97, 27);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(49, 14);
-            this.label44.TabIndex = 87;
-            this.label44.Text = "Mobile :";
-            // 
-            // label47
-            // 
-            this.label47.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label47.AutoEllipsis = true;
-            this.label47.AutoSize = true;
-            this.label47.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label47.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
-            this.label47.Location = new System.Drawing.Point(29, 27);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(117, 14);
-            this.label47.TabIndex = 87;
-            this.label47.Text = "Organization Name :";
-            // 
-            // cmbTaluka
-            // 
-            this.cmbTaluka.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbTaluka.FormattingEnabled = true;
-            this.cmbTaluka.Items.AddRange(new object[] {
-            "US"});
-            this.cmbTaluka.Location = new System.Drawing.Point(345, 123);
-            this.cmbTaluka.MaxDropDownItems = 3;
-            this.cmbTaluka.MaxLength = 20;
-            this.cmbTaluka.Name = "cmbTaluka";
-            this.cmbTaluka.Size = new System.Drawing.Size(118, 22);
-            this.cmbTaluka.TabIndex = 83;
-            // 
-            // label45
-            // 
-            this.label45.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label45.AutoEllipsis = true;
-            this.label45.AutoSize = true;
-            this.label45.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label45.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
-            this.label45.Location = new System.Drawing.Point(289, 127);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(50, 14);
-            this.label45.TabIndex = 84;
-            this.label45.Text = "Taluka :";
-            // 
-            // cmbState
-            // 
-            this.cmbState.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbState.FormattingEnabled = true;
-            this.cmbState.Location = new System.Drawing.Point(149, 149);
-            this.cmbState.MaxLength = 20;
-            this.cmbState.Name = "cmbState";
-            this.cmbState.Size = new System.Drawing.Size(98, 22);
-            this.cmbState.TabIndex = 86;
-            // 
-            // label46
-            // 
-            this.label46.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label46.AutoEllipsis = true;
-            this.label46.AutoSize = true;
-            this.label46.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label46.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
-            this.label46.Location = new System.Drawing.Point(101, 153);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(45, 14);
-            this.label46.TabIndex = 85;
-            this.label46.Text = "State :";
-            // 
-            // btnPreviewNSave
-            // 
-            this.btnPreviewNSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
-            this.btnPreviewNSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnPreviewNSave.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPreviewNSave.Enabled = false;
-            this.btnPreviewNSave.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
-            this.btnPreviewNSave.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
-            this.btnPreviewNSave.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
-            this.btnPreviewNSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
-            this.btnPreviewNSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPreviewNSave.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
-            this.btnPreviewNSave.ForeColor = System.Drawing.Color.White;
-            this.btnPreviewNSave.Location = new System.Drawing.Point(463, 9);
-            this.btnPreviewNSave.Name = "btnPreviewNSave";
-            this.btnPreviewNSave.Size = new System.Drawing.Size(109, 28);
-            this.btnPreviewNSave.TabIndex = 49;
-            this.btnPreviewNSave.Text = "&Preview && Save";
-            this.btnPreviewNSave.UseVisualStyleBackColor = false;
+            this.lblRegistration.AutoEllipsis = true;
+            this.lblRegistration.AutoSize = true;
+            this.lblRegistration.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRegistration.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
+            this.lblRegistration.Location = new System.Drawing.Point(526, 125);
+            this.lblRegistration.Name = "lblRegistration";
+            this.lblRegistration.Size = new System.Drawing.Size(85, 14);
+            this.lblRegistration.TabIndex = 64;
+            this.lblRegistration.Text = "Date of Birth :";
+            this.lblRegistration.Visible = false;
             // 
             // frmPersonRegistration
             // 
@@ -1592,20 +1699,25 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.ClientSize = new System.Drawing.Size(663, 726);
-            this.Controls.Add(this.pnlPersonReg);
-            this.Controls.Add(this.pnlBottomButton);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.pnlPersonType);
             this.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmPersonRegistration";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmPersonRegistration";
+            this.Text = "Person Registration";
             this.Load += new System.EventHandler(this.frmPersonRegistration_Load);
             this.pnlPersonType.ResumeLayout(false);
             this.pnlPersonType.PerformLayout();
             this.pnlPersonReg.ResumeLayout(false);
             this.pnlPersonDetails.ResumeLayout(false);
+            this.grpbOrganizationDetails.ResumeLayout(false);
+            this.grpbOrganizationDetails.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.grpbContactDetails.ResumeLayout(false);
             this.grpbContactDetails.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -1623,16 +1735,18 @@
             this.groupBox8.PerformLayout();
             this.grpbVerificationDetails.ResumeLayout(false);
             this.grpbVerificationDetails.PerformLayout();
+            this.pnlOtherDocumentDetails.ResumeLayout(false);
+            this.pnlOtherDocumentDetails.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
             this.pnlBottomButton.ResumeLayout(false);
-            this.pnlOtherDocumentDetails.ResumeLayout(false);
-            this.pnlOtherDocumentDetails.PerformLayout();
-            this.grpbOrganizationDetails.ResumeLayout(false);
-            this.grpbOrganizationDetails.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -1650,11 +1764,9 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel pnlPersonReg;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label lblRegistration;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.GroupBox grpbPersonDetails;
         private System.Windows.Forms.GroupBox grpbContactDetails;
         private System.Windows.Forms.TextBox txtEmail;
@@ -1747,5 +1859,15 @@
         private System.Windows.Forms.ComboBox cmbTaluka;
         private System.Windows.Forms.Label label45;
         internal System.Windows.Forms.Button btnPreviewNSave;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label lblRegistration;
     }
 }
