@@ -34,10 +34,16 @@ namespace eAPMC.Forms
             DataTable dtUser = null;
             try
             {
+                if (txtPassword.Text.Trim()!=txtConfirmPassword.Text.Trim())
+                {
+                    MessageBox.Show("Password and Confirm password should be match.");
+                    return;
+                }
+
                 dbAccess = new DBAccess();
                 Int64 nUserID = 0;
                 string sLoginName = txtLoginName.Text.ToString();
-                string sPassword = Encryption.EncryptToBase64String(txtPassword.Text.Trim());
+                string sPassword = Encryption.EncryptToBase64String(txtConfirmPassword.Text.Trim());
                 string sFirstName = txtPersonFName.Text.Trim();
                 string sMiddleName = txtPersonMName.Text.Trim();
                 string sLastName = txtPersonLName.Text.Trim();
@@ -151,6 +157,14 @@ namespace eAPMC.Forms
                     MessageBox.Show("Please enter valid email address.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtEmail.SelectAll();
                 }
+            }
+        }
+
+        private void txtPhoneNo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
             }
         }
 
