@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Pincode.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,8 +86,20 @@
     <Compile Include="Forms\frmUserRegistration.Designer.cs">
       <DependentUpon>frmUserRegistration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmView_AllUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmView_AllUsers.Designer.cs">
+      <DependentUpon>frmView_AllUsers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\PincodeFinder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\PincodeFinder.Designer.cs">
+      <DependentUpon>PincodeFinder.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -105,6 +118,9 @@
     <EmbeddedResource Include="Forms\frmUserRegistration.resx">
       <DependentUpon>frmUserRegistration.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmView_AllUsers.resx">
+      <DependentUpon>frmView_AllUsers.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -115,6 +131,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UserControls\PincodeFinder.resx">
+      <DependentUpon>PincodeFinder.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="App.config" />
     <None Include="LoginScreen\SplashScreen_1.psd" />
     <None Include="LoginScreen\SplashScreen_12.psd" />
@@ -131,7 +150,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Classes\" />
     <Folder Include="DLL\" />
   </ItemGroup>
   <ItemGroup>

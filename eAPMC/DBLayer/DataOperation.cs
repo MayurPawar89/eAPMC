@@ -369,5 +369,122 @@ namespace DBLayer
 
             return dt;
         }
+
+        public Int64 InsertUpdateUserMaster(Int64 UserID, string LoginName,string Password,string FirstName,string MiddleName,string LastName,int Gender,DateTime DOB,DateTime RegistrationDate,string Phone,string Mobile,string Mobile1,string EMail,string AddressLine1,string AddressLine2,string City,string State, string Zip,bool bIsBlocked)
+        {
+            Int64 nUserID = 0;
+            string query_procedure_name = string.Empty;
+
+            try
+            {
+                query_procedure_name = "gsp_INUP_UserMaster";
+
+                using (DbCommand dbCommand = sqlDb.GetStoredProcCommand(query_procedure_name))
+                {
+                    //sqlDb.AddInParameter(dbCommand, "@UserId", DbType.Int64, UserID);
+                    sqlDb.AddParameter(dbCommand, "@UserID", DbType.Int64, ParameterDirection.InputOutput, "UserID", DataRowVersion.Current, UserID);
+                    sqlDb.AddInParameter(dbCommand, "@LoginName", DbType.String, LoginName);
+                    sqlDb.AddInParameter(dbCommand, "@Password", DbType.String, Password);
+                    sqlDb.AddInParameter(dbCommand, "@FirstName", DbType.String, FirstName);
+                    sqlDb.AddInParameter(dbCommand, "@MiddleName", DbType.String, MiddleName);
+                    sqlDb.AddInParameter(dbCommand, "@LastName", DbType.String, LastName);
+                    sqlDb.AddInParameter(dbCommand, "@Gender", DbType.Int16, Gender);
+                    sqlDb.AddInParameter(dbCommand, "@DOB", DbType.Date, DOB);
+                    sqlDb.AddInParameter(dbCommand, "@RegistrationDate", DbType.DateTime, RegistrationDate);
+                    sqlDb.AddInParameter(dbCommand, "@Phone", DbType.String, Phone);
+                    sqlDb.AddInParameter(dbCommand, "@Mobile", DbType.String, Mobile);
+                    sqlDb.AddInParameter(dbCommand, "@Mobile1", DbType.String, Mobile1);
+                    sqlDb.AddInParameter(dbCommand, "@eMail", DbType.String, EMail);
+                    sqlDb.AddInParameter(dbCommand, "@AddressLine1", DbType.String, AddressLine1);
+                    sqlDb.AddInParameter(dbCommand, "@AddressLine2", DbType.String, AddressLine2);
+                    sqlDb.AddInParameter(dbCommand, "@City", DbType.String, City);
+                    sqlDb.AddInParameter(dbCommand, "@State", DbType.String, State);
+                    sqlDb.AddInParameter(dbCommand, "@Zip", DbType.String, Zip);
+                    sqlDb.AddInParameter(dbCommand, "@bIsBlocked", DbType.Boolean, bIsBlocked);
+                    
+
+                    //ds = sqlDb.ExecuteDataSet(dbCommand);
+                    Int64 n = sqlDb.ExecuteNonQuery(dbCommand);
+                    object objID = sqlDb.GetParameterValue(dbCommand, "@userID");
+                    if (Convert.ToInt64(objID) > 0)
+                        nUserID = Convert.ToInt64(objID);
+                    else
+                        nUserID = 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+            }
+
+            return nUserID;
+        }
+
+        public DataTable GetPincodeDetails()
+        {
+            DataSet ds = null;
+            DataTable dt = null;
+            string query_procedure_name = string.Empty;
+
+            try
+            {
+                query_procedure_name = "gsp_GetPincodeDetails";
+                ds = sqlDb.ExecuteDataSet(CommandType.StoredProcedure, query_procedure_name);
+                if (ds != null && ds.Tables != null && ds.Tables.Count > 0)
+                {
+                    dt = ds.Tables[0];
+                    dt.TableName = "Pincode";
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                if (ds != null) { if (ds.Tables != null) { ds.Tables.Clear(); } ds.Dispose(); ds = null; }
+            }
+
+            return dt;
+        }
+
+        public DataTable GetUsersDetails(int UsersType)
+        {
+            DataSet ds = null;
+            DataTable dt = null;
+            string query_procedure_name = string.Empty;
+
+            try
+            {
+                query_procedure_name = "gsp_GetUsersDetails_ByUserType";
+
+                using (DbCommand dbCommand = sqlDb.GetStoredProcCommand(query_procedure_name))
+                {
+                    sqlDb.AddInParameter(dbCommand, "@nUserType", DbType.String, UsersType);
+                    ds = sqlDb.ExecuteDataSet(dbCommand);
+
+                    if (ds != null && ds.Tables != null && ds.Tables.Count > 0)
+                    {
+                        dt = ds.Tables[0];
+                        dt.TableName = "Users";
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                if (ds != null) { if (ds.Tables != null) { ds.Tables.Clear(); } ds.Dispose(); ds = null; }
+            }
+
+            return dt;
+        }
     }
 }
