@@ -18,6 +18,7 @@ namespace eAPMC.Forms
         public string UserName { get; set; }
         public Int64 UserType { get; set; }
         public Int64 UserID { get; set; }
+        public Boolean IsDefaultPassword { get; set; }
 
         private void btnRegisterFarmer_Click(object sender, EventArgs e)
         {
@@ -58,7 +59,10 @@ namespace eAPMC.Forms
 
         private void btnChallan_Click(object sender, EventArgs e)
         {
-
+            frmChallan ofrmChallan = new frmChallan();
+            ofrmChallan.ShowDialog(this);
+            ofrmChallan.Dispose();
+            ofrmChallan = null;
         }
 
         private void btnRegisterUser_Click(object sender, EventArgs e)
@@ -69,7 +73,31 @@ namespace eAPMC.Forms
             ofrmUserRegistration = null;
         }
 
-        private void tsmnuUsers_Click(object sender, EventArgs e)
+        private void Dashbaord_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void Dashbaord_Load(object sender, EventArgs e)
+        {
+            if (IsDefaultPassword)
+            {
+                frmChangePassword ofrmChangePassword = new frmChangePassword();
+                ofrmChangePassword.ShowDialog(this);
+                ofrmChangePassword.Dispose();
+                ofrmChangePassword = null;
+            }
+        }
+
+        private void tmnuTools_ChangePassword_Click(object sender, EventArgs e)
+        {
+            frmChangePassword ofrmChangePassword = new frmChangePassword();
+            ofrmChangePassword.ShowDialog(this);
+            ofrmChangePassword.Dispose();
+            ofrmChangePassword = null;
+        }
+
+        private void tmnuView_Users_Click(object sender, EventArgs e)
         {
             frmView_AllUsers ofrmView_AllUsers = new frmView_AllUsers();
             ofrmView_AllUsers.ShowDialog(this);

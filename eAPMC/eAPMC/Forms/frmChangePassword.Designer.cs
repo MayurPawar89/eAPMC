@@ -48,7 +48,7 @@
             // 
             this.txtConfirmPassword.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtConfirmPassword.ForeColor = System.Drawing.Color.Black;
-            this.txtConfirmPassword.Location = new System.Drawing.Point(132, 77);
+            this.txtConfirmPassword.Location = new System.Drawing.Point(130, 70);
             this.txtConfirmPassword.Name = "txtConfirmPassword";
             this.txtConfirmPassword.Size = new System.Drawing.Size(347, 22);
             this.txtConfirmPassword.TabIndex = 102;
@@ -63,7 +63,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
-            this.label3.Location = new System.Drawing.Point(18, 80);
+            this.label3.Location = new System.Drawing.Point(16, 73);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(111, 14);
             this.label3.TabIndex = 101;
@@ -73,7 +73,7 @@
             // 
             this.txtNewPassword.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNewPassword.ForeColor = System.Drawing.Color.Black;
-            this.txtNewPassword.Location = new System.Drawing.Point(132, 49);
+            this.txtNewPassword.Location = new System.Drawing.Point(130, 42);
             this.txtNewPassword.Name = "txtNewPassword";
             this.txtNewPassword.Size = new System.Drawing.Size(347, 22);
             this.txtNewPassword.TabIndex = 100;
@@ -88,7 +88,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
-            this.label1.Location = new System.Drawing.Point(34, 52);
+            this.label1.Location = new System.Drawing.Point(32, 45);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(95, 14);
             this.label1.TabIndex = 99;
@@ -98,10 +98,11 @@
             // 
             this.txtOldPassword.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtOldPassword.ForeColor = System.Drawing.Color.Black;
-            this.txtOldPassword.Location = new System.Drawing.Point(131, 21);
+            this.txtOldPassword.Location = new System.Drawing.Point(129, 14);
             this.txtOldPassword.Name = "txtOldPassword";
             this.txtOldPassword.Size = new System.Drawing.Size(347, 22);
             this.txtOldPassword.TabIndex = 98;
+            this.txtOldPassword.UseSystemPasswordChar = true;
             this.txtOldPassword.Leave += new System.EventHandler(this.txtOldPassword_Leave);
             // 
             // label47
@@ -113,7 +114,7 @@
             this.label47.AutoSize = true;
             this.label47.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label47.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
-            this.label47.Location = new System.Drawing.Point(41, 24);
+            this.label47.Location = new System.Drawing.Point(39, 17);
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(88, 14);
             this.label47.TabIndex = 97;
@@ -129,7 +130,7 @@
             this.pnlBottomButton.Controls.Add(this.label22);
             this.pnlBottomButton.Controls.Add(this.label30);
             this.pnlBottomButton.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlBottomButton.Location = new System.Drawing.Point(0, 114);
+            this.pnlBottomButton.Location = new System.Drawing.Point(0, 99);
             this.pnlBottomButton.Name = "pnlBottomButton";
             this.pnlBottomButton.Size = new System.Drawing.Size(489, 49);
             this.pnlBottomButton.TabIndex = 103;
@@ -222,7 +223,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(489, 163);
+            this.ClientSize = new System.Drawing.Size(489, 148);
             this.Controls.Add(this.pnlBottomButton);
             this.Controls.Add(this.txtConfirmPassword);
             this.Controls.Add(this.label3);
@@ -232,6 +233,7 @@
             this.Controls.Add(this.label47);
             this.Name = "frmChangePassword";
             this.Text = "frmChangePassword";
+            this.Load += new System.EventHandler(this.frmChangePassword_Load);
             this.pnlBottomButton.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -515,5 +515,41 @@ namespace DBLayer
 
             return dt;
         }
+
+        public Int64 ChangePassword(long UserID, string LoginName, string Password)
+        {
+            Int64 nUserID = 0;
+            string query_procedure_name = string.Empty;
+
+            try
+            {
+                query_procedure_name = "gsp_ChangePassword";
+
+                using (DbCommand dbCommand = sqlDb.GetStoredProcCommand(query_procedure_name))
+                {
+                    //sqlDb.AddInParameter(dbCommand, "@UserId", DbType.Int64, UserID);
+                    sqlDb.AddParameter(dbCommand, "@UserID", DbType.Int64, ParameterDirection.InputOutput, "UserID", DataRowVersion.Current, UserID);
+                    sqlDb.AddInParameter(dbCommand, "@LoginName", DbType.String, LoginName);
+                    sqlDb.AddInParameter(dbCommand, "@Password", DbType.String, Password);
+
+                    //ds = sqlDb.ExecuteDataSet(dbCommand);
+                    Int64 n = sqlDb.ExecuteNonQuery(dbCommand);
+                    object objID = sqlDb.GetParameterValue(dbCommand, "@userID");
+                    if (Convert.ToInt64(objID) > 0)
+                        nUserID = Convert.ToInt64(objID);
+                    else
+                        nUserID = 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+            }
+
+            return nUserID;
+        }
     }
 }

@@ -45,12 +45,13 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tmnuView_Users = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reortsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tmnuTools_ChangePassword = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmnuUsers = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.pnlMainMenu.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -331,12 +332,19 @@
             // viewToolStripMenuItem
             // 
             this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmnuUsers});
+            this.tmnuView_Users});
             this.viewToolStripMenuItem.Font = new System.Drawing.Font("Arial", 8.25F);
             this.viewToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
             this.viewToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
             this.viewToolStripMenuItem.Text = "View";
+            // 
+            // tmnuView_Users
+            // 
+            this.tmnuView_Users.Name = "tmnuView_Users";
+            this.tmnuView_Users.Size = new System.Drawing.Size(152, 22);
+            this.tmnuView_Users.Text = "&Users";
+            this.tmnuView_Users.Click += new System.EventHandler(this.tmnuView_Users_Click);
             // 
             // editToolStripMenuItem
             // 
@@ -356,11 +364,20 @@
             // 
             // toolsToolStripMenuItem
             // 
+            this.toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tmnuTools_ChangePassword});
             this.toolsToolStripMenuItem.Font = new System.Drawing.Font("Arial", 8.25F);
             this.toolsToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
             this.toolsToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.toolsToolStripMenuItem.Text = "Tools";
+            // 
+            // tmnuTools_ChangePassword
+            // 
+            this.tmnuTools_ChangePassword.Name = "tmnuTools_ChangePassword";
+            this.tmnuTools_ChangePassword.Size = new System.Drawing.Size(164, 22);
+            this.tmnuTools_ChangePassword.Text = "Change Password";
+            this.tmnuTools_ChangePassword.Click += new System.EventHandler(this.tmnuTools_ChangePassword_Click);
             // 
             // settingsToolStripMenuItem
             // 
@@ -378,13 +395,6 @@
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
             this.helpToolStripMenuItem.Text = "Help";
             // 
-            // tsmnuUsers
-            // 
-            this.tsmnuUsers.Name = "tsmnuUsers";
-            this.tsmnuUsers.Size = new System.Drawing.Size(152, 22);
-            this.tsmnuUsers.Text = "&Users";
-            this.tsmnuUsers.Click += new System.EventHandler(this.tsmnuUsers_Click);
-            // 
             // Dashbaord
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
@@ -398,6 +408,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashbaord";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Dashbaord_FormClosing);
+            this.Load += new System.EventHandler(this.Dashbaord_Load);
             this.panel1.ResumeLayout(false);
             this.pnlMainMenu.ResumeLayout(false);
             this.pnlMainMenu.PerformLayout();
@@ -431,6 +443,7 @@
         internal System.Windows.Forms.Button btnChallan;
         internal System.Windows.Forms.Button btnRegisterOrganization;
         internal System.Windows.Forms.Button btnRegisterUser;
-        private System.Windows.Forms.ToolStripMenuItem tsmnuUsers;
+        private System.Windows.Forms.ToolStripMenuItem tmnuView_Users;
+        private System.Windows.Forms.ToolStripMenuItem tmnuTools_ChangePassword;
     }
 }

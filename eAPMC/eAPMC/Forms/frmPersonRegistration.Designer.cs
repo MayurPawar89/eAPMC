@@ -62,6 +62,13 @@
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.grpbAddressDetails = new System.Windows.Forms.GroupBox();
+            this.pnlPincodeDetails = new System.Windows.Forms.Panel();
+            this.txtState = new System.Windows.Forms.TextBox();
+            this.txtTaluka = new System.Windows.Forms.TextBox();
+            this.label49 = new System.Windows.Forms.Label();
+            this.txtDistrict = new System.Windows.Forms.TextBox();
+            this.label50 = new System.Windows.Forms.Label();
+            this.label51 = new System.Windows.Forms.Label();
             this.cmbState = new System.Windows.Forms.ComboBox();
             this.label46 = new System.Windows.Forms.Label();
             this.cmbTaluka = new System.Windows.Forms.ComboBox();
@@ -79,6 +86,7 @@
             this.grpbPersonDetails = new System.Windows.Forms.GroupBox();
             this.label23 = new System.Windows.Forms.Label();
             this.lblGIPatName = new System.Windows.Forms.Label();
+            this.lblRegistration = new System.Windows.Forms.Label();
             this.lblGIDOB = new System.Windows.Forms.Label();
             this.lblGIFName = new System.Windows.Forms.Label();
             this.lblGIPatMName = new System.Windows.Forms.Label();
@@ -145,7 +153,6 @@
             this.label26 = new System.Windows.Forms.Label();
             this.label48 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.lblRegistration = new System.Windows.Forms.Label();
             this.pnlPersonType.SuspendLayout();
             this.pnlPersonReg.SuspendLayout();
             this.pnlPersonDetails.SuspendLayout();
@@ -327,7 +334,7 @@
             this.grpbOrganizationDetails.Controls.Add(this.label47);
             this.grpbOrganizationDetails.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpbOrganizationDetails.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
-            this.grpbOrganizationDetails.Location = new System.Drawing.Point(13, 471);
+            this.grpbOrganizationDetails.Location = new System.Drawing.Point(13, 528);
             this.grpbOrganizationDetails.Name = "grpbOrganizationDetails";
             this.grpbOrganizationDetails.Size = new System.Drawing.Size(632, 73);
             this.grpbOrganizationDetails.TabIndex = 44;
@@ -441,7 +448,7 @@
             this.grpbContactDetails.Controls.Add(this.label20);
             this.grpbContactDetails.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpbContactDetails.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
-            this.grpbContactDetails.Location = new System.Drawing.Point(13, 350);
+            this.grpbContactDetails.Location = new System.Drawing.Point(13, 403);
             this.grpbContactDetails.Name = "grpbContactDetails";
             this.grpbContactDetails.Size = new System.Drawing.Size(632, 116);
             this.grpbContactDetails.TabIndex = 43;
@@ -456,6 +463,7 @@
             this.txtFaxNo.Name = "txtFaxNo";
             this.txtFaxNo.Size = new System.Drawing.Size(344, 22);
             this.txtFaxNo.TabIndex = 93;
+            this.txtFaxNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhoneNo_KeyPress);
             // 
             // txtMobileNo
             // 
@@ -465,6 +473,7 @@
             this.txtMobileNo.Name = "txtMobileNo";
             this.txtMobileNo.Size = new System.Drawing.Size(345, 22);
             this.txtMobileNo.TabIndex = 92;
+            this.txtMobileNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhoneNo_KeyPress);
             // 
             // groupBox1
             // 
@@ -547,6 +556,7 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(347, 22);
             this.txtEmail.TabIndex = 88;
+            this.txtEmail.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmail_Validating);
             // 
             // label10
             // 
@@ -595,6 +605,13 @@
             // 
             // grpbAddressDetails
             // 
+            this.grpbAddressDetails.Controls.Add(this.pnlPincodeDetails);
+            this.grpbAddressDetails.Controls.Add(this.txtState);
+            this.grpbAddressDetails.Controls.Add(this.txtTaluka);
+            this.grpbAddressDetails.Controls.Add(this.label49);
+            this.grpbAddressDetails.Controls.Add(this.txtDistrict);
+            this.grpbAddressDetails.Controls.Add(this.label50);
+            this.grpbAddressDetails.Controls.Add(this.label51);
             this.grpbAddressDetails.Controls.Add(this.cmbState);
             this.grpbAddressDetails.Controls.Add(this.label46);
             this.grpbAddressDetails.Controls.Add(this.cmbTaluka);
@@ -613,20 +630,104 @@
             this.grpbAddressDetails.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
             this.grpbAddressDetails.Location = new System.Drawing.Point(13, 168);
             this.grpbAddressDetails.Name = "grpbAddressDetails";
-            this.grpbAddressDetails.Size = new System.Drawing.Size(632, 177);
+            this.grpbAddressDetails.Size = new System.Drawing.Size(632, 227);
             this.grpbAddressDetails.TabIndex = 43;
             this.grpbAddressDetails.TabStop = false;
             this.grpbAddressDetails.Text = "   Address Details  ";
+            // 
+            // pnlPincodeDetails
+            // 
+            this.pnlPincodeDetails.Location = new System.Drawing.Point(252, 66);
+            this.pnlPincodeDetails.Name = "pnlPincodeDetails";
+            this.pnlPincodeDetails.Size = new System.Drawing.Size(375, 160);
+            this.pnlPincodeDetails.TabIndex = 98;
+            this.pnlPincodeDetails.Visible = false;
+            // 
+            // txtState
+            // 
+            this.txtState.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtState.ForeColor = System.Drawing.Color.Black;
+            this.txtState.Location = new System.Drawing.Point(148, 177);
+            this.txtState.Name = "txtState";
+            this.txtState.Size = new System.Drawing.Size(244, 22);
+            this.txtState.TabIndex = 97;
+            this.txtState.Tag = "19";
+            // 
+            // txtTaluka
+            // 
+            this.txtTaluka.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTaluka.ForeColor = System.Drawing.Color.Black;
+            this.txtTaluka.Location = new System.Drawing.Point(148, 148);
+            this.txtTaluka.Name = "txtTaluka";
+            this.txtTaluka.Size = new System.Drawing.Size(244, 22);
+            this.txtTaluka.TabIndex = 96;
+            this.txtTaluka.Tag = "19";
+            // 
+            // label49
+            // 
+            this.label49.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label49.AutoEllipsis = true;
+            this.label49.AutoSize = true;
+            this.label49.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label49.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
+            this.label49.Location = new System.Drawing.Point(96, 152);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(50, 14);
+            this.label49.TabIndex = 95;
+            this.label49.Text = "Taluka :";
+            // 
+            // txtDistrict
+            // 
+            this.txtDistrict.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDistrict.ForeColor = System.Drawing.Color.Black;
+            this.txtDistrict.Location = new System.Drawing.Point(148, 121);
+            this.txtDistrict.Name = "txtDistrict";
+            this.txtDistrict.Size = new System.Drawing.Size(244, 22);
+            this.txtDistrict.TabIndex = 94;
+            this.txtDistrict.Tag = "19";
+            // 
+            // label50
+            // 
+            this.label50.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label50.AutoEllipsis = true;
+            this.label50.AutoSize = true;
+            this.label50.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label50.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
+            this.label50.Location = new System.Drawing.Point(100, 181);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(45, 14);
+            this.label50.TabIndex = 93;
+            this.label50.Text = "State :";
+            // 
+            // label51
+            // 
+            this.label51.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label51.AutoEllipsis = true;
+            this.label51.AutoSize = true;
+            this.label51.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label51.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
+            this.label51.Location = new System.Drawing.Point(94, 125);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(52, 14);
+            this.label51.TabIndex = 92;
+            this.label51.Text = "District :";
             // 
             // cmbState
             // 
             this.cmbState.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbState.FormattingEnabled = true;
-            this.cmbState.Location = new System.Drawing.Point(149, 149);
+            this.cmbState.Location = new System.Drawing.Point(509, 57);
             this.cmbState.MaxLength = 20;
             this.cmbState.Name = "cmbState";
             this.cmbState.Size = new System.Drawing.Size(98, 22);
             this.cmbState.TabIndex = 86;
+            this.cmbState.Visible = false;
             // 
             // label46
             // 
@@ -637,11 +738,12 @@
             this.label46.AutoSize = true;
             this.label46.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label46.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
-            this.label46.Location = new System.Drawing.Point(101, 153);
+            this.label46.Location = new System.Drawing.Point(461, 61);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(45, 14);
             this.label46.TabIndex = 85;
             this.label46.Text = "State :";
+            this.label46.Visible = false;
             // 
             // cmbTaluka
             // 
@@ -649,12 +751,13 @@
             this.cmbTaluka.FormattingEnabled = true;
             this.cmbTaluka.Items.AddRange(new object[] {
             "US"});
-            this.cmbTaluka.Location = new System.Drawing.Point(345, 123);
+            this.cmbTaluka.Location = new System.Drawing.Point(508, 86);
             this.cmbTaluka.MaxDropDownItems = 3;
             this.cmbTaluka.MaxLength = 20;
             this.cmbTaluka.Name = "cmbTaluka";
             this.cmbTaluka.Size = new System.Drawing.Size(118, 22);
             this.cmbTaluka.TabIndex = 83;
+            this.cmbTaluka.Visible = false;
             // 
             // label45
             // 
@@ -665,11 +768,12 @@
             this.label45.AutoSize = true;
             this.label45.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label45.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
-            this.label45.Location = new System.Drawing.Point(289, 127);
+            this.label45.Location = new System.Drawing.Point(452, 90);
             this.label45.Name = "label45";
             this.label45.Size = new System.Drawing.Size(50, 14);
             this.label45.TabIndex = 84;
             this.label45.Text = "Taluka :";
+            this.label45.Visible = false;
             // 
             // cmbDistrict
             // 
@@ -677,12 +781,13 @@
             this.cmbDistrict.FormattingEnabled = true;
             this.cmbDistrict.Items.AddRange(new object[] {
             "US"});
-            this.cmbDistrict.Location = new System.Drawing.Point(148, 123);
+            this.cmbDistrict.Location = new System.Drawing.Point(508, 31);
             this.cmbDistrict.MaxDropDownItems = 3;
             this.cmbDistrict.MaxLength = 20;
             this.cmbDistrict.Name = "cmbDistrict";
             this.cmbDistrict.Size = new System.Drawing.Size(118, 22);
             this.cmbDistrict.TabIndex = 81;
+            this.cmbDistrict.Visible = false;
             // 
             // label21
             // 
@@ -693,11 +798,12 @@
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
-            this.label21.Location = new System.Drawing.Point(94, 127);
+            this.label21.Location = new System.Drawing.Point(454, 35);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(52, 14);
             this.label21.TabIndex = 82;
             this.label21.Text = "District :";
+            this.label21.Visible = false;
             // 
             // txtPincode
             // 
@@ -709,6 +815,8 @@
             this.txtPincode.Size = new System.Drawing.Size(97, 22);
             this.txtPincode.TabIndex = 77;
             this.txtPincode.Tag = "";
+            this.txtPincode.TextChanged += new System.EventHandler(this.txtPincode_TextChanged);
+            this.txtPincode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhoneNo_KeyPress);
             // 
             // txtArea
             // 
@@ -850,6 +958,22 @@
             this.lblGIPatName.Size = new System.Drawing.Size(46, 14);
             this.lblGIPatName.TabIndex = 62;
             this.lblGIPatName.Text = "Name :";
+            // 
+            // lblRegistration
+            // 
+            this.lblRegistration.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblRegistration.AutoEllipsis = true;
+            this.lblRegistration.AutoSize = true;
+            this.lblRegistration.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRegistration.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
+            this.lblRegistration.Location = new System.Drawing.Point(526, 125);
+            this.lblRegistration.Name = "lblRegistration";
+            this.lblRegistration.Size = new System.Drawing.Size(85, 14);
+            this.lblRegistration.TabIndex = 64;
+            this.lblRegistration.Text = "Date of Birth :";
+            this.lblRegistration.Visible = false;
             // 
             // lblGIDOB
             // 
@@ -1466,6 +1590,7 @@
             this.btnPreviewNSave.TabIndex = 49;
             this.btnPreviewNSave.Text = "&Preview && Save";
             this.btnPreviewNSave.UseVisualStyleBackColor = false;
+            this.btnPreviewNSave.Click += new System.EventHandler(this.btnPreviewNSave_Click);
             // 
             // btnBack
             // 
@@ -1677,22 +1802,6 @@
             this.panel4.Size = new System.Drawing.Size(663, 644);
             this.panel4.TabIndex = 65;
             // 
-            // lblRegistration
-            // 
-            this.lblRegistration.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblRegistration.AutoEllipsis = true;
-            this.lblRegistration.AutoSize = true;
-            this.lblRegistration.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRegistration.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
-            this.lblRegistration.Location = new System.Drawing.Point(526, 125);
-            this.lblRegistration.Name = "lblRegistration";
-            this.lblRegistration.Size = new System.Drawing.Size(85, 14);
-            this.lblRegistration.TabIndex = 64;
-            this.lblRegistration.Text = "Date of Birth :";
-            this.lblRegistration.Visible = false;
-            // 
             // frmPersonRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -1869,5 +1978,12 @@
         private System.Windows.Forms.Label label48;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label lblRegistration;
+        private System.Windows.Forms.TextBox txtState;
+        private System.Windows.Forms.TextBox txtTaluka;
+        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.TextBox txtDistrict;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.Panel pnlPincodeDetails;
     }
 }

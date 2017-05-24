@@ -20,7 +20,7 @@ namespace eAPMC.Forms
         {
             InitializeComponent();
         }
-        DataTable dtPincode;
+
         private void frmUserRegistration_Load(object sender, EventArgs e)
         {
             FillRoles();
@@ -263,6 +263,12 @@ namespace eAPMC.Forms
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtLoginName_Leave(object sender, EventArgs e)
+        {
+            txtPassword.Text = "eAPMC";
+            txtConfirmPassword.Text = "eAPMC";
         }
 
 

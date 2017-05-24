@@ -49,7 +49,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\eGlobal.cs" />
+    <Compile Include="Classes\Person.cs" />
     <Compile Include="Classes\Pincode.cs" />
+    <Compile Include="Classes\Users.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +107,12 @@
     <Compile Include="Forms\frmUserRegistration.Designer.cs">
       <DependentUpon>frmUserRegistration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmViewPersonDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmViewPersonDetails.Designer.cs">
+      <DependentUpon>frmViewPersonDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmView_AllUsers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +153,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmUserRegistration.resx">
       <DependentUpon>frmUserRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmViewPersonDetails.resx">
+      <DependentUpon>frmViewPersonDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmView_AllUsers.resx">
       <DependentUpon>frmView_AllUsers.cs</DependentUpon>
