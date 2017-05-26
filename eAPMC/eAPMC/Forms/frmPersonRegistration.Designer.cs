@@ -310,9 +310,9 @@
             this.pnlPersonReg.Controls.Add(this.label7);
             this.pnlPersonReg.Controls.Add(this.label8);
             this.pnlPersonReg.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlPersonReg.Location = new System.Drawing.Point(3, 0);
+            this.pnlPersonReg.Location = new System.Drawing.Point(3, 3);
             this.pnlPersonReg.Name = "pnlPersonReg";
-            this.pnlPersonReg.Size = new System.Drawing.Size(657, 641);
+            this.pnlPersonReg.Size = new System.Drawing.Size(657, 648);
             this.pnlPersonReg.TabIndex = 57;
             // 
             // pnlPersonDetails
@@ -324,7 +324,7 @@
             this.pnlPersonDetails.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlPersonDetails.Location = new System.Drawing.Point(1, 1);
             this.pnlPersonDetails.Name = "pnlPersonDetails";
-            this.pnlPersonDetails.Size = new System.Drawing.Size(655, 639);
+            this.pnlPersonDetails.Size = new System.Drawing.Size(655, 646);
             this.pnlPersonDetails.TabIndex = 44;
             // 
             // grpbOrganizationDetails
@@ -637,9 +637,9 @@
             // 
             // pnlPincodeDetails
             // 
-            this.pnlPincodeDetails.Location = new System.Drawing.Point(252, 66);
+            this.pnlPincodeDetails.Location = new System.Drawing.Point(251, 66);
             this.pnlPincodeDetails.Name = "pnlPincodeDetails";
-            this.pnlPincodeDetails.Size = new System.Drawing.Size(375, 160);
+            this.pnlPincodeDetails.Size = new System.Drawing.Size(342, 150);
             this.pnlPincodeDetails.TabIndex = 98;
             this.pnlPincodeDetails.Visible = false;
             // 
@@ -725,7 +725,7 @@
             this.cmbState.Location = new System.Drawing.Point(509, 57);
             this.cmbState.MaxLength = 20;
             this.cmbState.Name = "cmbState";
-            this.cmbState.Size = new System.Drawing.Size(98, 22);
+            this.cmbState.Size = new System.Drawing.Size(118, 22);
             this.cmbState.TabIndex = 86;
             this.cmbState.Visible = false;
             // 
@@ -1129,7 +1129,7 @@
             this.pnlVerificationDoc.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlVerificationDoc.Location = new System.Drawing.Point(1, 1);
             this.pnlVerificationDoc.Name = "pnlVerificationDoc";
-            this.pnlVerificationDoc.Size = new System.Drawing.Size(655, 639);
+            this.pnlVerificationDoc.Size = new System.Drawing.Size(655, 646);
             this.pnlVerificationDoc.TabIndex = 44;
             // 
             // grpbPhotoDetails
@@ -1526,7 +1526,7 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
             this.label4.Location = new System.Drawing.Point(0, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(1, 640);
+            this.label4.Size = new System.Drawing.Size(1, 647);
             this.label4.TabIndex = 7;
             this.label4.Text = "label4";
             // 
@@ -1537,7 +1537,7 @@
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
             this.label7.Location = new System.Drawing.Point(656, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(1, 640);
+            this.label7.Size = new System.Drawing.Size(1, 647);
             this.label7.TabIndex = 6;
             this.label7.Text = "label7";
             // 
@@ -1546,7 +1546,7 @@
             this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
             this.label8.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
-            this.label8.Location = new System.Drawing.Point(0, 640);
+            this.label8.Location = new System.Drawing.Point(0, 647);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(657, 1);
             this.label8.TabIndex = 5;
@@ -1568,7 +1568,7 @@
             this.pnlBottomButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlBottomButton.Location = new System.Drawing.Point(3, 0);
             this.pnlBottomButton.Name = "pnlBottomButton";
-            this.pnlBottomButton.Size = new System.Drawing.Size(657, 43);
+            this.pnlBottomButton.Size = new System.Drawing.Size(657, 40);
             this.pnlBottomButton.TabIndex = 58;
             // 
             // btnPreviewNSave
@@ -1582,9 +1582,9 @@
             this.btnPreviewNSave.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
             this.btnPreviewNSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
             this.btnPreviewNSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPreviewNSave.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnPreviewNSave.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPreviewNSave.ForeColor = System.Drawing.Color.White;
-            this.btnPreviewNSave.Location = new System.Drawing.Point(463, 9);
+            this.btnPreviewNSave.Location = new System.Drawing.Point(465, 6);
             this.btnPreviewNSave.Name = "btnPreviewNSave";
             this.btnPreviewNSave.Size = new System.Drawing.Size(109, 28);
             this.btnPreviewNSave.TabIndex = 49;
@@ -1602,9 +1602,9 @@
             this.btnBack.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
             this.btnBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnBack.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.ForeColor = System.Drawing.Color.White;
-            this.btnBack.Location = new System.Drawing.Point(315, 9);
+            this.btnBack.Location = new System.Drawing.Point(317, 6);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(69, 28);
             this.btnBack.TabIndex = 48;
@@ -1623,9 +1623,9 @@
             this.btnCancel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
             this.btnCancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnCancel.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Location = new System.Drawing.Point(577, 9);
+            this.btnCancel.Location = new System.Drawing.Point(579, 6);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(69, 28);
             this.btnCancel.TabIndex = 47;
@@ -1643,9 +1643,9 @@
             this.btnNext.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
             this.btnNext.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
             this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNext.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnNext.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNext.ForeColor = System.Drawing.Color.White;
-            this.btnNext.Location = new System.Drawing.Point(389, 9);
+            this.btnNext.Location = new System.Drawing.Point(391, 6);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(69, 28);
             this.btnNext.TabIndex = 46;
@@ -1671,7 +1671,7 @@
             this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
             this.label18.Location = new System.Drawing.Point(0, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(1, 42);
+            this.label18.Size = new System.Drawing.Size(1, 39);
             this.label18.TabIndex = 44;
             this.label18.Text = "label18";
             // 
@@ -1682,7 +1682,7 @@
             this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
             this.label22.Location = new System.Drawing.Point(656, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(1, 42);
+            this.label22.Size = new System.Drawing.Size(1, 39);
             this.label22.TabIndex = 43;
             this.label22.Text = "label22";
             // 
@@ -1691,7 +1691,7 @@
             this.label30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
             this.label30.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
-            this.label30.Location = new System.Drawing.Point(0, 42);
+            this.label30.Location = new System.Drawing.Point(0, 39);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(657, 1);
             this.label30.TabIndex = 42;
@@ -1701,21 +1701,20 @@
             // 
             this.panel3.Controls.Add(this.pnlBottomButton);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 680);
+            this.panel3.Location = new System.Drawing.Point(0, 683);
             this.panel3.Name = "panel3";
             this.panel3.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.panel3.Size = new System.Drawing.Size(663, 46);
+            this.panel3.Size = new System.Drawing.Size(663, 43);
             this.panel3.TabIndex = 63;
             // 
             // panel2
             // 
-            this.panel2.AutoSize = true;
             this.panel2.Controls.Add(this.panel1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(3);
-            this.panel2.Size = new System.Drawing.Size(663, 36);
+            this.panel2.Size = new System.Drawing.Size(663, 29);
             this.panel2.TabIndex = 64;
             // 
             // panel1
@@ -1746,15 +1745,13 @@
             // 
             // label11
             // 
-            this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label11.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(9, 5);
+            this.label11.Location = new System.Drawing.Point(7, 6);
             this.label11.Name = "label11";
-            this.label11.Padding = new System.Windows.Forms.Padding(2);
-            this.label11.Size = new System.Drawing.Size(98, 18);
+            this.label11.Size = new System.Drawing.Size(94, 14);
             this.label11.TabIndex = 41;
             this.label11.Text = "Person Details";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1796,10 +1793,10 @@
             // 
             this.panel4.Controls.Add(this.pnlPersonReg);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(0, 36);
+            this.panel4.Location = new System.Drawing.Point(0, 29);
             this.panel4.Name = "panel4";
-            this.panel4.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.panel4.Size = new System.Drawing.Size(663, 644);
+            this.panel4.Padding = new System.Windows.Forms.Padding(3);
+            this.panel4.Size = new System.Drawing.Size(663, 654);
             this.panel4.TabIndex = 65;
             // 
             // frmPersonRegistration
@@ -1852,10 +1849,8 @@
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

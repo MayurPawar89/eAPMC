@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvPincodes = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPincodes)).BeginInit();
             this.SuspendLayout();
@@ -38,12 +40,26 @@
             this.dgvPincodes.AllowUserToDeleteRows = false;
             this.dgvPincodes.AllowUserToOrderColumns = true;
             this.dgvPincodes.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Lavender;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Thistle;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvPincodes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvPincodes.BackgroundColor = System.Drawing.Color.GhostWhite;
+            this.dgvPincodes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvPincodes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvPincodes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvPincodes.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
             this.dgvPincodes.Location = new System.Drawing.Point(0, 0);
             this.dgvPincodes.MultiSelect = false;
             this.dgvPincodes.Name = "dgvPincodes";
             this.dgvPincodes.ReadOnly = true;
+            this.dgvPincodes.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Thistle;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvPincodes.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvPincodes.Size = new System.Drawing.Size(475, 153);
             this.dgvPincodes.TabIndex = 1;
             this.dgvPincodes.SelectionChanged += new System.EventHandler(this.dgvPincodes_SelectionChanged);

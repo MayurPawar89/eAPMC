@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUserRegistration));
             this.pnlBottomButton = new System.Windows.Forms.Panel();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
@@ -135,11 +136,17 @@
             this.label31 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label51 = new System.Windows.Forms.Label();
+            this.label52 = new System.Windows.Forms.Label();
+            this.label53 = new System.Windows.Forms.Label();
+            this.label54 = new System.Windows.Forms.Label();
+            this.label55 = new System.Windows.Forms.Label();
             this.pnlBottomButton.SuspendLayout();
             this.pnlPersonReg.SuspendLayout();
             this.pnlPersonDetails.SuspendLayout();
@@ -156,11 +163,15 @@
             this.grpbVerificationDetails.SuspendLayout();
             this.pnlOtherDocumentDetails.SuspendLayout();
             this.groupBox6.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlBottomButton
             // 
             this.pnlBottomButton.BackColor = System.Drawing.Color.Transparent;
+            this.pnlBottomButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlBottomButton.BackgroundImage")));
+            this.pnlBottomButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlBottomButton.Controls.Add(this.btnSave);
             this.pnlBottomButton.Controls.Add(this.btnCancel);
             this.pnlBottomButton.Controls.Add(this.label16);
@@ -168,9 +179,10 @@
             this.pnlBottomButton.Controls.Add(this.label22);
             this.pnlBottomButton.Controls.Add(this.label30);
             this.pnlBottomButton.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlBottomButton.Location = new System.Drawing.Point(0, 707);
+            this.pnlBottomButton.Location = new System.Drawing.Point(0, 709);
             this.pnlBottomButton.Name = "pnlBottomButton";
-            this.pnlBottomButton.Size = new System.Drawing.Size(660, 49);
+            this.pnlBottomButton.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
+            this.pnlBottomButton.Size = new System.Drawing.Size(660, 47);
             this.pnlBottomButton.TabIndex = 59;
             // 
             // btnSave
@@ -185,7 +197,7 @@
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(492, 9);
+            this.btnSave.Location = new System.Drawing.Point(502, 8);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(69, 28);
             this.btnSave.TabIndex = 49;
@@ -205,7 +217,7 @@
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
             this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Location = new System.Drawing.Point(577, 9);
+            this.btnCancel.Location = new System.Drawing.Point(577, 8);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(69, 28);
             this.btnCancel.TabIndex = 47;
@@ -218,9 +230,9 @@
             this.label16.BackColor = System.Drawing.Color.Black;
             this.label16.Dock = System.Windows.Forms.DockStyle.Top;
             this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
-            this.label16.Location = new System.Drawing.Point(1, 0);
+            this.label16.Location = new System.Drawing.Point(4, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(658, 1);
+            this.label16.Size = new System.Drawing.Size(652, 1);
             this.label16.TabIndex = 45;
             this.label16.Text = "label16";
             // 
@@ -229,9 +241,9 @@
             this.label18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
             this.label18.Dock = System.Windows.Forms.DockStyle.Left;
             this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
-            this.label18.Location = new System.Drawing.Point(0, 0);
+            this.label18.Location = new System.Drawing.Point(3, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(1, 48);
+            this.label18.Size = new System.Drawing.Size(1, 43);
             this.label18.TabIndex = 44;
             this.label18.Text = "label18";
             // 
@@ -240,9 +252,9 @@
             this.label22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
             this.label22.Dock = System.Windows.Forms.DockStyle.Right;
             this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
-            this.label22.Location = new System.Drawing.Point(659, 0);
+            this.label22.Location = new System.Drawing.Point(656, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(1, 48);
+            this.label22.Size = new System.Drawing.Size(1, 43);
             this.label22.TabIndex = 43;
             this.label22.Text = "label22";
             // 
@@ -251,27 +263,25 @@
             this.label30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
             this.label30.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
-            this.label30.Location = new System.Drawing.Point(0, 48);
+            this.label30.Location = new System.Drawing.Point(3, 43);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(660, 1);
+            this.label30.Size = new System.Drawing.Size(654, 1);
             this.label30.TabIndex = 42;
             this.label30.Text = "label30";
             // 
             // pnlPersonReg
             // 
-            this.pnlPersonReg.Controls.Add(this.pnlPersonDetails);
             this.pnlPersonReg.Controls.Add(this.pnlVerificationDoc);
             this.pnlPersonReg.Controls.Add(this.label12);
-            this.pnlPersonReg.Controls.Add(this.label11);
             this.pnlPersonReg.Controls.Add(this.label4);
             this.pnlPersonReg.Controls.Add(this.label7);
             this.pnlPersonReg.Controls.Add(this.label8);
             this.pnlPersonReg.Controls.Add(this.label9);
             this.pnlPersonReg.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlPersonReg.Location = new System.Drawing.Point(0, 0);
+            this.pnlPersonReg.Location = new System.Drawing.Point(0, 29);
             this.pnlPersonReg.Name = "pnlPersonReg";
-            this.pnlPersonReg.Padding = new System.Windows.Forms.Padding(0, 3, 0, 3);
-            this.pnlPersonReg.Size = new System.Drawing.Size(660, 707);
+            this.pnlPersonReg.Padding = new System.Windows.Forms.Padding(3);
+            this.pnlPersonReg.Size = new System.Drawing.Size(660, 680);
             this.pnlPersonReg.TabIndex = 60;
             // 
             // pnlPersonDetails
@@ -280,9 +290,10 @@
             this.pnlPersonDetails.Controls.Add(this.grpbContactDetails);
             this.pnlPersonDetails.Controls.Add(this.grpbAddressDetails);
             this.pnlPersonDetails.Controls.Add(this.grpbPersonDetails);
-            this.pnlPersonDetails.Location = new System.Drawing.Point(1, 31);
+            this.pnlPersonDetails.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlPersonDetails.Location = new System.Drawing.Point(0, 0);
             this.pnlPersonDetails.Name = "pnlPersonDetails";
-            this.pnlPersonDetails.Size = new System.Drawing.Size(658, 669);
+            this.pnlPersonDetails.Size = new System.Drawing.Size(652, 671);
             this.pnlPersonDetails.TabIndex = 44;
             // 
             // grpbLoginDetails
@@ -1181,12 +1192,13 @@
             // 
             // pnlVerificationDoc
             // 
+            this.pnlVerificationDoc.Controls.Add(this.pnlPersonDetails);
             this.pnlVerificationDoc.Controls.Add(this.grpbPhotoDetails);
             this.pnlVerificationDoc.Controls.Add(this.grpbVerificationDetails);
             this.pnlVerificationDoc.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlVerificationDoc.Location = new System.Drawing.Point(1, 32);
+            this.pnlVerificationDoc.Location = new System.Drawing.Point(4, 5);
             this.pnlVerificationDoc.Name = "pnlVerificationDoc";
-            this.pnlVerificationDoc.Size = new System.Drawing.Size(658, 671);
+            this.pnlVerificationDoc.Size = new System.Drawing.Size(652, 671);
             this.pnlVerificationDoc.TabIndex = 44;
             // 
             // grpbPhotoDetails
@@ -1566,35 +1578,20 @@
             this.label12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label12.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(1, 31);
+            this.label12.Location = new System.Drawing.Point(4, 4);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(658, 1);
+            this.label12.Size = new System.Drawing.Size(652, 1);
             this.label12.TabIndex = 42;
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label11
-            // 
-            this.label11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(229)))));
-            this.label11.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label11.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
-            this.label11.Location = new System.Drawing.Point(1, 4);
-            this.label11.Name = "label11";
-            this.label11.Padding = new System.Windows.Forms.Padding(2);
-            this.label11.Size = new System.Drawing.Size(658, 27);
-            this.label11.TabIndex = 41;
-            this.label11.Text = "User Registration";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label4
             // 
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
             this.label4.Dock = System.Windows.Forms.DockStyle.Left;
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
-            this.label4.Location = new System.Drawing.Point(0, 4);
+            this.label4.Location = new System.Drawing.Point(3, 4);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(1, 699);
+            this.label4.Size = new System.Drawing.Size(1, 672);
             this.label4.TabIndex = 7;
             this.label4.Text = "label4";
             // 
@@ -1603,9 +1600,9 @@
             this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
             this.label7.Dock = System.Windows.Forms.DockStyle.Right;
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
-            this.label7.Location = new System.Drawing.Point(659, 4);
+            this.label7.Location = new System.Drawing.Point(656, 4);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(1, 699);
+            this.label7.Size = new System.Drawing.Size(1, 672);
             this.label7.TabIndex = 6;
             this.label7.Text = "label7";
             // 
@@ -1614,9 +1611,9 @@
             this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
             this.label8.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
-            this.label8.Location = new System.Drawing.Point(0, 703);
+            this.label8.Location = new System.Drawing.Point(3, 676);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(660, 1);
+            this.label8.Size = new System.Drawing.Size(654, 1);
             this.label8.TabIndex = 5;
             this.label8.Text = "label8";
             // 
@@ -1625,11 +1622,93 @@
             this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
             this.label9.Dock = System.Windows.Forms.DockStyle.Top;
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
-            this.label9.Location = new System.Drawing.Point(0, 3);
+            this.label9.Location = new System.Drawing.Point(3, 3);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(660, 1);
+            this.label9.Size = new System.Drawing.Size(654, 1);
             this.label9.TabIndex = 4;
             this.label9.Text = "label9";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.panel1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Padding = new System.Windows.Forms.Padding(3);
+            this.panel2.Size = new System.Drawing.Size(660, 29);
+            this.panel2.TabIndex = 65;
+            // 
+            // panel1
+            // 
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.label51);
+            this.panel1.Controls.Add(this.label52);
+            this.panel1.Controls.Add(this.label53);
+            this.panel1.Controls.Add(this.label54);
+            this.panel1.Controls.Add(this.label55);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(654, 30);
+            this.panel1.TabIndex = 61;
+            // 
+            // label51
+            // 
+            this.label51.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
+            this.label51.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label51.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
+            this.label51.Location = new System.Drawing.Point(0, 1);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(1, 28);
+            this.label51.TabIndex = 7;
+            this.label51.Text = "label4";
+            // 
+            // label52
+            // 
+            this.label52.BackColor = System.Drawing.Color.Transparent;
+            this.label52.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label52.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label52.ForeColor = System.Drawing.Color.White;
+            this.label52.Location = new System.Drawing.Point(7, 6);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(252, 14);
+            this.label52.TabIndex = 41;
+            this.label52.Text = "User Registration";
+            this.label52.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label53
+            // 
+            this.label53.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
+            this.label53.Dock = System.Windows.Forms.DockStyle.Right;
+            this.label53.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
+            this.label53.Location = new System.Drawing.Point(653, 1);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(1, 28);
+            this.label53.TabIndex = 6;
+            this.label53.Text = "label7";
+            // 
+            // label54
+            // 
+            this.label54.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
+            this.label54.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label54.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
+            this.label54.Location = new System.Drawing.Point(0, 29);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(654, 1);
+            this.label54.TabIndex = 5;
+            this.label54.Text = "label8";
+            // 
+            // label55
+            // 
+            this.label55.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
+            this.label55.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label55.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
+            this.label55.Location = new System.Drawing.Point(0, 0);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(654, 1);
+            this.label55.TabIndex = 4;
+            this.label55.Text = "label9";
             // 
             // frmUserRegistration
             // 
@@ -1638,6 +1717,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.ClientSize = new System.Drawing.Size(660, 756);
             this.Controls.Add(this.pnlPersonReg);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.pnlBottomButton);
             this.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
@@ -1672,6 +1752,8 @@
             this.pnlOtherDocumentDetails.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1766,7 +1848,6 @@
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
@@ -1793,6 +1874,13 @@
         private System.Windows.Forms.Label label48;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.Label label55;
 
     }
 }
