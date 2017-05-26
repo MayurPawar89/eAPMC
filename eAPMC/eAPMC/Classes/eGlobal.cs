@@ -8,6 +8,26 @@ namespace eAPMC.Classes
 {
     public static class eGlobal
     {
+        public enum ContactType
+        {
+            MobileNo,
+            FaxNo,
+            EmailID
+        }
+
+        public enum EntityType
+        {
+            Individual,
+            Organazation
+        }
+
+        public enum PersonType
+        {
+            Farmer,
+            Driver,
+            Sellar
+        }
+        
         public static string UserName { get; set; }
 
         public static Int64 UserID { get; set; }

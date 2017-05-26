@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using eAPMC.Classes;
 
 namespace eAPMC.Forms
 {
@@ -23,7 +24,7 @@ namespace eAPMC.Forms
         private void btnRegisterFarmer_Click(object sender, EventArgs e)
         {
             frmPersonRegistration ofrmPersonRegistration = new frmPersonRegistration();
-            ofrmPersonRegistration.PersonEntityType =0;
+            ofrmPersonRegistration.PersonType =eGlobal.PersonType.Farmer;
             ofrmPersonRegistration.ShowDialog(this);
             ofrmPersonRegistration.Dispose();
             ofrmPersonRegistration = null;
@@ -32,7 +33,7 @@ namespace eAPMC.Forms
         private void btnRegisterDrive_Click(object sender, EventArgs e)
         {
             frmPersonRegistration ofrmPersonRegistration = new frmPersonRegistration();
-            ofrmPersonRegistration.PersonEntityType = 1;
+            ofrmPersonRegistration.PersonType = eGlobal.PersonType.Driver;
             ofrmPersonRegistration.ShowDialog(this);
             ofrmPersonRegistration.Dispose();
             ofrmPersonRegistration = null;
@@ -41,7 +42,7 @@ namespace eAPMC.Forms
         private void btnRegisterSaller_Click(object sender, EventArgs e)
         {
             frmPersonRegistration ofrmPersonRegistration = new frmPersonRegistration();
-            ofrmPersonRegistration.PersonEntityType = 2;
+            ofrmPersonRegistration.PersonType = eGlobal.PersonType.Sellar;
             ofrmPersonRegistration.ShowDialog(this);
             ofrmPersonRegistration.Dispose();
             ofrmPersonRegistration = null;

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace eAPMC.Classes
 {
-    class Person
+    public class Person
     {
         #region "Personal Details"
         public Int64 PersonID { get; set; }
@@ -45,16 +45,16 @@ namespace eAPMC.Classes
 
         public string State { get; set; }
 
-        public string ZipCode { get; set; } 
+        public string ZipCode { get; set; }
+
+        public string Taluka { get; set; }
+
+        public string District { get; set; }
         #endregion
 
         #region "Contact Details"
-        public string ContactNo { get; set; }
-
-        public string ContactTypeCode { get; set; }
-
-        public string ContactTypeDesc { get; set; } 
-        #endregion
+        public List<ContactDetails> ContactDetails { get; set; }
+        #endregion  
 
         #region "Varification Details"
         public string DrivingLicenceNo { get; set; }
@@ -63,15 +63,17 @@ namespace eAPMC.Classes
 
         public string AadhaarCardNo { get; set; }
 
-        public string OtherIdCardNo { get; set; }
+        public string OtherIdCardDocumentNo { get; set; }
 
-        public Int64 IDReferenceNo { get; set; }
+        public string OtherIdCardDocumentName { get; set; }
 
-        public int IDCardTypeCode { get; set; }
+        //public Int64 IDReferenceNo { get; set; }
 
-        public string IDCardTypeDesc { get; set; }
+        //public int IDCardTypeCode { get; set; }
 
-        public byte[] IDCard { get; set; } 
+        //public string IDCardTypeDesc { get; set; }
+
+        //public byte[] IDCard { get; set; } 
         #endregion
 
         #region "Photo Details"
@@ -90,5 +92,18 @@ namespace eAPMC.Classes
         public byte[] Thumbnail { get; set; } 
         #endregion
 
+    }
+
+    public class ContactDetails
+    {
+        public ContactDetails()
+        {
+        }
+
+        public string ContactNo { get; set; }
+
+        public string ContactTypeCode { get; set; }
+
+        public string ContactTypeDesc { get; set; } 
     }
 }

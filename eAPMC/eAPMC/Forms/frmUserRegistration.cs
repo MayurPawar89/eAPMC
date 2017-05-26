@@ -206,6 +206,11 @@ namespace eAPMC.Forms
             {
                 if (pnlPincodeDetails.Visible == false)
                 {
+                    if (ucPincodeFinder != null)
+                    {
+                        ucPincodeFinder.Dispose();
+                        ucPincodeFinder = null;
+                    }
                     ucPincodeFinder = new PincodeFinder();
                     ucPincodeFinder.dgvPincodes.SelectionChanged += dgvPincodes_SelectionChanged;
                     pnlPincodeDetails.BringToFront();

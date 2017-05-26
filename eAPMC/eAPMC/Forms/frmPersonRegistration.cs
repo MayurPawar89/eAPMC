@@ -3,18 +3,20 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using eAPMC.Classes;
 using eAPMC.UserControls;
 
 namespace eAPMC.Forms
 {
     public partial class frmPersonRegistration : Form
     {
-        public int PersonEntityType { get; set; }
+        public eGlobal.PersonType PersonType { get; set; }
         public frmPersonRegistration()
         {
             InitializeComponent();
@@ -47,26 +49,24 @@ namespace eAPMC.Forms
 
         private void frmPersonRegistration_Load(object sender, EventArgs e)
         {
-            switch (PersonEntityType)
+            switch (PersonType)
             {
-                case 0://Farmer
+                case eGlobal.PersonType.Farmer://Farmer
                     {
                         lblRegistration.Text = "Farmer Registration";
                         break;
                     }
-                case 1://Driver
+                case eGlobal.PersonType.Driver://Driver
                     {
                         lblRegistration.Text = "Driver Registration";
                         break;
                     }
-                case 2://Saller
+                case eGlobal.PersonType.Sellar://Saller
                     {
                         lblRegistration.Text = "Saller Registration";
                         grpbOrganizationDetails.Visible = true;
                         break;
                     }
-                case 3://Other person
-                    { break; }
             }
         }
 
@@ -126,6 +126,11 @@ namespace eAPMC.Forms
             {
                 if (pnlPincodeDetails.Visible == false)
                 {
+                    if (ucPincodeFinder!=null)
+                    {
+                        ucPincodeFinder.Dispose();
+                        ucPincodeFinder = null;
+                    }
                     ucPincodeFinder = new PincodeFinder();
                     ucPincodeFinder.dgvPincodes.SelectionChanged += dgvPincodes_SelectionChanged;
                     pnlPincodeDetails.BringToFront();
@@ -182,11 +187,92 @@ namespace eAPMC.Forms
 
         private void btnPreviewNSave_Click(object sender, EventArgs e)
         {
-            frmViewPersonDetails ofrmViewPersonDetails = new frmViewPersonDetails();
-            ofrmViewPersonDetails.PersonEntityType = PersonEntityType;
-            ofrmViewPersonDetails.ShowDialog(this);
-            ofrmViewPersonDetails.Dispose();
-            ofrmViewPersonDetails = null;
+            Person oPerson = null;
+
+            if (validateControls())
+            {
+                oPerson = new Person();
+                oPerson.PersonFirstName = txtPersonFName.Text.Trim();
+                oPerson.PersonMiddleName = txtPersonMName.Text.Trim();
+                oPerson.PersonLastName = txtPersonLName.Text.Trim();
+                oPerson.PersonDOB = Convert.ToDateTime(mskPersonDOB.Text.Trim());
+                int nGender = -1;
+                if (rdPersonMale.Checked)
+                {
+                    nGender = 1;
+                }
+                else if (rdPersonFemale.Checked)
+                {
+                    nGender = 2;
+                }
+                else if (rdPersonOthers.Checked)
+                {
+                    nGender = 0;
+                }
+                oPerson.PersonEntityTypeCode = eGlobal.EntityType.Individual.GetHashCode();
+                oPerson.PersonEntityTypeDesc = eGlobal.EntityType.Individual.ToString();
+
+                oPerson.PersonGender = nGender;
+                oPerson.PersonTypeCode = PersonType.GetHashCode();
+                oPerson.personTypeDesc = PersonType.ToString();
+                oPerson.AddressType = 1;
+                oPerson.AddressLine1 = txtAddressLine1.Text.Trim();
+                oPerson.AddressLine2 = txtAddressLine2.Text.Trim();
+                oPerson.City = txtArea.Text.Trim();
+                oPerson.Taluka = txtTaluka.Text.Trim();
+                oPerson.District = txtDistrict.Text.Trim();
+                oPerson.State = txtState.Text.Trim();
+                oPerson.ZipCode = txtPincode.Text.Trim();
+
+                List<ContactDetails> lstContactDetails = new List<ContactDetails>();
+                ContactDetails oContact = new ContactDetails();
+
+                oContact.ContactNo = txtMobileNo.Text.Trim();
+                oContact.ContactTypeCode = eGlobal.ContactType.MobileNo.GetHashCode().ToString();
+                oContact.ContactTypeDesc = eGlobal.ContactType.MobileNo.ToString();// "MobileNo";
+                //oPerson.ContactDetails.Add(oContact);
+                lstContactDetails.Add(oContact);
+                oContact = null;
+                
+                oContact = new ContactDetails();
+                oContact.ContactNo = txtFaxNo.Text.Trim();
+                oContact.ContactTypeCode = eGlobal.ContactType.FaxNo.GetHashCode().ToString();
+                oContact.ContactTypeDesc = eGlobal.ContactType.FaxNo.ToString();// "FaxNo";
+                //oPerson.ContactDetails.Add(oContact);
+                lstContactDetails.Add(oContact);
+                oContact = null;
+
+                oContact = new ContactDetails();
+                oContact.ContactNo = txtEmail.Text.Trim();
+                oContact.ContactTypeCode = eGlobal.ContactType.EmailID.GetHashCode().ToString();
+                oContact.ContactTypeDesc = eGlobal.ContactType.EmailID.ToString();// "EmailID";
+                //oPerson.ContactDetails.Add(oContact);
+                lstContactDetails.Add(oContact);
+
+                oPerson.ContactDetails = lstContactDetails;
+                oPerson.AadhaarCardNo = txtAadhaarNo.Text.Trim();
+                oPerson.DrivingLicenceNo = txtDrivingLicenceNo.Text.Trim();
+                oPerson.PANCardNo = txtPANNo.Text.Trim();
+                oPerson.OtherIdCardDocumentNo = txtOtherDocumentID.Text.Trim();
+                oPerson.OtherIdCardDocumentName = txtOtherDocumentName.Text.Trim();
+
+                //oPerson.iPhoto=
+
+                if (oPerson!=null)
+                {
+                    frmViewPersonDetails ofrmViewPersonDetails = new frmViewPersonDetails();
+                    ofrmViewPersonDetails.PersonType = PersonType;
+                    ofrmViewPersonDetails.PersonDetails = oPerson;
+                    ofrmViewPersonDetails.ShowDialog(this);
+                    ofrmViewPersonDetails.Dispose();
+                    ofrmViewPersonDetails = null;  
+                }
+            }
+        }
+
+        private bool validateControls()
+        {
+            return true;
         }
     }
 }
