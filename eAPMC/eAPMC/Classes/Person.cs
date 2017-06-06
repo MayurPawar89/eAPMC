@@ -31,10 +31,56 @@ namespace eAPMC.Classes
 
         public int PersonTypeCode { get; set; }
 
-        public string personTypeDesc { get; set; } 
+        public string personTypeDesc { get; set; }
+
+        public string LoginName { get; set; }
+
+        public string Password { get; set; }
         #endregion
 
         #region "Address Details"
+        public AddressDetails AddressDetails { get; set; }
+        
+        #endregion
+
+        #region "Contact Details"
+        public List<ContactDetails> ContactDetails { get; set; }
+        #endregion  
+
+        #region "Varification Details"
+        public VerificationDetails VerificationDetails { get; set; }
+        #endregion
+
+        #region "Photo Details"
+        public PhotoDetails PhotoDetails { get; set; }
+        #endregion
+
+        #region "Card Details"
+        public CardDetails CardDetails { get; set; }
+        #endregion
+
+    }
+
+    public class ContactDetails
+    {
+        public ContactDetails()
+        {
+        }
+        public Int64 ContactID { get; set; }
+
+        public string ContactNo { get; set; }
+
+        public string ContactTypeCode { get; set; }
+
+        public string ContactTypeDesc { get; set; } 
+    }
+
+    public class AddressDetails
+    {
+        public AddressDetails()
+        { }
+        public Int64 AddressID { get; set; }
+
         public int AddressType { get; set; }
 
         public string AddressLine1 { get; set; }
@@ -43,40 +89,42 @@ namespace eAPMC.Classes
 
         public string City { get; set; }
 
+        public string Taluka { get; set; }
+
+        public string District { get; set; }
+
         public string State { get; set; }
 
         public string ZipCode { get; set; }
 
-        public string Taluka { get; set; }
+    }
 
-        public string District { get; set; }
-        #endregion
+    public class VerificationDetails
+    {
+        public Int64 DrivingLicencID { get; set; }
 
-        #region "Contact Details"
-        public List<ContactDetails> ContactDetails { get; set; }
-        #endregion  
-
-        #region "Varification Details"
         public string DrivingLicenceNo { get; set; }
+
+        public Int64 PANID { get; set; }
 
         public string PANCardNo { get; set; }
 
+        public Int64 AadhaarCardID { get; set; }
+
         public string AadhaarCardNo { get; set; }
+
+        public Int64 OtherIdCardDocumentID { get; set; }
 
         public string OtherIdCardDocumentNo { get; set; }
 
         public string OtherIdCardDocumentName { get; set; }
+        
+    }
 
-        //public Int64 IDReferenceNo { get; set; }
+    public class PhotoDetails
+    {
+        public Int64 PhotoID { get; set; }
 
-        //public int IDCardTypeCode { get; set; }
-
-        //public string IDCardTypeDesc { get; set; }
-
-        //public byte[] IDCard { get; set; } 
-        #endregion
-
-        #region "Photo Details"
         public byte[] iPhoto { get; set; }
 
         public string FileExtension { get; set; }
@@ -90,20 +138,18 @@ namespace eAPMC.Classes
         public int Width { get; set; }
 
         public byte[] Thumbnail { get; set; } 
-        #endregion
-
     }
 
-    public class ContactDetails
+    public class CardDetails
     {
-        public ContactDetails()
-        {
-        }
+        public Int64 CardID { get; set; }
 
-        public string ContactNo { get; set; }
+        public Int64 ReferenceID { get; set; }
 
-        public string ContactTypeCode { get; set; }
+        public int IDTypeCode { get; set; }
 
-        public string ContactTypeDesc { get; set; } 
+        public string IDTypeDescription { get; set; }
+
+        public byte[] iPhoto { get; set; } 
     }
 }

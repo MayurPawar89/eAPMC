@@ -215,14 +215,19 @@ namespace eAPMC.Forms
                 oPerson.PersonGender = nGender;
                 oPerson.PersonTypeCode = PersonType.GetHashCode();
                 oPerson.personTypeDesc = PersonType.ToString();
-                oPerson.AddressType = 1;
-                oPerson.AddressLine1 = txtAddressLine1.Text.Trim();
-                oPerson.AddressLine2 = txtAddressLine2.Text.Trim();
-                oPerson.City = txtArea.Text.Trim();
-                oPerson.Taluka = txtTaluka.Text.Trim();
-                oPerson.District = txtDistrict.Text.Trim();
-                oPerson.State = txtState.Text.Trim();
-                oPerson.ZipCode = txtPincode.Text.Trim();
+
+                AddressDetails oAddress = new AddressDetails();
+
+                oAddress.AddressType = 1;
+                oAddress.AddressLine1 = txtAddressLine1.Text.Trim();
+                oAddress.AddressLine2 = txtAddressLine2.Text.Trim();
+                oAddress.City = txtArea.Text.Trim();
+                oAddress.Taluka = txtTaluka.Text.Trim();
+                oAddress.District = txtDistrict.Text.Trim();
+                oAddress.State = txtState.Text.Trim();
+                oAddress.ZipCode = txtPincode.Text.Trim();
+
+                oPerson.AddressDetails = oAddress;
 
                 List<ContactDetails> lstContactDetails = new List<ContactDetails>();
                 ContactDetails oContact = new ContactDetails();
@@ -250,11 +255,21 @@ namespace eAPMC.Forms
                 lstContactDetails.Add(oContact);
 
                 oPerson.ContactDetails = lstContactDetails;
-                oPerson.AadhaarCardNo = txtAadhaarNo.Text.Trim();
-                oPerson.DrivingLicenceNo = txtDrivingLicenceNo.Text.Trim();
-                oPerson.PANCardNo = txtPANNo.Text.Trim();
-                oPerson.OtherIdCardDocumentNo = txtOtherDocumentID.Text.Trim();
-                oPerson.OtherIdCardDocumentName = txtOtherDocumentName.Text.Trim();
+
+                VerificationDetails oVerification = new VerificationDetails();
+
+                oVerification.AadhaarCardNo = txtAadhaarNo.Text.Trim();
+                oVerification.DrivingLicenceNo = txtDrivingLicenceNo.Text.Trim();
+                oVerification.PANCardNo = txtPANNo.Text.Trim();
+                oVerification.OtherIdCardDocumentNo = txtOtherDocumentID.Text.Trim();
+                oVerification.OtherIdCardDocumentName = txtOtherDocumentName.Text.Trim();
+                oVerification.AadhaarCardID = 0;
+                oVerification.DrivingLicencID = 0;
+                oVerification.PANID = 0;
+                oVerification.OtherIdCardDocumentID = 0;
+
+                oPerson.VerificationDetails = oVerification;
+
 
                 //oPerson.iPhoto=
 
