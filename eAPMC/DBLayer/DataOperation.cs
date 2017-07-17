@@ -423,6 +423,36 @@ namespace DBLayer
             return nUserID;
         }
 
+        public Int64 InsertUpdatePerson(DataTable dtPersonDetails,DataTable dtCardDetails)
+        {
+            Int64 nUserID = 0;
+            string query_procedure_name = string.Empty;
+
+            try
+            {
+                query_procedure_name = "gsp_AddPerson";
+
+                using (DbCommand dbCommand = sqlDb.GetStoredProcCommand(query_procedure_name))
+                {
+                    //sqlDb.AddInParameter(dbCommand, "@UserId", DbType.Int64, UserID);
+                    sqlDb.AddInParameter(dbCommand, "@udtPerson", DbType.Object, dtPersonDetails);
+                    sqlDb.AddInParameter(dbCommand, "@udtPersonCards", DbType.Object, dtCardDetails);
+
+                    //ds = sqlDb.ExecuteDataSet(dbCommand);
+                    Int64 n = sqlDb.ExecuteNonQuery(dbCommand);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+            }
+
+            return nUserID;
+        }
+
         public DataTable GetPincodeDetails()
         {
             DataSet ds = null;

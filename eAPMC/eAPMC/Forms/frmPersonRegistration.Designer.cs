@@ -1166,6 +1166,7 @@
             this.btnWebCam.TabIndex = 94;
             this.btnWebCam.Text = "&Cam";
             this.btnWebCam.UseVisualStyleBackColor = false;
+            this.btnWebCam.Click += new System.EventHandler(this.btnWebCam_Click);
             // 
             // picbPhoto
             // 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -44,7 +45,7 @@ namespace eAPMC.Classes
         #endregion
 
         #region "Contact Details"
-        public List<ContactDetails> ContactDetails { get; set; }
+        public DataTable ContactDetails { get; set; }
         #endregion  
 
         #region "Varification Details"
@@ -56,7 +57,7 @@ namespace eAPMC.Classes
         #endregion
 
         #region "Card Details"
-        public CardDetails CardDetails { get; set; }
+        public DataTable CardDetails { get; set; }
         #endregion
 
     }
@@ -101,7 +102,7 @@ namespace eAPMC.Classes
 
     public class VerificationDetails
     {
-        public Int64 DrivingLicencID { get; set; }
+        public Int64 DrivingLicenceID { get; set; }
 
         public string DrivingLicenceNo { get; set; }
 

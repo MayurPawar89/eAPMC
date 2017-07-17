@@ -131,38 +131,60 @@ namespace eAPMC.Forms
                 try
                 {
                     dbAccess = new DBAccess();
-                    Int64 nUserID = 0;
-                    string sLoginName = PersonDetails.LoginName;
-                    string sPassword = Encryption.EncryptToBase64String(PersonDetails.Password);
+                    Int64 nPersonID = PersonDetails.PersonID;
+                    string sPersonCode = PersonDetails.PersonCode;
+                    //string sLoginName = PersonDetails.LoginName;
+                    //string sPassword = Encryption.EncryptToBase64String(PersonDetails.Password);
                     string sFirstName = PersonDetails.PersonFirstName;
                     string sMiddleName = PersonDetails.PersonMiddleName;
                     string sLastName = PersonDetails.PersonLastName;
                     int nGender = PersonDetails.PersonGender;
 
                     DateTime dtDOB = PersonDetails.PersonDOB;
-                    DateTime dtRegistrationDate = DateTime.Now;
-                    List<ContactDetails> ContactDetails = PersonDetails.ContactDetails;
-                    
-                    string sAddressLine1 = PersonDetails.AddressLine1;
-                    string sAddressLine2 = PersonDetails.AddressLine2;
-                    string sCity = PersonDetails.City;
-                    string sTaluka = PersonDetails.Taluka;
-                    string sDistrict = PersonDetails.District;
-                    string sState = PersonDetails.State;
-                    string sZip = PersonDetails.ZipCode;
+                    int nEntityTypeCode = PersonDetails.PersonEntityTypeCode;
+                    string sEntityTypeDesc = PersonDetails.PersonEntityTypeDesc;
+                    int nPersonTypeCode = PersonDetails.PersonTypeCode;
+                    string sPersonTypeCode = PersonDetails.personTypeDesc;
 
-                    string sAadhaarCardNo = PersonDetails.AddressLine2;
-                    string sDrivingLicienceNo = PersonDetails.City;
-                    string sPanCardNo = PersonDetails.Taluka;
-                    string sOtherIdCardDocumentNo = PersonDetails.District;
-                    string sOtherIdCardDocumentName = PersonDetails.State;
+                    Int64 nPhotoID = PersonDetails.PhotoDetails.PhotoID;
+                    byte[] iPhoto = PersonDetails.PhotoDetails.iPhoto;
+                    string sFileExtension = PersonDetails.PhotoDetails.FileExtension;
+                    string sMIMEType = PersonDetails.PhotoDetails.MIMEType;
+                    int nFileSize = PersonDetails.PhotoDetails.FileSize;
+                    int nWidth = PersonDetails.PhotoDetails.Width;
+                    int nHeight = PersonDetails.PhotoDetails.Height;
+                    byte[] Thumbnail =PersonDetails.PhotoDetails.Thumbnail;
 
+                    Int64 nAddressID = PersonDetails.AddressDetails.AddressID;
+                    string sAddressLine1 = PersonDetails.AddressDetails.AddressLine1;
+                    string sAddressLine2 = PersonDetails.AddressDetails.AddressLine2;
+                    string sCity = PersonDetails.AddressDetails.City;
+                    string sTaluka = PersonDetails.AddressDetails.Taluka;
+                    string sDistrict = PersonDetails.AddressDetails.District;
+                    string sState = PersonDetails.AddressDetails.State;
+                    string sZip = PersonDetails.AddressDetails.ZipCode;
 
-                    nUserID = dbAccess.InsertUpdateUserMaster(0, sLoginName, sPassword, sFirstName, sMiddleName, sLastName, nGender, dtDOB, dtRegistrationDate, sPhone, sMobile, sMobile1, seMail, sAddressLine1, sAddressLine2, sCity, sState, sZip, bIsBlocked);
-                    if (nUserID > 0)
-                    {
-                        MessageBox.Show("User register successfully.");
-                    }
+                    DataTable dtContactDetails = PersonDetails.ContactDetails;
+
+                    Int64 nAadhaarCardID = 0, nDrivingLicenceID = 0, nPanCardID = 0, nOtherIdCardDocumentID = 0;
+                    string sAadhaarCardNo = PersonDetails.VerificationDetails.AadhaarCardNo;
+                    nAadhaarCardID = PersonDetails.VerificationDetails.AadhaarCardID;
+                    string sDrivingLicienceNo = PersonDetails.VerificationDetails.DrivingLicenceNo;
+                    nDrivingLicenceID = PersonDetails.VerificationDetails.DrivingLicenceID;
+                    string sPanCardNo = PersonDetails.VerificationDetails.PANCardNo;
+                    nPanCardID = PersonDetails.VerificationDetails.PANID;
+                    string sOtherIdCardDocumentNo = PersonDetails.VerificationDetails.OtherIdCardDocumentNo;
+                    string sOtherIdCardDocumentName = PersonDetails.VerificationDetails.OtherIdCardDocumentName;
+                    nOtherIdCardDocumentID = PersonDetails.VerificationDetails.OtherIdCardDocumentID;
+
+                    DataTable dtCardDetails = PersonDetails.CardDetails;
+                    //nUserID = dbAccess.InsertUpdateUserMaster(0, sLoginName, sPassword, sFirstName, sMiddleName, sLastName, nGender, dtDOB, dtRegistrationDate, sPhone, sMobile, sMobile1, seMail, sAddressLine1, sAddressLine2, sCity, sState, sZip, bIsBlocked);
+                    //if (nUserID > 0)
+                    //{
+                    //    MessageBox.Show("User register successfully.");
+                    //}
+
+                    //dbAccess.InsertUpdatePerson();
                 }
                 catch (Exception ex)
                 {
