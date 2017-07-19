@@ -127,7 +127,6 @@ namespace eAPMC.Forms
             if (PersonDetails!=null)
             {
                 DBAccess dbAccess = null;
-                DataTable dtUser = null;
                 try
                 {
                     dbAccess = new DBAccess();
@@ -146,38 +145,56 @@ namespace eAPMC.Forms
                     int nPersonTypeCode = PersonDetails.PersonTypeCode;
                     string sPersonTypeCode = PersonDetails.personTypeDesc;
 
-                    Int64 nPhotoID = PersonDetails.PhotoDetails.PhotoID;
-                    byte[] iPhoto = PersonDetails.PhotoDetails.iPhoto;
-                    string sFileExtension = PersonDetails.PhotoDetails.FileExtension;
-                    string sMIMEType = PersonDetails.PhotoDetails.MIMEType;
-                    int nFileSize = PersonDetails.PhotoDetails.FileSize;
-                    int nWidth = PersonDetails.PhotoDetails.Width;
-                    int nHeight = PersonDetails.PhotoDetails.Height;
-                    byte[] Thumbnail =PersonDetails.PhotoDetails.Thumbnail;
+                    //Int64 nPhotoID = PersonDetails.PhotoDetails.PhotoID;
+                    //byte[] iPhoto = PersonDetails.PhotoDetails.iPhoto;
+                    //string sFileExtension = PersonDetails.PhotoDetails.FileExtension;
+                    //string sMIMEType = PersonDetails.PhotoDetails.MIMEType;
+                    //long nFileSize = PersonDetails.PhotoDetails.FileSize;
+                    //int nWidth = PersonDetails.PhotoDetails.Width;
+                    //int nHeight = PersonDetails.PhotoDetails.Height;
+                    //byte[] Thumbnail =PersonDetails.PhotoDetails.Thumbnail;
 
-                    Int64 nAddressID = PersonDetails.AddressDetails.AddressID;
-                    string sAddressLine1 = PersonDetails.AddressDetails.AddressLine1;
-                    string sAddressLine2 = PersonDetails.AddressDetails.AddressLine2;
-                    string sCity = PersonDetails.AddressDetails.City;
-                    string sTaluka = PersonDetails.AddressDetails.Taluka;
-                    string sDistrict = PersonDetails.AddressDetails.District;
-                    string sState = PersonDetails.AddressDetails.State;
-                    string sZip = PersonDetails.AddressDetails.ZipCode;
+                    //Int64 nAddressID = PersonDetails.AddressDetails.AddressID;
+                    //string sAddressLine1 = PersonDetails.AddressDetails.AddressLine1;
+                    //string sAddressLine2 = PersonDetails.AddressDetails.AddressLine2;
+                    //string sCity = PersonDetails.AddressDetails.City;
+                    //string sTaluka = PersonDetails.AddressDetails.Taluka;
+                    //string sDistrict = PersonDetails.AddressDetails.District;
+                    //string sState = PersonDetails.AddressDetails.State;
+                    //string sZip = PersonDetails.AddressDetails.ZipCode;
 
                     DataTable dtContactDetails = PersonDetails.ContactDetails;
 
-                    Int64 nAadhaarCardID = 0, nDrivingLicenceID = 0, nPanCardID = 0, nOtherIdCardDocumentID = 0;
-                    string sAadhaarCardNo = PersonDetails.VerificationDetails.AadhaarCardNo;
-                    nAadhaarCardID = PersonDetails.VerificationDetails.AadhaarCardID;
-                    string sDrivingLicienceNo = PersonDetails.VerificationDetails.DrivingLicenceNo;
-                    nDrivingLicenceID = PersonDetails.VerificationDetails.DrivingLicenceID;
-                    string sPanCardNo = PersonDetails.VerificationDetails.PANCardNo;
-                    nPanCardID = PersonDetails.VerificationDetails.PANID;
-                    string sOtherIdCardDocumentNo = PersonDetails.VerificationDetails.OtherIdCardDocumentNo;
-                    string sOtherIdCardDocumentName = PersonDetails.VerificationDetails.OtherIdCardDocumentName;
-                    nOtherIdCardDocumentID = PersonDetails.VerificationDetails.OtherIdCardDocumentID;
+                    //Int64 nAadhaarCardID = 0, nDrivingLicenceID = 0, nPanCardID = 0, nOtherIdCardDocumentID = 0;
+                    //string sAadhaarCardNo = PersonDetails.VerificationDetails.AadhaarCardNo;
+                    //nAadhaarCardID = PersonDetails.VerificationDetails.AadhaarCardID;
+                    //string sDrivingLicienceNo = PersonDetails.VerificationDetails.DrivingLicenceNo;
+                    //nDrivingLicenceID = PersonDetails.VerificationDetails.DrivingLicenceID;
+                    //string sPanCardNo = PersonDetails.VerificationDetails.PANCardNo;
+                    //nPanCardID = PersonDetails.VerificationDetails.PANID;
+                    //string sOtherIdCardDocumentNo = PersonDetails.VerificationDetails.OtherIdCardDocumentNo;
+                    //string sOtherIdCardDocumentName = PersonDetails.VerificationDetails.OtherIdCardDocumentName;
+                    //nOtherIdCardDocumentID = PersonDetails.VerificationDetails.OtherIdCardDocumentID;
 
                     DataTable dtCardDetails = PersonDetails.CardDetails;
+                    
+                    List<Person> lstPerson = new List<Person>();
+                    lstPerson.Add(PersonDetails);
+                    DataTable dtPersonDetails = eGlobal.CreateDataTable<Person>(lstPerson);
+
+                    List<VerificationDetails> lstVerificationDetails = new List<VerificationDetails>();
+                    lstVerificationDetails.Add(PersonDetails.VerificationDetails);
+                    DataTable dtVerificationDetails = eGlobal.CreateDataTable<VerificationDetails>(lstVerificationDetails);
+
+                    List<PhotoDetails> lstPhoto = new List<PhotoDetails>();
+                    lstPhoto.Add(PersonDetails.PhotoDetails);
+                    DataTable dtPhoto = eGlobal.CreateDataTable<PhotoDetails>(lstPhoto);
+
+                    List<AddressDetails> lstAddress = new List<AddressDetails>();
+                    lstAddress.Add(PersonDetails.AddressDetails);
+                    DataTable dtAddress = eGlobal.CreateDataTable<AddressDetails>(lstAddress);
+
+                    nPersonID = dbAccess.InsertUpdatePerson(dtPersonDetails,dtContactDetails,dtCardDetails,dtVerificationDetails,dtPhoto,dtAddress);
                     //nUserID = dbAccess.InsertUpdateUserMaster(0, sLoginName, sPassword, sFirstName, sMiddleName, sLastName, nGender, dtDOB, dtRegistrationDate, sPhone, sMobile, sMobile1, seMail, sAddressLine1, sAddressLine2, sCity, sState, sZip, bIsBlocked);
                     //if (nUserID > 0)
                     //{

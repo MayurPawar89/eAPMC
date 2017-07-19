@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -21,6 +22,15 @@ namespace eAPMC.Forms
         {
             InitializeComponent();
         }
+        public Image PersonImage { get; set; }
+        public string PersonPhotoLocation { get; set; }
+        public string PersonDetails { get; set; }
+        public int PersonPhotoHeight { get; set; }
+        public int PersonPhotoWidth { get; set; }
+        public string PersonPhotoExtention { get; set; }
+        public long PersonPhotoSize { get; set; }
+        public Image PersonThumbImage { get; set; }
+        public string PersonThumbImagePath { get; set; }
 
         private void btnNext_Click(object sender, EventArgs e)
         {
@@ -277,13 +287,13 @@ namespace eAPMC.Forms
 
                 PhotoDetails oPhotoDetails = new PhotoDetails();
                 oPhotoDetails.PhotoID = 0;
-                oPhotoDetails.iPhoto = null;
-                oPhotoDetails.FileExtension = "";
+                oPhotoDetails.iPhoto = File.ReadAllBytes(PersonPhotoLocation);
+                oPhotoDetails.FileExtension = PersonPhotoExtention;
                 oPhotoDetails.MIMEType = "";
-                oPhotoDetails.FileSize = 0;
-                oPhotoDetails.Width = 0;
-                oPhotoDetails.Height = 0;
-                oPhotoDetails.Thumbnail = null;
+                oPhotoDetails.FileSize = PersonPhotoSize;
+                oPhotoDetails.Width = PersonPhotoWidth;
+                oPhotoDetails.Height = PersonPhotoHeight;
+                oPhotoDetails.Thumbnail = File.ReadAllBytes(PersonThumbImagePath);
 
                 oPerson.PhotoDetails = oPhotoDetails;
 
@@ -333,7 +343,6 @@ namespace eAPMC.Forms
                 DataTable dtCardDetails = eGlobal.CreateDataTable<CardDetails>(lstCardDetails);
                 oPerson.CardDetails = dtCardDetails;
                 //oPerson.iPhoto=
-
                 if (oPerson!=null)
                 {
                     frmViewPersonDetails ofrmViewPersonDetails = new frmViewPersonDetails();
@@ -353,8 +362,34 @@ namespace eAPMC.Forms
 
         private void btnWebCam_Click(object sender, EventArgs e)
         {
-            frmWebCam ofrmWWebCam = new frmWebCam();
-            ofrmWWebCam.ShowDialog(this);
+            PersonDetails=txtPersonFName.Text.Trim()+txtPersonLName.Text.Trim()+Convert.ToDateTime(mskPersonDOB.Text.Trim()).ToString("ddMMyyyy");
+            frmWebCam ofrmWebCam = new frmWebCam();
+            ofrmWebCam.PersonDetails=PersonDetails;
+            ofrmWebCam.ShowDialog(this);
+
+            if (ofrmWebCam.Picture!=null)
+            {
+                Image img = ofrmWebCam.Picture.Image;
+                PersonImage = img;
+                PersonPhotoLocation = ofrmWebCam.PhotoLocation;
+                PersonPhotoExtention = ofrmWebCam.PhotoExtention;
+                PersonPhotoHeight = ofrmWebCam.PhotoHeight;
+                PersonPhotoWidth = ofrmWebCam.PhotoWidth;
+                PersonPhotoSize = ofrmWebCam.PhotoSize;
+                if (img != null)
+                {
+                    string sImagePath = Path.Combine(Application.ExecutablePath, "Images", "ProfileImages", "Thumbnail");
+                    string path = sImagePath +"\\"+ PersonDetails + "_" + DateTime.Now.ToString("yyyyMMddhhmm") + Convert.ToString(ImageFormat.Png);
+                    Bitmap bmpImage = new Bitmap(img);
+                    bmpImage.Save(path, ImageFormat.Png);
+                    PersonThumbImage = img.GetThumbnailImage(70, 70, null, new IntPtr());
+                    PersonThumbImage.Save(path, ImageFormat.Png);
+                    PersonThumbImagePath = path;
+                    bmpImage.Dispose();
+                    bmpImage = null;
+                }
+
+            }
         }
     }
 }

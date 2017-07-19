@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,6 +19,13 @@ namespace eAPMC.Forms
         private bool DeviceExist = false;
         private FilterInfoCollection videoDevices;
         private VideoCaptureDevice videoSource = null;
+        public PictureBox Picture { get; set; }
+        public string PersonDetails { get; set; }
+        public string PhotoLocation { get; set; }
+        public int PhotoHeight { get; set; }
+        public int PhotoWidth { get; set; }
+        public string PhotoExtention { get; set; }
+        public long PhotoSize { get; set; }
         public frmWebCam()
         {
             InitializeComponent();
@@ -106,16 +114,23 @@ namespace eAPMC.Forms
         private void frmWebCam_FormClosed(object sender, FormClosedEventArgs e)
         {
             CloseVideoSource();
+            Picture = pictureBox1;
         }
 
         private void btnCapture_Click(object sender, EventArgs e)
         {
             if (pictureBox1.Image != null)
             {
-                string path = Application.ExecutablePath.ToString() + DateTime.Now.ToString("yyyyMMdd_hhmm");
+                string sImagePath = Path.Combine(Application.ExecutablePath, "Images", "ProfileImages");
+                string path = sImagePath + PersonDetails + "_" + DateTime.Now.ToString("yyyyMMddhhmm") + Convert.ToString(ImageFormat.Png);
+                PhotoLocation = path;
                 Bitmap bmpImage = new Bitmap(pictureBox1.Image);
                 Bitmap newImg = new Bitmap(bmpImage);
                 bmpImage.Save(path, ImageFormat.Png);
+                PhotoExtention = Path.GetExtension(path);
+                PhotoHeight = bmpImage.Height;
+                PhotoWidth = bmpImage.Width;
+                PhotoSize = new FileInfo(path).Length;
                 bmpImage.Dispose();
                 bmpImage = null;
             }

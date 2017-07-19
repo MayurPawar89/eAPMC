@@ -132,7 +132,7 @@ namespace eAPMC.Classes
 
         public string MIMEType { get; set; }
 
-        public int FileSize { get; set; }
+        public long FileSize { get; set; }
 
         public int Height { get; set; }
 
