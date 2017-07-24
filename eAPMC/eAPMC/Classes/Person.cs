@@ -39,26 +39,26 @@ namespace eAPMC.Classes
         public string Password { get; set; }
         #endregion
 
-        #region "Address Details"
-        public AddressDetails AddressDetails { get; set; }
+        //#region "Address Details"
+        //public AddressDetails AddressDetails { get; set; }
         
-        #endregion
+        //#endregion
 
-        #region "Contact Details"
-        public DataTable ContactDetails { get; set; }
-        #endregion  
+        //#region "Contact Details"
+        //public DataTable ContactDetails { get; set; }
+        //#endregion  
 
-        #region "Varification Details"
-        public VerificationDetails VerificationDetails { get; set; }
-        #endregion
+        //#region "Varification Details"
+        //public VerificationDetails VerificationDetails { get; set; }
+        //#endregion
 
-        #region "Photo Details"
-        public PhotoDetails PhotoDetails { get; set; }
-        #endregion
+        //#region "Photo Details"
+        //public PhotoDetails PhotoDetails { get; set; }
+        //#endregion
 
-        #region "Card Details"
-        public DataTable CardDetails { get; set; }
-        #endregion
+        //#region "Card Details"
+        //public DataTable CardDetails { get; set; }
+        //#endregion
 
     }
 

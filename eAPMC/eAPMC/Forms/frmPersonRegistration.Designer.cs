@@ -1152,7 +1152,6 @@
             this.btnWebCam.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
             this.btnWebCam.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnWebCam.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnWebCam.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnWebCam.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
             this.btnWebCam.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
             this.btnWebCam.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
@@ -1182,7 +1181,6 @@
             this.btnScanPhoto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
             this.btnScanPhoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnScanPhoto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnScanPhoto.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnScanPhoto.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
             this.btnScanPhoto.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
             this.btnScanPhoto.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));

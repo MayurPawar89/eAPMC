@@ -37,6 +37,7 @@
             this.label22 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.pnlPersonReg = new System.Windows.Forms.Panel();
+            this.pnlVerificationDoc = new System.Windows.Forms.Panel();
             this.pnlPersonDetails = new System.Windows.Forms.Panel();
             this.grpbLoginDetails = new System.Windows.Forms.GroupBox();
             this.txtConfirmPassword = new System.Windows.Forms.TextBox();
@@ -103,7 +104,6 @@
             this.mskPersonDOB = new System.Windows.Forms.MaskedTextBox();
             this.txtPersonLName = new System.Windows.Forms.TextBox();
             this.txtPersonMName = new System.Windows.Forms.TextBox();
-            this.pnlVerificationDoc = new System.Windows.Forms.Panel();
             this.grpbPhotoDetails = new System.Windows.Forms.GroupBox();
             this.btnWebCam = new System.Windows.Forms.Button();
             this.picbPhoto = new System.Windows.Forms.PictureBox();
@@ -149,6 +149,7 @@
             this.label55 = new System.Windows.Forms.Label();
             this.pnlBottomButton.SuspendLayout();
             this.pnlPersonReg.SuspendLayout();
+            this.pnlVerificationDoc.SuspendLayout();
             this.pnlPersonDetails.SuspendLayout();
             this.grpbLoginDetails.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -156,7 +157,6 @@
             this.groupBox1.SuspendLayout();
             this.grpbAddressDetails.SuspendLayout();
             this.grpbPersonDetails.SuspendLayout();
-            this.pnlVerificationDoc.SuspendLayout();
             this.grpbPhotoDetails.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picbPhoto)).BeginInit();
             this.groupBox8.SuspendLayout();
@@ -283,6 +283,17 @@
             this.pnlPersonReg.Padding = new System.Windows.Forms.Padding(3);
             this.pnlPersonReg.Size = new System.Drawing.Size(660, 680);
             this.pnlPersonReg.TabIndex = 60;
+            // 
+            // pnlVerificationDoc
+            // 
+            this.pnlVerificationDoc.Controls.Add(this.pnlPersonDetails);
+            this.pnlVerificationDoc.Controls.Add(this.grpbPhotoDetails);
+            this.pnlVerificationDoc.Controls.Add(this.grpbVerificationDetails);
+            this.pnlVerificationDoc.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlVerificationDoc.Location = new System.Drawing.Point(4, 5);
+            this.pnlVerificationDoc.Name = "pnlVerificationDoc";
+            this.pnlVerificationDoc.Size = new System.Drawing.Size(652, 671);
+            this.pnlVerificationDoc.TabIndex = 44;
             // 
             // pnlPersonDetails
             // 
@@ -1190,17 +1201,6 @@
             this.txtPersonMName.Size = new System.Drawing.Size(23, 22);
             this.txtPersonMName.TabIndex = 59;
             // 
-            // pnlVerificationDoc
-            // 
-            this.pnlVerificationDoc.Controls.Add(this.pnlPersonDetails);
-            this.pnlVerificationDoc.Controls.Add(this.grpbPhotoDetails);
-            this.pnlVerificationDoc.Controls.Add(this.grpbVerificationDetails);
-            this.pnlVerificationDoc.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlVerificationDoc.Location = new System.Drawing.Point(4, 5);
-            this.pnlVerificationDoc.Name = "pnlVerificationDoc";
-            this.pnlVerificationDoc.Size = new System.Drawing.Size(652, 671);
-            this.pnlVerificationDoc.TabIndex = 44;
-            // 
             // grpbPhotoDetails
             // 
             this.grpbPhotoDetails.Controls.Add(this.btnWebCam);
@@ -1728,6 +1728,7 @@
             this.Load += new System.EventHandler(this.frmUserRegistration_Load);
             this.pnlBottomButton.ResumeLayout(false);
             this.pnlPersonReg.ResumeLayout(false);
+            this.pnlVerificationDoc.ResumeLayout(false);
             this.pnlPersonDetails.ResumeLayout(false);
             this.grpbLoginDetails.ResumeLayout(false);
             this.grpbLoginDetails.PerformLayout();
@@ -1741,7 +1742,6 @@
             this.grpbAddressDetails.PerformLayout();
             this.grpbPersonDetails.ResumeLayout(false);
             this.grpbPersonDetails.PerformLayout();
-            this.pnlVerificationDoc.ResumeLayout(false);
             this.grpbPhotoDetails.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picbPhoto)).EndInit();
             this.groupBox8.ResumeLayout(false);

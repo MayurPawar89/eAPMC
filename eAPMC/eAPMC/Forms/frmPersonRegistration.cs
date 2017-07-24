@@ -136,11 +136,11 @@ namespace eAPMC.Forms
             {
                 if (pnlPincodeDetails.Visible == false)
                 {
-                    if (ucPincodeFinder!=null)
-                    {
-                        ucPincodeFinder.Dispose();
-                        ucPincodeFinder = null;
-                    }
+                    //if (ucPincodeFinder!=null)
+                    //{
+                    //    ucPincodeFinder.Dispose();
+                    //    ucPincodeFinder = null;
+                    //}
                     ucPincodeFinder = new PincodeFinder();
                     ucPincodeFinder.dgvPincodes.SelectionChanged += dgvPincodes_SelectionChanged;
                     pnlPincodeDetails.BringToFront();
@@ -240,7 +240,7 @@ namespace eAPMC.Forms
                 oAddress.State = txtState.Text.Trim();
                 oAddress.ZipCode = txtPincode.Text.Trim();
 
-                oPerson.AddressDetails = oAddress;
+                //oPerson.AddressDetails = oAddress;
 
                 List<ContactDetails> lstContactDetails = new List<ContactDetails>();
                 ContactDetails oContact = new ContactDetails();
@@ -283,7 +283,7 @@ namespace eAPMC.Forms
                 oVerification.PANID = 0;
                 oVerification.OtherIdCardDocumentID = 0;
 
-                oPerson.VerificationDetails = oVerification;
+                //oPerson.VerificationDetails = oVerification;
 
                 PhotoDetails oPhotoDetails = new PhotoDetails();
                 oPhotoDetails.PhotoID = 0;
@@ -295,10 +295,10 @@ namespace eAPMC.Forms
                 oPhotoDetails.Height = PersonPhotoHeight;
                 oPhotoDetails.Thumbnail = File.ReadAllBytes(PersonThumbImagePath);
 
-                oPerson.PhotoDetails = oPhotoDetails;
+                //oPerson.PhotoDetails = oPhotoDetails;
 
                 DataTable dtContactDetails= eGlobal.CreateDataTable<ContactDetails>(lstContactDetails);
-                oPerson.ContactDetails = dtContactDetails;
+                //oPerson.ContactDetails = dtContactDetails;
 
 
                 List<CardDetails> lstCardDetails = new List<CardDetails>();
@@ -306,7 +306,7 @@ namespace eAPMC.Forms
 
                 oCardDetails = new CardDetails();
                 oCardDetails.CardID = 0;
-                oCardDetails.ReferenceID = oPerson.VerificationDetails.AadhaarCardID;
+                oCardDetails.ReferenceID = oVerification.AadhaarCardID;
                 oCardDetails.IDTypeCode = eGlobal.CardType.AadhaarCard.GetHashCode();
                 oCardDetails.IDTypeDescription = eGlobal.CardType.AadhaarCard.ToString();
                 oCardDetails.iPhoto = null;
@@ -315,7 +315,7 @@ namespace eAPMC.Forms
 
                 oCardDetails = new CardDetails();
                 oCardDetails.CardID = 0;
-                oCardDetails.ReferenceID = oPerson.VerificationDetails.PANID;
+                oCardDetails.ReferenceID = oVerification.PANID;
                 oCardDetails.IDTypeCode = eGlobal.CardType.PanCard.GetHashCode();
                 oCardDetails.IDTypeDescription = eGlobal.CardType.PanCard.ToString();
                 oCardDetails.iPhoto = null;
@@ -324,7 +324,7 @@ namespace eAPMC.Forms
 
                 oCardDetails = new CardDetails();
                 oCardDetails.CardID = 0;
-                oCardDetails.ReferenceID = oPerson.VerificationDetails.DrivingLicenceID;
+                oCardDetails.ReferenceID = oVerification.DrivingLicenceID;
                 oCardDetails.IDTypeCode = eGlobal.CardType.DrivingLicenceID.GetHashCode();
                 oCardDetails.IDTypeDescription = eGlobal.CardType.DrivingLicenceID.ToString();
                 oCardDetails.iPhoto = null;
@@ -333,7 +333,7 @@ namespace eAPMC.Forms
 
                 oCardDetails = new CardDetails();
                 oCardDetails.CardID = 0;
-                oCardDetails.ReferenceID = oPerson.VerificationDetails.OtherIdCardDocumentID;
+                oCardDetails.ReferenceID = oVerification.OtherIdCardDocumentID;
                 oCardDetails.IDTypeCode = eGlobal.CardType.OtherIDCard.GetHashCode();
                 oCardDetails.IDTypeDescription = eGlobal.CardType.OtherIDCard.ToString();
                 oCardDetails.iPhoto = null;
@@ -341,13 +341,18 @@ namespace eAPMC.Forms
                 oCardDetails = null;
 
                 DataTable dtCardDetails = eGlobal.CreateDataTable<CardDetails>(lstCardDetails);
-                oPerson.CardDetails = dtCardDetails;
+                //oPerson.CardDetails = dtCardDetails;
                 //oPerson.iPhoto=
                 if (oPerson!=null)
                 {
                     frmViewPersonDetails ofrmViewPersonDetails = new frmViewPersonDetails();
                     ofrmViewPersonDetails.PersonType = PersonType;
                     ofrmViewPersonDetails.PersonDetails = oPerson;
+                    ofrmViewPersonDetails.oAddress = oAddress;
+                    ofrmViewPersonDetails.lstCard = lstCardDetails;
+                    ofrmViewPersonDetails.lstContact = lstContactDetails;
+                    ofrmViewPersonDetails.oPhoto = oPhotoDetails;
+                    ofrmViewPersonDetails.oVerification = oVerification;
                     ofrmViewPersonDetails.ShowDialog(this);
                     ofrmViewPersonDetails.Dispose();
                     ofrmViewPersonDetails = null;  
@@ -367,7 +372,7 @@ namespace eAPMC.Forms
             ofrmWebCam.PersonDetails=PersonDetails;
             ofrmWebCam.ShowDialog(this);
 
-            if (ofrmWebCam.Picture!=null)
+            if (ofrmWebCam.Picture.Image!=null)
             {
                 Image img = ofrmWebCam.Picture.Image;
                 PersonImage = img;

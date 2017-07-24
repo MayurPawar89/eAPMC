@@ -201,31 +201,38 @@ namespace eAPMC.Forms
         PincodeFinder ucPincodeFinder = null;
         private void txtPincode_TextChanged(object sender, EventArgs e)
         {
-            string sSearchText = txtPincode.Text.ToString();
-            if (sSearchText != "")
+            try
             {
-                if (pnlPincodeDetails.Visible == false)
+                string sSearchText = txtPincode.Text.ToString();
+                if (sSearchText != "")
                 {
-                    if (ucPincodeFinder != null)
+                    if (pnlPincodeDetails.Visible == false)
                     {
-                        ucPincodeFinder.Dispose();
-                        ucPincodeFinder = null;
+                        if (ucPincodeFinder != null)
+                        {
+                            ucPincodeFinder.Dispose();
+                            ucPincodeFinder = null;
+                        }
+                        ucPincodeFinder = new PincodeFinder();
+                        ucPincodeFinder.dgvPincodes.SelectionChanged += dgvPincodes_SelectionChanged;
+                        pnlPincodeDetails.BringToFront();
+                        pnlPincodeDetails.Visible = true;
+                        pnlPincodeDetails.Controls.Add(ucPincodeFinder);
+
+                        //ucPincodeFinder.SearchPincode(sSearchText);
                     }
-                    ucPincodeFinder = new PincodeFinder();
-                    ucPincodeFinder.dgvPincodes.SelectionChanged += dgvPincodes_SelectionChanged;
-                    pnlPincodeDetails.BringToFront();
-                    pnlPincodeDetails.Visible = true;
-                    pnlPincodeDetails.Controls.Add(ucPincodeFinder);
+                    else
+                    {
+                        ucPincodeFinder.dgvPincodes.SelectionChanged -= dgvPincodes_SelectionChanged;
+                        ucPincodeFinder.SearchPincode(sSearchText);
+                        ucPincodeFinder.dgvPincodes.SelectionChanged += dgvPincodes_SelectionChanged;
+                    }
 
-                    //ucPincodeFinder.SearchPincode(sSearchText);
                 }
-                else
-                {
-                    ucPincodeFinder.dgvPincodes.SelectionChanged -= dgvPincodes_SelectionChanged;
-                    ucPincodeFinder.SearchPincode(sSearchText);
-                    ucPincodeFinder.dgvPincodes.SelectionChanged += dgvPincodes_SelectionChanged;
-                }
-
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Exception: " + ex.InnerException);
             }
         }
 

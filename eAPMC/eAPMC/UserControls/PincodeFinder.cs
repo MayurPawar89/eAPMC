@@ -38,8 +38,15 @@ namespace eAPMC.UserControls
 
         private void PincodeFinder_Load(object sender, EventArgs e)
         {
-            dtPincodes = getPincodeDetails();
-            dgvPincodes.DataSource = dtPincodes;
+            try
+            {
+                dtPincodes = getPincodeDetails();
+                dgvPincodes.DataSource = dtPincodes;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Exception: " + ex.InnerException);
+            }
         }
 
         private DataTable getPincodeDetails()

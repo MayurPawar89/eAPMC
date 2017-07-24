@@ -39,6 +39,7 @@
             this.dgvPincodes.AllowUserToAddRows = false;
             this.dgvPincodes.AllowUserToDeleteRows = false;
             this.dgvPincodes.AllowUserToOrderColumns = true;
+            this.dgvPincodes.AllowUserToResizeColumns = false;
             this.dgvPincodes.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.Lavender;
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
@@ -54,7 +55,7 @@
             this.dgvPincodes.MultiSelect = false;
             this.dgvPincodes.Name = "dgvPincodes";
             this.dgvPincodes.ReadOnly = true;
-            this.dgvPincodes.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.dgvPincodes.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Thistle;

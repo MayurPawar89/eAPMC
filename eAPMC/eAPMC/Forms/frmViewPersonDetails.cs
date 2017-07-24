@@ -23,6 +23,15 @@ namespace eAPMC.Forms
         }
         public eGlobal.PersonType PersonType { get; set; }
         public Person PersonDetails { get; set; }
+
+        public AddressDetails oAddress { get; set; }
+        public ContactDetails oContact { get; set; }
+        public CardDetails oCard { get; set; }
+        public PhotoDetails oPhoto { get; set; }
+        public VerificationDetails oVerification { get; set; }
+
+        public List<CardDetails> lstCard { get; set; }
+        public List<ContactDetails> lstContact { get; set; }
         private void frmViewPersonDetails_Load(object sender, EventArgs e)
         {
             switch (PersonType)
@@ -163,7 +172,7 @@ namespace eAPMC.Forms
                     //string sState = PersonDetails.AddressDetails.State;
                     //string sZip = PersonDetails.AddressDetails.ZipCode;
 
-                    DataTable dtContactDetails = PersonDetails.ContactDetails;
+                    //DataTable dtContactDetails = oContact;
 
                     //Int64 nAadhaarCardID = 0, nDrivingLicenceID = 0, nPanCardID = 0, nOtherIdCardDocumentID = 0;
                     //string sAadhaarCardNo = PersonDetails.VerificationDetails.AadhaarCardNo;
@@ -176,23 +185,31 @@ namespace eAPMC.Forms
                     //string sOtherIdCardDocumentName = PersonDetails.VerificationDetails.OtherIdCardDocumentName;
                     //nOtherIdCardDocumentID = PersonDetails.VerificationDetails.OtherIdCardDocumentID;
 
-                    DataTable dtCardDetails = PersonDetails.CardDetails;
+                    //DataTable dtCardDetails = oCard;
                     
                     List<Person> lstPerson = new List<Person>();
                     lstPerson.Add(PersonDetails);
                     DataTable dtPersonDetails = eGlobal.CreateDataTable<Person>(lstPerson);
 
                     List<VerificationDetails> lstVerificationDetails = new List<VerificationDetails>();
-                    lstVerificationDetails.Add(PersonDetails.VerificationDetails);
+                    lstVerificationDetails.Add(oVerification);
                     DataTable dtVerificationDetails = eGlobal.CreateDataTable<VerificationDetails>(lstVerificationDetails);
 
                     List<PhotoDetails> lstPhoto = new List<PhotoDetails>();
-                    lstPhoto.Add(PersonDetails.PhotoDetails);
+                    lstPhoto.Add(oPhoto);
                     DataTable dtPhoto = eGlobal.CreateDataTable<PhotoDetails>(lstPhoto);
 
                     List<AddressDetails> lstAddress = new List<AddressDetails>();
-                    lstAddress.Add(PersonDetails.AddressDetails);
+                    lstAddress.Add(oAddress);
                     DataTable dtAddress = eGlobal.CreateDataTable<AddressDetails>(lstAddress);
+
+                    //List<ContactDetails> lstContact = new List<ContactDetails>();
+                    //lstContact.Add(oContact);
+                    DataTable dtContactDetails = eGlobal.CreateDataTable<ContactDetails>(lstContact);
+
+                    //List<CardDetails> lstCard = new List<CardDetails>();
+                    //lstCard.Add(oCard);
+                    DataTable dtCardDetails = eGlobal.CreateDataTable<CardDetails>(lstCard);
 
                     nPersonID = dbAccess.InsertUpdatePerson(dtPersonDetails,dtContactDetails,dtCardDetails,dtVerificationDetails,dtPhoto,dtAddress);
                     //nUserID = dbAccess.InsertUpdateUserMaster(0, sLoginName, sPassword, sFirstName, sMiddleName, sLastName, nGender, dtDOB, dtRegistrationDate, sPhone, sMobile, sMobile1, seMail, sAddressLine1, sAddressLine2, sCity, sState, sZip, bIsBlocked);

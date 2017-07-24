@@ -435,11 +435,16 @@ namespace DBLayer
                 using (DbCommand dbCommand = sqlDb.GetStoredProcCommand(query_procedure_name))
                 {
                     //sqlDb.AddInParameter(dbCommand, "@UserId", DbType.Int64, UserID);
-                    sqlDb.AddInParameter(dbCommand, "@udtPerson", DbType.Object, dtPersonDetails);
-                    sqlDb.AddInParameter(dbCommand, "@udtPersonCards", DbType.Object, dtCardDetails);
-                    sqlDb.AddInParameter(dbCommand, "@udtPersonContacts", DbType.Object, dtContactDetails);
-                    sqlDb.AddInParameter(dbCommand, "@udtPersonPhotoDetails", DbType.Object, dtPhotoDetails);
-                    sqlDb.AddInParameter(dbCommand, "@udtPersonAddressDetails", DbType.Object, dtAddressDetails);
+                    sqlDb.AddInParameter(dbCommand, "@udtPerson", SqlDbType.Structured, dtPersonDetails);
+                    sqlDb.AddInParameter(dbCommand, "@udtPersonCards", SqlDbType.Structured, dtCardDetails);
+                    sqlDb.AddInParameter(dbCommand, "@udtPersonContacts", SqlDbType.Structured, dtContactDetails);
+                    sqlDb.AddInParameter(dbCommand, "@udtPersonPhotoDetails", SqlDbType.Structured, dtPhotoDetails);
+                    sqlDb.AddInParameter(dbCommand, "@udtPersonAddressDetails", SqlDbType.Structured, dtAddressDetails);
+                    //sqlDb.AddInParameter(dbCommand, "@udtPerson", DbType.Object, dtPersonDetails);
+                    //sqlDb.AddInParameter(dbCommand, "@udtPersonCards", DbType.Object, dtCardDetails);
+                    //sqlDb.AddInParameter(dbCommand, "@udtPersonContacts", DbType.Object, dtContactDetails);
+                    //sqlDb.AddInParameter(dbCommand, "@udtPersonPhotoDetails", DbType.Object, dtPhotoDetails);
+                    //sqlDb.AddInParameter(dbCommand, "@udtPersonAddressDetails", DbType.Object, dtAddressDetails);
 
                     //ds = sqlDb.ExecuteDataSet(dbCommand);
                     Int64 n = sqlDb.ExecuteNonQuery(dbCommand);
