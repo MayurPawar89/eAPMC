@@ -440,6 +440,7 @@ namespace DBLayer
                     sqlDb.AddInParameter(dbCommand, "@udtPersonContacts", SqlDbType.Structured, dtContactDetails);
                     sqlDb.AddInParameter(dbCommand, "@udtPersonPhotoDetails", SqlDbType.Structured, dtPhotoDetails);
                     sqlDb.AddInParameter(dbCommand, "@udtPersonAddressDetails", SqlDbType.Structured, dtAddressDetails);
+                    sqlDb.AddInParameter(dbCommand, "@udtPersonVerificationDetails", SqlDbType.Structured, dtVerificationDetails);
                     //sqlDb.AddInParameter(dbCommand, "@udtPerson", DbType.Object, dtPersonDetails);
                     //sqlDb.AddInParameter(dbCommand, "@udtPersonCards", DbType.Object, dtCardDetails);
                     //sqlDb.AddInParameter(dbCommand, "@udtPersonContacts", DbType.Object, dtContactDetails);

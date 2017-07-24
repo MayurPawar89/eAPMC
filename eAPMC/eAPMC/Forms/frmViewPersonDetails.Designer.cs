@@ -96,7 +96,7 @@
             this.lblGIPatName = new System.Windows.Forms.Label();
             this.lblRegistration = new System.Windows.Forms.Label();
             this.lblGIDOB = new System.Windows.Forms.Label();
-            this.lblGIFName = new System.Windows.Forms.Label();
+            //this.lblPersonName = new System.Windows.Forms.Label();
             this.lblGIPatMName = new System.Windows.Forms.Label();
             this.lblGIPatLName = new System.Windows.Forms.Label();
             this.grpboxGIGender = new System.Windows.Forms.GroupBox();
@@ -1032,7 +1032,7 @@
             this.grpbPersonDetails.Controls.Add(this.lblGIPatName);
             this.grpbPersonDetails.Controls.Add(this.lblRegistration);
             this.grpbPersonDetails.Controls.Add(this.lblGIDOB);
-            this.grpbPersonDetails.Controls.Add(this.lblGIFName);
+            //this.grpbPersonDetails.Controls.Add(this.lblPersonName);
             this.grpbPersonDetails.Controls.Add(this.lblGIPatMName);
             this.grpbPersonDetails.Controls.Add(this.lblGIPatLName);
             this.grpbPersonDetails.Controls.Add(this.grpboxGIGender);
@@ -1112,18 +1112,18 @@
             // 
             // lblGIFName
             // 
-            this.lblGIFName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblGIFName.AutoEllipsis = true;
-            this.lblGIFName.AutoSize = true;
-            this.lblGIFName.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGIFName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
-            this.lblGIFName.Location = new System.Drawing.Point(209, 45);
-            this.lblGIFName.Name = "lblGIFName";
-            this.lblGIFName.Size = new System.Drawing.Size(57, 11);
-            this.lblGIFName.TabIndex = 65;
-            this.lblGIFName.Text = "(First Name)";
+            //this.lblPersonName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            //| System.Windows.Forms.AnchorStyles.Left) 
+            //| System.Windows.Forms.AnchorStyles.Right)));
+            //this.lblPersonName.AutoEllipsis = true;
+            //this.lblPersonName.AutoSize = true;
+            //this.lblPersonName.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            //this.lblPersonName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
+            //this.lblPersonName.Location = new System.Drawing.Point(209, 45);
+            //this.lblPersonName.Name = "lblGIFName";
+            //this.lblPersonName.Size = new System.Drawing.Size(57, 11);
+            //this.lblPersonName.TabIndex = 65;
+            //this.lblPersonName.Text = "(First Name)";
             // 
             // lblGIPatMName
             // 

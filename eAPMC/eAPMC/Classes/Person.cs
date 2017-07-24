@@ -34,9 +34,9 @@ namespace eAPMC.Classes
 
         public string personTypeDesc { get; set; }
 
-        public string LoginName { get; set; }
+        //public string LoginName { get; set; }
 
-        public string Password { get; set; }
+        //public string Password { get; set; }
         #endregion
 
         //#region "Address Details"
@@ -69,6 +69,8 @@ namespace eAPMC.Classes
         }
         public Int64 ContactID { get; set; }
 
+        public Int64 PersonID { get; set; }
+
         public string ContactNo { get; set; }
 
         public string ContactTypeCode { get; set; }
@@ -81,6 +83,8 @@ namespace eAPMC.Classes
         public AddressDetails()
         { }
         public Int64 AddressID { get; set; }
+
+        public Int64 PersonID { get; set; }
 
         public int AddressType { get; set; }
 
@@ -102,6 +106,8 @@ namespace eAPMC.Classes
 
     public class VerificationDetails
     {
+        public Int64 PersonID { get; set; }
+        
         public Int64 DrivingLicenceID { get; set; }
 
         public string DrivingLicenceNo { get; set; }
@@ -126,6 +132,8 @@ namespace eAPMC.Classes
     {
         public Int64 PhotoID { get; set; }
 
+        public Int64 PersonID { get; set; }
+
         public byte[] iPhoto { get; set; }
 
         public string FileExtension { get; set; }
@@ -144,6 +152,8 @@ namespace eAPMC.Classes
     public class CardDetails
     {
         public Int64 CardID { get; set; }
+
+        public Int64 PersonID { get; set; }
 
         public Int64 ReferenceID { get; set; }
 
