@@ -256,6 +256,7 @@
     <Content Include="Logo Images\onion_sample2.png" />
     <Content Include="Logo Images\onion_sample3 copy.png" />
     <Content Include="Logo Images\onion_sample3.png" />
+    <Content Include="Scripts\20170725\CreateSP.sql" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DBLayer\DBLayer.csproj">
