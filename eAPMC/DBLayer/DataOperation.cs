@@ -526,6 +526,78 @@ namespace DBLayer
             return dt;
         }
 
+        public DataTable GetPersonDetails(int PersonType)
+        {
+            DataSet ds = null;
+            DataTable dt = null;
+            string query_procedure_name = string.Empty;
+
+            try
+            {
+                query_procedure_name = "gsp_GetPersonByPersonType";
+
+                using (DbCommand dbCommand = sqlDb.GetStoredProcCommand(query_procedure_name))
+                {
+                    sqlDb.AddInParameter(dbCommand, "@PersonTypeCode", SqlDbType.Int, PersonType);
+                    ds = sqlDb.ExecuteDataSet(dbCommand);
+
+                    if (ds != null && ds.Tables != null && ds.Tables.Count > 0)
+                    {
+                        dt = ds.Tables[0];
+                        dt.TableName = "Person";
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                if (ds != null) { if (ds.Tables != null) { ds.Tables.Clear(); } ds.Dispose(); ds = null; }
+            }
+
+            return dt;
+        }
+
+        public DataSet GetPersonFullDetails(long PersonID)
+        {
+            DataSet ds = null;
+            string query_procedure_name = string.Empty;
+
+            try
+            {
+                query_procedure_name = "gsp_GetPersonFullDetails";
+
+                using (DbCommand dbCommand = sqlDb.GetStoredProcCommand(query_procedure_name))
+                {
+                    sqlDb.AddInParameter(dbCommand, "@PersonID", SqlDbType.BigInt, PersonID);
+                    ds = sqlDb.ExecuteDataSet(dbCommand);
+
+                    if (ds != null && ds.Tables != null && ds.Tables.Count > 0)
+                    {
+                        ds.Tables[0].TableName = "AddressDetails";
+                        ds.Tables[1].TableName = "ContactDetails";
+                        ds.Tables[2].TableName = "PhotoDetails";
+                        ds.Tables[3].TableName = "VerificationDetails";
+                        ds.Tables[4].TableName = "PersonDetails";
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                if (ds != null) { if (ds.Tables != null) { ds.Tables.Clear(); } ds.Dispose(); ds = null; }
+            }
+
+            return ds;
+        }
+
         public DataTable GetRoles()
         {
             DataSet ds = null;

@@ -34,9 +34,10 @@
             this.btnReports = new System.Windows.Forms.Button();
             this.btnRegisterSaller = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnRegisterUser = new System.Windows.Forms.Button();
-            this.btnChallan = new System.Windows.Forms.Button();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnRegisterOrganization = new System.Windows.Forms.Button();
+            this.btnChallan = new System.Windows.Forms.Button();
+            this.btnRegisterUser = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -55,11 +56,11 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.tmnuView_Person = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             this.pnlMainMenu.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnRegisterFarmer
@@ -175,29 +176,46 @@
             this.panel1.Size = new System.Drawing.Size(720, 602);
             this.panel1.TabIndex = 9;
             // 
-            // btnRegisterUser
+            // flowLayoutPanel1
             // 
-            this.btnRegisterUser.BackColor = System.Drawing.Color.Transparent;
-            this.btnRegisterUser.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRegisterUser.BackgroundImage")));
-            this.btnRegisterUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnRegisterUser.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRegisterUser.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnRegisterUser.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
-            this.btnRegisterUser.FlatAppearance.BorderSize = 0;
-            this.btnRegisterUser.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.btnRegisterUser.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnRegisterUser.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnRegisterUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegisterUser.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegisterUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
-            this.btnRegisterUser.Location = new System.Drawing.Point(53, 345);
-            this.btnRegisterUser.Name = "btnRegisterUser";
-            this.btnRegisterUser.Padding = new System.Windows.Forms.Padding(3);
-            this.btnRegisterUser.Size = new System.Drawing.Size(180, 140);
-            this.btnRegisterUser.TabIndex = 11;
-            this.btnRegisterUser.Text = "Register User";
-            this.btnRegisterUser.UseVisualStyleBackColor = false;
-            this.btnRegisterUser.Click += new System.EventHandler(this.btnRegisterUser_Click);
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.flowLayoutPanel1.Controls.Add(this.btnRegisterDrive);
+            this.flowLayoutPanel1.Controls.Add(this.btnRegisterFarmer);
+            this.flowLayoutPanel1.Controls.Add(this.btnRegisterOrganization);
+            this.flowLayoutPanel1.Controls.Add(this.btnRegisterSaller);
+            this.flowLayoutPanel1.Controls.Add(this.btnReports);
+            this.flowLayoutPanel1.Controls.Add(this.btnChallan);
+            this.flowLayoutPanel1.Controls.Add(this.btnRegisterUser);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(1, 1);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(50);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(718, 600);
+            this.flowLayoutPanel1.TabIndex = 12;
+            // 
+            // btnRegisterOrganization
+            // 
+            this.btnRegisterOrganization.BackColor = System.Drawing.Color.Transparent;
+            this.btnRegisterOrganization.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRegisterOrganization.BackgroundImage")));
+            this.btnRegisterOrganization.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRegisterOrganization.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRegisterOrganization.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btnRegisterOrganization.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
+            this.btnRegisterOrganization.FlatAppearance.BorderSize = 0;
+            this.btnRegisterOrganization.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.btnRegisterOrganization.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnRegisterOrganization.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnRegisterOrganization.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegisterOrganization.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegisterOrganization.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
+            this.btnRegisterOrganization.Location = new System.Drawing.Point(425, 53);
+            this.btnRegisterOrganization.Name = "btnRegisterOrganization";
+            this.btnRegisterOrganization.Padding = new System.Windows.Forms.Padding(3);
+            this.btnRegisterOrganization.Size = new System.Drawing.Size(180, 140);
+            this.btnRegisterOrganization.TabIndex = 9;
+            this.btnRegisterOrganization.Text = "Register Organization";
+            this.btnRegisterOrganization.UseVisualStyleBackColor = false;
+            this.btnRegisterOrganization.Click += new System.EventHandler(this.btnRegisterOrganization_Click);
             // 
             // btnChallan
             // 
@@ -223,29 +241,29 @@
             this.btnChallan.UseVisualStyleBackColor = false;
             this.btnChallan.Click += new System.EventHandler(this.btnChallan_Click);
             // 
-            // btnRegisterOrganization
+            // btnRegisterUser
             // 
-            this.btnRegisterOrganization.BackColor = System.Drawing.Color.Transparent;
-            this.btnRegisterOrganization.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRegisterOrganization.BackgroundImage")));
-            this.btnRegisterOrganization.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnRegisterOrganization.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRegisterOrganization.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnRegisterOrganization.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
-            this.btnRegisterOrganization.FlatAppearance.BorderSize = 0;
-            this.btnRegisterOrganization.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.btnRegisterOrganization.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnRegisterOrganization.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnRegisterOrganization.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegisterOrganization.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegisterOrganization.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
-            this.btnRegisterOrganization.Location = new System.Drawing.Point(425, 53);
-            this.btnRegisterOrganization.Name = "btnRegisterOrganization";
-            this.btnRegisterOrganization.Padding = new System.Windows.Forms.Padding(3);
-            this.btnRegisterOrganization.Size = new System.Drawing.Size(180, 140);
-            this.btnRegisterOrganization.TabIndex = 9;
-            this.btnRegisterOrganization.Text = "Register Organization";
-            this.btnRegisterOrganization.UseVisualStyleBackColor = false;
-            this.btnRegisterOrganization.Click += new System.EventHandler(this.btnRegisterOrganization_Click);
+            this.btnRegisterUser.BackColor = System.Drawing.Color.Transparent;
+            this.btnRegisterUser.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRegisterUser.BackgroundImage")));
+            this.btnRegisterUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRegisterUser.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRegisterUser.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btnRegisterUser.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
+            this.btnRegisterUser.FlatAppearance.BorderSize = 0;
+            this.btnRegisterUser.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.btnRegisterUser.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnRegisterUser.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnRegisterUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegisterUser.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegisterUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
+            this.btnRegisterUser.Location = new System.Drawing.Point(53, 345);
+            this.btnRegisterUser.Name = "btnRegisterUser";
+            this.btnRegisterUser.Padding = new System.Windows.Forms.Padding(3);
+            this.btnRegisterUser.Size = new System.Drawing.Size(180, 140);
+            this.btnRegisterUser.TabIndex = 11;
+            this.btnRegisterUser.Text = "Register User";
+            this.btnRegisterUser.UseVisualStyleBackColor = false;
+            this.btnRegisterUser.Click += new System.EventHandler(this.btnRegisterUser_Click);
             // 
             // label4
             // 
@@ -335,7 +353,8 @@
             // viewToolStripMenuItem
             // 
             this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tmnuView_Users});
+            this.tmnuView_Users,
+            this.tmnuView_Person});
             this.viewToolStripMenuItem.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.viewToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
@@ -433,22 +452,12 @@
             this.label7.TabIndex = 6;
             this.label7.Text = "label7";
             // 
-            // flowLayoutPanel1
+            // tmnuView_Person
             // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.flowLayoutPanel1.Controls.Add(this.btnRegisterDrive);
-            this.flowLayoutPanel1.Controls.Add(this.btnRegisterFarmer);
-            this.flowLayoutPanel1.Controls.Add(this.btnRegisterOrganization);
-            this.flowLayoutPanel1.Controls.Add(this.btnRegisterSaller);
-            this.flowLayoutPanel1.Controls.Add(this.btnReports);
-            this.flowLayoutPanel1.Controls.Add(this.btnChallan);
-            this.flowLayoutPanel1.Controls.Add(this.btnRegisterUser);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(1, 1);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(50);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(718, 600);
-            this.flowLayoutPanel1.TabIndex = 12;
+            this.tmnuView_Person.Name = "tmnuView_Person";
+            this.tmnuView_Person.Size = new System.Drawing.Size(152, 22);
+            this.tmnuView_Person.Text = "&Person";
+            this.tmnuView_Person.Click += new System.EventHandler(this.tmnuView_Person_Click);
             // 
             // Dashbaord
             // 
@@ -467,11 +476,11 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Dashbaord_FormClosing);
             this.Load += new System.EventHandler(this.Dashbaord_Load);
             this.panel1.ResumeLayout(false);
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.pnlMainMenu.ResumeLayout(false);
             this.pnlMainMenu.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -506,5 +515,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.ToolStripMenuItem tmnuView_Person;
     }
 }

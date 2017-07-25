@@ -105,5 +105,13 @@ namespace eAPMC.Forms
             ofrmView_AllUsers.Dispose();
             ofrmView_AllUsers = null;
         }
+
+        private void tmnuView_Person_Click(object sender, EventArgs e)
+        {
+            frmView_AllPersons ofrmView_AllPersons = new frmView_AllPersons();
+            ofrmView_AllPersons.ShowDialog(this);
+            ofrmView_AllPersons.Dispose();
+            ofrmView_AllPersons = null;
+        }
     }
 }

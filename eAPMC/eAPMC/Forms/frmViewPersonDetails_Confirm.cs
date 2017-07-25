@@ -34,25 +34,25 @@ namespace eAPMC.Forms
         public List<ContactDetails> lstContact { get; set; }
         private void frmViewPersonDetails_Load(object sender, EventArgs e)
         {
-            switch (PersonType)
-            {
-                //case eGlobal.PersonType.Farmer://Farmer
-                //    {
-                //        lblRegistration.Text = "Farmer Registration";
-                //        break;
-                //    }
-                //case eGlobal.PersonType.Driver://Driver
-                //    {
-                //        lblRegistration.Text = "Driver Registration";
-                //        break;
-                //    }
-                //case eGlobal.PersonType.Sellar://Saller
-                //    {
-                //        lblRegistration.Text = "Saller Registration";
-                //        grpbOrganizationDetails.Visible = true;
-                //        break;
-                //    }
-            }
+            //switch (PersonType)
+            //{
+            //    //case eGlobal.PersonType.Farmer://Farmer
+            //    //    {
+            //    //        lblRegistration.Text = "Farmer Registration";
+            //    //        break;
+            //    //    }
+            //    //case eGlobal.PersonType.Driver://Driver
+            //    //    {
+            //    //        lblRegistration.Text = "Driver Registration";
+            //    //        break;
+            //    //    }
+            //    //case eGlobal.PersonType.Sellar://Saller
+            //    //    {
+            //    //        lblRegistration.Text = "Saller Registration";
+            //    //        grpbOrganizationDetails.Visible = true;
+            //    //        break;
+            //    //    }
+            //}
             if (PersonDetails!=null)
             {
                 //XmlSerializer xsSubmit = new XmlSerializer(typeof(Person));
@@ -61,7 +61,7 @@ namespace eAPMC.Forms
 
                 //TextWriter tw = new StreamWriter(@"c:\Person.xml");
                 //xsSubmit.Serialize(tw, PersonDetails);
-
+                lblPersonCode.Text = Convert.ToString(PersonDetails.PersonCode);
                 lblPersonName.Text = PersonDetails.PersonFirstName +" "+ PersonDetails.PersonMiddleName +" "+ PersonDetails.PersonLastName;
                 lblPersonDOB.Text = Convert.ToString(PersonDetails.PersonDOB);
                 switch (PersonDetails.PersonGender)

@@ -139,6 +139,12 @@
     <Compile Include="Forms\frmViewPersonDetails.Designer.cs">
       <DependentUpon>frmViewPersonDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmView_AllPersons.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmView_AllPersons.Designer.cs">
+      <DependentUpon>frmView_AllPersons.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmView_AllUsers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -191,6 +197,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmViewPersonDetails.resx">
       <DependentUpon>frmViewPersonDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmView_AllPersons.resx">
+      <DependentUpon>frmView_AllPersons.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmView_AllUsers.resx">
       <DependentUpon>frmView_AllUsers.cs</DependentUpon>
