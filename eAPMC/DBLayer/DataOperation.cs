@@ -423,6 +423,50 @@ namespace DBLayer
             return nUserID;
         }
 
+        public Int64 InsertUserSession(Int64 LoginSessionID, string LoginName, string LocalMachineName, string LocalMachineIP, string LocalUserName, string RemoteMachineName,string RemoteMachineIP,string RemoteUserName,string Domain,Int64 ClientProcessID)
+        {
+            Int64 nLoginSessionID = 0;
+            string query_procedure_name = string.Empty;
+
+            try
+            {
+                query_procedure_name = "gsp_InsertUserSession";
+
+                using (DbCommand dbCommand = sqlDb.GetStoredProcCommand(query_procedure_name))
+                {
+                    //sqlDb.AddInParameter(dbCommand, "@UserId", DbType.Int64, UserID);
+                    sqlDb.AddParameter(dbCommand, "@LoginSessionID", DbType.Int64, ParameterDirection.InputOutput, "LoginSessionID", DataRowVersion.Current, LoginSessionID);
+                    sqlDb.AddInParameter(dbCommand, "@LoginName", DbType.String, LoginName);
+                    sqlDb.AddInParameter(dbCommand, "@LocalMachineName", DbType.String, LocalMachineName);
+                    sqlDb.AddInParameter(dbCommand, "@LocalMachineIP", DbType.String, LocalMachineIP);
+                    sqlDb.AddInParameter(dbCommand, "@LocalUserName", DbType.String, LocalUserName);
+                    sqlDb.AddInParameter(dbCommand, "@RemoteMachineName", DbType.String, RemoteMachineName);
+                    sqlDb.AddInParameter(dbCommand, "@RemoteMachineIP", DbType.String, RemoteMachineIP);
+                    sqlDb.AddInParameter(dbCommand, "@RemoteUserName", DbType.String, RemoteUserName);
+                    sqlDb.AddInParameter(dbCommand, "@Domain", DbType.String, Domain);
+                    sqlDb.AddInParameter(dbCommand, "@ClientProcessID", DbType.Int64, ClientProcessID);
+                    
+
+                    //ds = sqlDb.ExecuteDataSet(dbCommand);
+                    Int64 n = sqlDb.ExecuteNonQuery(dbCommand);
+                    object objID = sqlDb.GetParameterValue(dbCommand, "@LoginSessionID");
+                    if (Convert.ToInt64(objID) > 0)
+                        nLoginSessionID = Convert.ToInt64(objID);
+                    else
+                        nLoginSessionID = 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+            }
+
+            return nLoginSessionID;
+        }
+
         public Int64 InsertUpdatePerson(DataTable dtPersonDetails, DataTable dtContactDetails, DataTable dtCardDetails, DataTable dtVerificationDetails, DataTable dtPhotoDetails, DataTable dtAddressDetails)
         {
             Int64 nUserID = 0;

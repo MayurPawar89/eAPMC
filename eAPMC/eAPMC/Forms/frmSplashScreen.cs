@@ -70,6 +70,7 @@ namespace eAPMC.Forms
                             {
                                 IsDefaultPassword = true;
                             }
+                            eGlobal.LoginSessionID=Convert.ToInt64(AddRemoteLoginSession(Convert.ToString(dr["LoginName"]), true));
                             _result = true;
                             break;
                         }
@@ -94,6 +95,24 @@ namespace eAPMC.Forms
             }
 
             return _result;
+        }
+        public Int64 AddRemoteLoginSession(string LoginName, bool _isLogin = true)
+        {
+            MachineDetails.MachineInfo localMachine = MachineDetails.LocalMachineDetails(_isLogin);
+            MachineDetails.MachineInfo remotemachine = MachineDetails.RemoteMachineDetails(_isLogin);
+            DBAccess dbAccess = null;
+            Int64 LoginSessionID = 0;
+            try
+            {
+                dbAccess = new DBAccess();
+                LoginSessionID = dbAccess.InsertUserSession(0, LoginName, localMachine.MachineName, localMachine.MachineIp, localMachine.UserName, remotemachine.MachineName, remotemachine.MachineIp, remotemachine.UserName, remotemachine.DomainName, System.Diagnostics.Process.GetCurrentProcess().Id);
+            }
+            catch (Exception)
+            {
+                
+                throw;
+            }
+            return LoginSessionID;
         }
     }
 }

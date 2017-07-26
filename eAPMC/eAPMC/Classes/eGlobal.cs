@@ -43,6 +43,8 @@ namespace eAPMC.Classes
 
         public static Int64 UserID { get; set; }
 
+        public static Int64 LoginSessionID { get; set; }
+
         public static Int64 UserType { get; set; }
 
         public static string LoginName { get; set; }

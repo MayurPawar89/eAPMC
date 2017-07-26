@@ -59,6 +59,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -69,7 +70,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Challan.cs" />
     <Compile Include="Classes\eGlobal.cs" />
+    <Compile Include="Classes\MachineDetails.cs" />
     <Compile Include="Classes\Person.cs" />
     <Compile Include="Classes\Pincode.cs" />
     <Compile Include="Classes\Users.cs" />
@@ -257,6 +260,8 @@
     <Content Include="Logo Images\onion_sample3 copy.png" />
     <Content Include="Logo Images\onion_sample3.png" />
     <Content Include="Scripts\20170725\CreateSP.sql" />
+    <Content Include="Scripts\20170726\eAPMC_ItemsTable.sql" />
+    <Content Include="Scripts\20170726\gsp_InsertUserSession.sql" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DBLayer\DBLayer.csproj">

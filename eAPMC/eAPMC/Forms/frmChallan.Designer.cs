@@ -31,23 +31,38 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmChallan));
             this.pnlPersonReg = new System.Windows.Forms.Panel();
+            this.grpbAddressDetails = new System.Windows.Forms.GroupBox();
+            this.txtPincode = new System.Windows.Forms.TextBox();
+            this.txtAddressLine2 = new System.Windows.Forms.TextBox();
+            this.txtAddressLine1 = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.grpbContactDetails = new System.Windows.Forms.GroupBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.pnlChallanReceiver_Driver = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.pnlChallanReceiver_Farmer = new System.Windows.Forms.Panel();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label31 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
             this.grpbLoginDetails = new System.Windows.Forms.GroupBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.label34 = new System.Windows.Forms.Label();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.label33 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.label32 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtLoginName = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -88,26 +103,17 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.grpbContactDetails = new System.Windows.Forms.GroupBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label27 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label31 = new System.Windows.Forms.Label();
-            this.grpbAddressDetails = new System.Windows.Forms.GroupBox();
-            this.txtPincode = new System.Windows.Forms.TextBox();
-            this.txtAddressLine2 = new System.Windows.Forms.TextBox();
-            this.txtAddressLine1 = new System.Windows.Forms.TextBox();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
+            this.pnlChallanReceiverType = new System.Windows.Forms.Panel();
+            this.pnlChallanReceiver = new System.Windows.Forms.Panel();
+            this.label19 = new System.Windows.Forms.Label();
+            this.rdReceiverType_Farmer = new System.Windows.Forms.RadioButton();
+            this.rdReceiverType_Driver = new System.Windows.Forms.RadioButton();
             this.pnlPersonReg.SuspendLayout();
+            this.grpbAddressDetails.SuspendLayout();
+            this.grpbContactDetails.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.pnlChallanReceiver_Driver.SuspendLayout();
+            this.pnlChallanReceiver_Farmer.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.grpbLoginDetails.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -116,11 +122,8 @@
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.grpbContactDetails.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.grpbAddressDetails.SuspendLayout();
+            this.pnlChallanReceiverType.SuspendLayout();
+            this.pnlChallanReceiver.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlPersonReg
@@ -141,37 +144,274 @@
             this.pnlPersonReg.Size = new System.Drawing.Size(661, 712);
             this.pnlPersonReg.TabIndex = 61;
             // 
+            // grpbAddressDetails
+            // 
+            this.grpbAddressDetails.Controls.Add(this.txtPincode);
+            this.grpbAddressDetails.Controls.Add(this.txtAddressLine2);
+            this.grpbAddressDetails.Controls.Add(this.txtAddressLine1);
+            this.grpbAddressDetails.Controls.Add(this.label24);
+            this.grpbAddressDetails.Controls.Add(this.label28);
+            this.grpbAddressDetails.Controls.Add(this.label29);
+            this.grpbAddressDetails.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpbAddressDetails.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
+            this.grpbAddressDetails.Location = new System.Drawing.Point(18, 567);
+            this.grpbAddressDetails.Name = "grpbAddressDetails";
+            this.grpbAddressDetails.Size = new System.Drawing.Size(634, 109);
+            this.grpbAddressDetails.TabIndex = 90;
+            this.grpbAddressDetails.TabStop = false;
+            this.grpbAddressDetails.Text = "   Challan Documents  ";
+            // 
+            // txtPincode
+            // 
+            this.txtPincode.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPincode.ForeColor = System.Drawing.Color.Black;
+            this.txtPincode.Location = new System.Drawing.Point(196, 75);
+            this.txtPincode.MaxLength = 6;
+            this.txtPincode.Name = "txtPincode";
+            this.txtPincode.Size = new System.Drawing.Size(326, 22);
+            this.txtPincode.TabIndex = 77;
+            this.txtPincode.Tag = "";
+            // 
+            // txtAddressLine2
+            // 
+            this.txtAddressLine2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddressLine2.ForeColor = System.Drawing.Color.Black;
+            this.txtAddressLine2.Location = new System.Drawing.Point(196, 48);
+            this.txtAddressLine2.Name = "txtAddressLine2";
+            this.txtAddressLine2.Size = new System.Drawing.Size(326, 22);
+            this.txtAddressLine2.TabIndex = 76;
+            // 
+            // txtAddressLine1
+            // 
+            this.txtAddressLine1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddressLine1.ForeColor = System.Drawing.Color.Black;
+            this.txtAddressLine1.Location = new System.Drawing.Point(196, 21);
+            this.txtAddressLine1.Name = "txtAddressLine1";
+            this.txtAddressLine1.Size = new System.Drawing.Size(326, 22);
+            this.txtAddressLine1.TabIndex = 75;
+            // 
+            // label24
+            // 
+            this.label24.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label24.AutoEllipsis = true;
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
+            this.label24.Location = new System.Drawing.Point(94, 77);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(98, 14);
+            this.label24.TabIndex = 71;
+            this.label24.Text = "Document Scan:";
+            // 
+            // label28
+            // 
+            this.label28.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label28.AutoEllipsis = true;
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
+            this.label28.Location = new System.Drawing.Point(62, 52);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(130, 14);
+            this.label28.TabIndex = 73;
+            this.label28.Text = "Document Type Desc:";
+            // 
+            // label29
+            // 
+            this.label29.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label29.AutoEllipsis = true;
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
+            this.label29.Location = new System.Drawing.Point(60, 24);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(132, 14);
+            this.label29.TabIndex = 72;
+            this.label29.Text = "Document Type Code:";
+            // 
+            // grpbContactDetails
+            // 
+            this.grpbContactDetails.Controls.Add(this.pnlChallanReceiver);
+            this.grpbContactDetails.Controls.Add(this.pnlChallanReceiverType);
+            this.grpbContactDetails.Controls.Add(this.groupBox1);
+            this.grpbContactDetails.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpbContactDetails.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
+            this.grpbContactDetails.Location = new System.Drawing.Point(18, 316);
+            this.grpbContactDetails.Name = "grpbContactDetails";
+            this.grpbContactDetails.Size = new System.Drawing.Size(634, 94);
+            this.grpbContactDetails.TabIndex = 88;
+            this.grpbContactDetails.TabStop = false;
+            this.grpbContactDetails.Text = "   Challan Receiver  ";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.textBox9);
+            this.groupBox1.Controls.Add(this.label13);
+            this.groupBox1.Controls.Add(this.label14);
+            this.groupBox1.Controls.Add(this.label15);
+            this.groupBox1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
+            this.groupBox1.Location = new System.Drawing.Point(17, 408);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(737, 125);
+            this.groupBox1.TabIndex = 91;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Contact Details";
+            // 
+            // textBox9
+            // 
+            this.textBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
+            this.textBox9.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox9.ForeColor = System.Drawing.Color.Black;
+            this.textBox9.Location = new System.Drawing.Point(173, 79);
+            this.textBox9.MaxLength = 50;
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(404, 22);
+            this.textBox9.TabIndex = 88;
+            // 
+            // label13
+            // 
+            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label13.AutoEllipsis = true;
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
+            this.label13.Location = new System.Drawing.Point(121, 83);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(42, 14);
+            this.label13.TabIndex = 90;
+            this.label13.Text = "Email :";
+            // 
+            // label14
+            // 
+            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label14.AutoEllipsis = true;
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
+            this.label14.Location = new System.Drawing.Point(132, 54);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(33, 14);
+            this.label14.TabIndex = 89;
+            this.label14.Text = "Fax :";
+            // 
+            // label15
+            // 
+            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label15.AutoEllipsis = true;
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
+            this.label15.Location = new System.Drawing.Point(113, 29);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(49, 14);
+            this.label15.TabIndex = 87;
+            this.label15.Text = "Mobile :";
+            // 
+            // pnlChallanReceiver_Driver
+            // 
+            this.pnlChallanReceiver_Driver.Controls.Add(this.comboBox1);
+            this.pnlChallanReceiver_Driver.Controls.Add(this.label27);
+            this.pnlChallanReceiver_Driver.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlChallanReceiver_Driver.Location = new System.Drawing.Point(0, 0);
+            this.pnlChallanReceiver_Driver.Name = "pnlChallanReceiver_Driver";
+            this.pnlChallanReceiver_Driver.Size = new System.Drawing.Size(628, 37);
+            this.pnlChallanReceiver_Driver.TabIndex = 96;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "US"});
+            this.comboBox1.Location = new System.Drawing.Point(193, 7);
+            this.comboBox1.MaxDropDownItems = 3;
+            this.comboBox1.MaxLength = 20;
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(325, 22);
+            this.comboBox1.TabIndex = 83;
+            // 
+            // label27
+            // 
+            this.label27.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label27.AutoEllipsis = true;
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
+            this.label27.Location = new System.Drawing.Point(146, 10);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(42, 14);
+            this.label27.TabIndex = 84;
+            this.label27.Text = "Driver:";
+            // 
+            // pnlChallanReceiver_Farmer
+            // 
+            this.pnlChallanReceiver_Farmer.Controls.Add(this.comboBox2);
+            this.pnlChallanReceiver_Farmer.Controls.Add(this.label31);
+            this.pnlChallanReceiver_Farmer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlChallanReceiver_Farmer.Location = new System.Drawing.Point(0, 0);
+            this.pnlChallanReceiver_Farmer.Name = "pnlChallanReceiver_Farmer";
+            this.pnlChallanReceiver_Farmer.Size = new System.Drawing.Size(628, 37);
+            this.pnlChallanReceiver_Farmer.TabIndex = 97;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "US"});
+            this.comboBox2.Location = new System.Drawing.Point(193, 7);
+            this.comboBox2.MaxDropDownItems = 3;
+            this.comboBox2.MaxLength = 20;
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(325, 22);
+            this.comboBox2.TabIndex = 83;
+            // 
+            // label31
+            // 
+            this.label31.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label31.AutoEllipsis = true;
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
+            this.label31.Location = new System.Drawing.Point(141, 10);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(48, 14);
+            this.label31.TabIndex = 84;
+            this.label31.Text = "Farmer:";
+            // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.comboBox5);
             this.groupBox2.Controls.Add(this.comboBox4);
             this.groupBox2.Controls.Add(this.textBox7);
             this.groupBox2.Controls.Add(this.label20);
             this.groupBox2.Controls.Add(this.textBox1);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.label19);
             this.groupBox2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
             this.groupBox2.Location = new System.Drawing.Point(18, 187);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(634, 142);
+            this.groupBox2.Size = new System.Drawing.Size(634, 121);
             this.groupBox2.TabIndex = 87;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "   Challan Items  ";
-            // 
-            // comboBox5
-            // 
-            this.comboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Items.AddRange(new object[] {
-            "US"});
-            this.comboBox5.Location = new System.Drawing.Point(195, 27);
-            this.comboBox5.MaxDropDownItems = 3;
-            this.comboBox5.MaxLength = 20;
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(325, 22);
-            this.comboBox5.TabIndex = 85;
             // 
             // comboBox4
             // 
@@ -179,7 +419,7 @@
             this.comboBox4.FormattingEnabled = true;
             this.comboBox4.Items.AddRange(new object[] {
             "US"});
-            this.comboBox4.Location = new System.Drawing.Point(195, 55);
+            this.comboBox4.Location = new System.Drawing.Point(195, 21);
             this.comboBox4.MaxDropDownItems = 3;
             this.comboBox4.MaxLength = 20;
             this.comboBox4.Name = "comboBox4";
@@ -190,7 +430,7 @@
             // 
             this.textBox7.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox7.ForeColor = System.Drawing.Color.Black;
-            this.textBox7.Location = new System.Drawing.Point(195, 110);
+            this.textBox7.Location = new System.Drawing.Point(195, 76);
             this.textBox7.MaxLength = 6;
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(326, 22);
@@ -206,7 +446,7 @@
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
-            this.label20.Location = new System.Drawing.Point(155, 114);
+            this.label20.Location = new System.Drawing.Point(155, 80);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(36, 14);
             this.label20.TabIndex = 78;
@@ -216,7 +456,7 @@
             // 
             this.textBox1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.Color.Black;
-            this.textBox1.Location = new System.Drawing.Point(195, 82);
+            this.textBox1.Location = new System.Drawing.Point(195, 48);
             this.textBox1.MaxLength = 6;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(326, 22);
@@ -232,7 +472,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
-            this.label2.Location = new System.Drawing.Point(102, 86);
+            this.label2.Location = new System.Drawing.Point(102, 52);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(89, 14);
             this.label2.TabIndex = 71;
@@ -247,26 +487,11 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
-            this.label10.Location = new System.Drawing.Point(92, 59);
+            this.label10.Location = new System.Drawing.Point(150, 25);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(99, 14);
+            this.label10.Size = new System.Drawing.Size(41, 14);
             this.label10.TabIndex = 73;
-            this.label10.Text = "Item Type Desc:";
-            // 
-            // label19
-            // 
-            this.label19.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label19.AutoEllipsis = true;
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
-            this.label19.Location = new System.Drawing.Point(90, 31);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(101, 14);
-            this.label19.TabIndex = 72;
-            this.label19.Text = "Item Type Code:";
+            this.label10.Text = "Item :";
             // 
             // grpbLoginDetails
             // 
@@ -275,17 +500,15 @@
             this.grpbLoginDetails.Controls.Add(this.label34);
             this.grpbLoginDetails.Controls.Add(this.textBox10);
             this.grpbLoginDetails.Controls.Add(this.label33);
-            this.grpbLoginDetails.Controls.Add(this.textBox8);
-            this.grpbLoginDetails.Controls.Add(this.label32);
             this.grpbLoginDetails.Controls.Add(this.label1);
             this.grpbLoginDetails.Controls.Add(this.txtLoginName);
             this.grpbLoginDetails.Controls.Add(this.groupBox3);
             this.grpbLoginDetails.Controls.Add(this.label47);
             this.grpbLoginDetails.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpbLoginDetails.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
-            this.grpbLoginDetails.Location = new System.Drawing.Point(18, 398);
+            this.grpbLoginDetails.Location = new System.Drawing.Point(18, 417);
             this.grpbLoginDetails.Name = "grpbLoginDetails";
-            this.grpbLoginDetails.Size = new System.Drawing.Size(636, 172);
+            this.grpbLoginDetails.Size = new System.Drawing.Size(636, 145);
             this.grpbLoginDetails.TabIndex = 44;
             this.grpbLoginDetails.TabStop = false;
             this.grpbLoginDetails.Text = "   Challan Vehicle  ";
@@ -307,7 +530,7 @@
             // 
             this.textBox11.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox11.ForeColor = System.Drawing.Color.Black;
-            this.textBox11.Location = new System.Drawing.Point(195, 140);
+            this.textBox11.Location = new System.Drawing.Point(195, 109);
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(330, 22);
             this.textBox11.TabIndex = 96;
@@ -321,7 +544,7 @@
             this.label34.AutoSize = true;
             this.label34.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
-            this.label34.Location = new System.Drawing.Point(101, 141);
+            this.label34.Location = new System.Drawing.Point(101, 110);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(90, 14);
             this.label34.TabIndex = 95;
@@ -331,7 +554,7 @@
             // 
             this.textBox10.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox10.ForeColor = System.Drawing.Color.Black;
-            this.textBox10.Location = new System.Drawing.Point(195, 112);
+            this.textBox10.Location = new System.Drawing.Point(195, 81);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(330, 22);
             this.textBox10.TabIndex = 96;
@@ -345,35 +568,11 @@
             this.label33.AutoSize = true;
             this.label33.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
-            this.label33.Location = new System.Drawing.Point(96, 113);
+            this.label33.Location = new System.Drawing.Point(96, 82);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(95, 14);
             this.label33.TabIndex = 95;
             this.label33.Text = "Loaded Weight:";
-            // 
-            // textBox8
-            // 
-            this.textBox8.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.ForeColor = System.Drawing.Color.Black;
-            this.textBox8.Location = new System.Drawing.Point(195, 84);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(330, 22);
-            this.textBox8.TabIndex = 96;
-            // 
-            // label32
-            // 
-            this.label32.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label32.AutoEllipsis = true;
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
-            this.label32.Location = new System.Drawing.Point(79, 85);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(112, 14);
-            this.label32.TabIndex = 95;
-            this.label32.Text = "Vehicle Type Desc:";
             // 
             // label1
             // 
@@ -882,257 +1081,65 @@
             this.panel3.Size = new System.Drawing.Size(661, 46);
             this.panel3.TabIndex = 62;
             // 
-            // grpbContactDetails
+            // pnlChallanReceiverType
             // 
-            this.grpbContactDetails.Controls.Add(this.groupBox1);
-            this.grpbContactDetails.Controls.Add(this.panel4);
-            this.grpbContactDetails.Controls.Add(this.panel5);
-            this.grpbContactDetails.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpbContactDetails.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
-            this.grpbContactDetails.Location = new System.Drawing.Point(18, 335);
-            this.grpbContactDetails.Name = "grpbContactDetails";
-            this.grpbContactDetails.Size = new System.Drawing.Size(634, 57);
-            this.grpbContactDetails.TabIndex = 88;
-            this.grpbContactDetails.TabStop = false;
-            this.grpbContactDetails.Text = "   Challan Receiver  ";
+            this.pnlChallanReceiverType.Controls.Add(this.rdReceiverType_Driver);
+            this.pnlChallanReceiverType.Controls.Add(this.rdReceiverType_Farmer);
+            this.pnlChallanReceiverType.Controls.Add(this.label19);
+            this.pnlChallanReceiverType.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlChallanReceiverType.Location = new System.Drawing.Point(3, 18);
+            this.pnlChallanReceiverType.Name = "pnlChallanReceiverType";
+            this.pnlChallanReceiverType.Size = new System.Drawing.Size(628, 36);
+            this.pnlChallanReceiverType.TabIndex = 98;
             // 
-            // groupBox1
+            // pnlChallanReceiver
             // 
-            this.groupBox1.Controls.Add(this.textBox9);
-            this.groupBox1.Controls.Add(this.label13);
-            this.groupBox1.Controls.Add(this.label14);
-            this.groupBox1.Controls.Add(this.label15);
-            this.groupBox1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
-            this.groupBox1.Location = new System.Drawing.Point(17, 408);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(737, 125);
-            this.groupBox1.TabIndex = 91;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Contact Details";
+            this.pnlChallanReceiver.Controls.Add(this.pnlChallanReceiver_Driver);
+            this.pnlChallanReceiver.Controls.Add(this.pnlChallanReceiver_Farmer);
+            this.pnlChallanReceiver.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlChallanReceiver.Location = new System.Drawing.Point(3, 54);
+            this.pnlChallanReceiver.Name = "pnlChallanReceiver";
+            this.pnlChallanReceiver.Size = new System.Drawing.Size(628, 37);
+            this.pnlChallanReceiver.TabIndex = 99;
             // 
-            // textBox9
+            // label19
             // 
-            this.textBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
-            this.textBox9.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.ForeColor = System.Drawing.Color.Black;
-            this.textBox9.Location = new System.Drawing.Point(173, 79);
-            this.textBox9.MaxLength = 50;
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(404, 22);
-            this.textBox9.TabIndex = 88;
-            // 
-            // label13
-            // 
-            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.label19.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label13.AutoEllipsis = true;
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
-            this.label13.Location = new System.Drawing.Point(121, 83);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(42, 14);
-            this.label13.TabIndex = 90;
-            this.label13.Text = "Email :";
+            this.label19.AutoEllipsis = true;
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
+            this.label19.Location = new System.Drawing.Point(95, 10);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(93, 14);
+            this.label19.TabIndex = 85;
+            this.label19.Text = "Receiver Type :";
             // 
-            // label14
+            // rdReceiverType_Farmer
             // 
-            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label14.AutoEllipsis = true;
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
-            this.label14.Location = new System.Drawing.Point(132, 54);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(33, 14);
-            this.label14.TabIndex = 89;
-            this.label14.Text = "Fax :";
+            this.rdReceiverType_Farmer.AutoSize = true;
+            this.rdReceiverType_Farmer.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.rdReceiverType_Farmer.Location = new System.Drawing.Point(195, 9);
+            this.rdReceiverType_Farmer.Name = "rdReceiverType_Farmer";
+            this.rdReceiverType_Farmer.Size = new System.Drawing.Size(62, 18);
+            this.rdReceiverType_Farmer.TabIndex = 86;
+            this.rdReceiverType_Farmer.TabStop = true;
+            this.rdReceiverType_Farmer.Text = "Farmer";
+            this.rdReceiverType_Farmer.UseVisualStyleBackColor = true;
             // 
-            // label15
+            // rdReceiverType_Driver
             // 
-            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label15.AutoEllipsis = true;
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
-            this.label15.Location = new System.Drawing.Point(113, 29);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(49, 14);
-            this.label15.TabIndex = 87;
-            this.label15.Text = "Mobile :";
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.comboBox1);
-            this.panel4.Controls.Add(this.label27);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(3, 18);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(628, 36);
-            this.panel4.TabIndex = 96;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "US"});
-            this.comboBox1.Location = new System.Drawing.Point(193, 7);
-            this.comboBox1.MaxDropDownItems = 3;
-            this.comboBox1.MaxLength = 20;
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(325, 22);
-            this.comboBox1.TabIndex = 83;
-            // 
-            // label27
-            // 
-            this.label27.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label27.AutoEllipsis = true;
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
-            this.label27.Location = new System.Drawing.Point(146, 10);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(42, 14);
-            this.label27.TabIndex = 84;
-            this.label27.Text = "Driver:";
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.comboBox2);
-            this.panel5.Controls.Add(this.label31);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(3, 18);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(628, 36);
-            this.panel5.TabIndex = 97;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "US"});
-            this.comboBox2.Location = new System.Drawing.Point(193, 7);
-            this.comboBox2.MaxDropDownItems = 3;
-            this.comboBox2.MaxLength = 20;
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(325, 22);
-            this.comboBox2.TabIndex = 83;
-            // 
-            // label31
-            // 
-            this.label31.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label31.AutoEllipsis = true;
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
-            this.label31.Location = new System.Drawing.Point(141, 10);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(48, 14);
-            this.label31.TabIndex = 84;
-            this.label31.Text = "Farmer:";
-            // 
-            // grpbAddressDetails
-            // 
-            this.grpbAddressDetails.Controls.Add(this.txtPincode);
-            this.grpbAddressDetails.Controls.Add(this.txtAddressLine2);
-            this.grpbAddressDetails.Controls.Add(this.txtAddressLine1);
-            this.grpbAddressDetails.Controls.Add(this.label24);
-            this.grpbAddressDetails.Controls.Add(this.label28);
-            this.grpbAddressDetails.Controls.Add(this.label29);
-            this.grpbAddressDetails.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpbAddressDetails.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
-            this.grpbAddressDetails.Location = new System.Drawing.Point(18, 576);
-            this.grpbAddressDetails.Name = "grpbAddressDetails";
-            this.grpbAddressDetails.Size = new System.Drawing.Size(634, 109);
-            this.grpbAddressDetails.TabIndex = 90;
-            this.grpbAddressDetails.TabStop = false;
-            this.grpbAddressDetails.Text = "   Challan Documents  ";
-            // 
-            // txtPincode
-            // 
-            this.txtPincode.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPincode.ForeColor = System.Drawing.Color.Black;
-            this.txtPincode.Location = new System.Drawing.Point(196, 75);
-            this.txtPincode.MaxLength = 6;
-            this.txtPincode.Name = "txtPincode";
-            this.txtPincode.Size = new System.Drawing.Size(326, 22);
-            this.txtPincode.TabIndex = 77;
-            this.txtPincode.Tag = "";
-            // 
-            // txtAddressLine2
-            // 
-            this.txtAddressLine2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAddressLine2.ForeColor = System.Drawing.Color.Black;
-            this.txtAddressLine2.Location = new System.Drawing.Point(196, 48);
-            this.txtAddressLine2.Name = "txtAddressLine2";
-            this.txtAddressLine2.Size = new System.Drawing.Size(326, 22);
-            this.txtAddressLine2.TabIndex = 76;
-            // 
-            // txtAddressLine1
-            // 
-            this.txtAddressLine1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAddressLine1.ForeColor = System.Drawing.Color.Black;
-            this.txtAddressLine1.Location = new System.Drawing.Point(196, 21);
-            this.txtAddressLine1.Name = "txtAddressLine1";
-            this.txtAddressLine1.Size = new System.Drawing.Size(326, 22);
-            this.txtAddressLine1.TabIndex = 75;
-            // 
-            // label24
-            // 
-            this.label24.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label24.AutoEllipsis = true;
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
-            this.label24.Location = new System.Drawing.Point(94, 77);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(98, 14);
-            this.label24.TabIndex = 71;
-            this.label24.Text = "Document Scan:";
-            // 
-            // label28
-            // 
-            this.label28.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label28.AutoEllipsis = true;
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
-            this.label28.Location = new System.Drawing.Point(62, 52);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(130, 14);
-            this.label28.TabIndex = 73;
-            this.label28.Text = "Document Type Desc:";
-            // 
-            // label29
-            // 
-            this.label29.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label29.AutoEllipsis = true;
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
-            this.label29.Location = new System.Drawing.Point(60, 24);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(132, 14);
-            this.label29.TabIndex = 72;
-            this.label29.Text = "Document Type Code:";
+            this.rdReceiverType_Driver.AutoSize = true;
+            this.rdReceiverType_Driver.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.rdReceiverType_Driver.Location = new System.Drawing.Point(263, 10);
+            this.rdReceiverType_Driver.Name = "rdReceiverType_Driver";
+            this.rdReceiverType_Driver.Size = new System.Drawing.Size(56, 18);
+            this.rdReceiverType_Driver.TabIndex = 87;
+            this.rdReceiverType_Driver.TabStop = true;
+            this.rdReceiverType_Driver.Text = "Driver";
+            this.rdReceiverType_Driver.UseVisualStyleBackColor = true;
             // 
             // frmChallan
             // 
@@ -1150,6 +1157,15 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Challan";
             this.pnlPersonReg.ResumeLayout(false);
+            this.grpbAddressDetails.ResumeLayout(false);
+            this.grpbAddressDetails.PerformLayout();
+            this.grpbContactDetails.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.pnlChallanReceiver_Driver.ResumeLayout(false);
+            this.pnlChallanReceiver_Driver.PerformLayout();
+            this.pnlChallanReceiver_Farmer.ResumeLayout(false);
+            this.pnlChallanReceiver_Farmer.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.grpbLoginDetails.ResumeLayout(false);
@@ -1163,15 +1179,9 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            this.grpbContactDetails.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.grpbAddressDetails.ResumeLayout(false);
-            this.grpbAddressDetails.PerformLayout();
+            this.pnlChallanReceiverType.ResumeLayout(false);
+            this.pnlChallanReceiverType.PerformLayout();
+            this.pnlChallanReceiver.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1227,14 +1237,10 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.ComboBox comboBox5;
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.GroupBox grpbAddressDetails;
@@ -1250,11 +1256,16 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel pnlChallanReceiver_Driver;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel pnlChallanReceiver_Farmer;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Panel pnlChallanReceiver;
+        private System.Windows.Forms.Panel pnlChallanReceiverType;
+        private System.Windows.Forms.RadioButton rdReceiverType_Driver;
+        private System.Windows.Forms.RadioButton rdReceiverType_Farmer;
+        private System.Windows.Forms.Label label19;
     }
 }
