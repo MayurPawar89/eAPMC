@@ -121,12 +121,12 @@ namespace eAPMC.Forms
         {
             if (pictureBox1.Image != null)
             {
-                string sImagePath = Path.Combine(Application.ExecutablePath, "Images", "ProfileImages");
-                string path = sImagePath + PersonDetails + "_" + DateTime.Now.ToString("yyyyMMddhhmm") + Convert.ToString(ImageFormat.Png);
+                string sImagePath = Path.Combine(Application.ExecutablePath.Substring(0, Application.ExecutablePath.LastIndexOf("\\")), "Images", "ProfileImages", PersonDetails);
+                string path = sImagePath + "_" + DateTime.Now.ToString("yyyyMMddhhmm") +"."+ Convert.ToString(ImageFormat.Png);
                 PhotoLocation = path;
                 Bitmap bmpImage = new Bitmap(pictureBox1.Image);
                 Bitmap newImg = new Bitmap(bmpImage);
-                bmpImage.Save(path, ImageFormat.Png);
+                bmpImage.Save(path,ImageFormat.Png);
                 PhotoExtention = Path.GetExtension(path);
                 PhotoHeight = bmpImage.Height;
                 PhotoWidth = bmpImage.Width;

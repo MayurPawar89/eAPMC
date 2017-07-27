@@ -386,6 +386,7 @@ namespace eAPMC.Forms
 
             if (ofrmWebCam.Picture.Image!=null)
             {
+                picbPhoto.Image = ofrmWebCam.Picture.Image;
                 Image img = ofrmWebCam.Picture.Image;
                 PersonImage = img;
                 PersonPhotoLocation = ofrmWebCam.PhotoLocation;
@@ -395,8 +396,9 @@ namespace eAPMC.Forms
                 PersonPhotoSize = ofrmWebCam.PhotoSize;
                 if (img != null)
                 {
-                    string sImagePath = Path.Combine(Application.ExecutablePath, "Images", "ProfileImages", "Thumbnail");
-                    string path = sImagePath +"\\"+ PersonDetails + "_" + DateTime.Now.ToString("yyyyMMddhhmm") + Convert.ToString(ImageFormat.Png);
+                    string sImagePath = Path.Combine(Application.ExecutablePath.Substring(0, Application.ExecutablePath.LastIndexOf("\\")), "Images", "Thumbnail", PersonDetails);
+                    
+                    string path = sImagePath + "_" + DateTime.Now.ToString("yyyyMMddhhmm") +"."+ Convert.ToString(ImageFormat.Png);
                     Bitmap bmpImage = new Bitmap(img);
                     bmpImage.Save(path, ImageFormat.Png);
                     PersonThumbImage = img.GetThumbnailImage(70, 70, null, new IntPtr());

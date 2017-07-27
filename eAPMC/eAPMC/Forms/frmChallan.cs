@@ -12,9 +12,22 @@ namespace eAPMC.Forms
 {
     public partial class frmChallan : Form
     {
+        public string ChallanNo { get; set; }
+
+        public Int64 SessionID { get; set; }
         public frmChallan()
         {
             InitializeComponent();
+        }
+
+        private void frmChallan_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void grpbLoginDetails_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }
