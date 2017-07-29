@@ -636,7 +636,43 @@ namespace DBLayer
             }
             finally
             {
-                if (ds != null) { if (ds.Tables != null) { ds.Tables.Clear(); } ds.Dispose(); ds = null; }
+                //if (ds != null) { if (ds.Tables != null) { ds.Tables.Clear(); } ds.Dispose(); ds = null; }
+            }
+
+            return ds;
+        }
+
+        public DataSet GetChallanLoadDetails()
+        {
+            DataSet ds = null;
+            string query_procedure_name = string.Empty;
+
+            try
+            {
+                query_procedure_name = "gsp_GetChallanOnLoadInfo";
+
+                using (DbCommand dbCommand = sqlDb.GetStoredProcCommand(query_procedure_name))
+                {
+                    ds = sqlDb.ExecuteDataSet(dbCommand);
+
+                    if (ds != null && ds.Tables != null && ds.Tables.Count > 0)
+                    {
+                        ds.Tables[0].TableName = "ChallanDetails";
+                        ds.Tables[1].TableName = "FarmerDetails";
+                        ds.Tables[2].TableName = "DriverDetails";
+                        ds.Tables[3].TableName = "ItemDetails";
+                        ds.Tables[4].TableName = "VehicleDetails";
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                //if (ds != null) { if (ds.Tables != null) { ds.Tables.Clear(); } ds.Dispose(); ds = null; }
             }
 
             return ds;

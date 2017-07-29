@@ -262,6 +262,7 @@
     <Content Include="Scripts\20170725\CreateSP.sql" />
     <Content Include="Scripts\20170726\eAPMC_ItemsTable.sql" />
     <Content Include="Scripts\20170726\gsp_InsertUserSession.sql" />
+    <Content Include="Scripts\20170729\Script_20170729.sql" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DBLayer\DBLayer.csproj">

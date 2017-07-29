@@ -63,6 +63,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.grpbLoginDetails = new System.Windows.Forms.GroupBox();
+            this.cmbVehicleRegNo = new System.Windows.Forms.TextBox();
+            this.label47 = new System.Windows.Forms.Label();
             this.cmbVehicleList = new System.Windows.Forms.ComboBox();
             this.txtEmptyWeight = new System.Windows.Forms.TextBox();
             this.label34 = new System.Windows.Forms.Label();
@@ -77,6 +79,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.grpbPersonDetails = new System.Windows.Forms.GroupBox();
+            this.mskChallanTime = new System.Windows.Forms.MaskedTextBox();
+            this.lblChallanTime = new System.Windows.Forms.Label();
+            this.lblChallanDate = new System.Windows.Forms.Label();
+            this.lblUserName = new System.Windows.Forms.Label();
+            this.lblChallanNo = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.txtWeighingReceiptNo = new System.Windows.Forms.TextBox();
@@ -102,13 +109,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.lblChallanNo = new System.Windows.Forms.Label();
-            this.lblUserName = new System.Windows.Forms.Label();
-            this.lblChallanDate = new System.Windows.Forms.Label();
-            this.lblChallanTime = new System.Windows.Forms.Label();
-            this.mskChallanTime = new System.Windows.Forms.MaskedTextBox();
-            this.cmbVehicleRegNo = new System.Windows.Forms.TextBox();
-            this.label47 = new System.Windows.Forms.Label();
             this.pnlPersonReg.SuspendLayout();
             this.grpbAddressDetails.SuspendLayout();
             this.grpbContactDetails.SuspendLayout();
@@ -273,9 +273,10 @@
             // cmbDriversList
             // 
             this.cmbDriversList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbDriversList.Font = new System.Drawing.Font("Tahoma", 9F);
             this.cmbDriversList.FormattingEnabled = true;
             this.cmbDriversList.Items.AddRange(new object[] {
-            "US"});
+            "--Select--"});
             this.cmbDriversList.Location = new System.Drawing.Point(193, 7);
             this.cmbDriversList.MaxDropDownItems = 3;
             this.cmbDriversList.MaxLength = 20;
@@ -311,9 +312,10 @@
             // cmbFamersList
             // 
             this.cmbFamersList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbFamersList.Font = new System.Drawing.Font("Tahoma", 9F);
             this.cmbFamersList.FormattingEnabled = true;
             this.cmbFamersList.Items.AddRange(new object[] {
-            "US"});
+            "--Select--"});
             this.cmbFamersList.Location = new System.Drawing.Point(193, 7);
             this.cmbFamersList.MaxDropDownItems = 3;
             this.cmbFamersList.MaxLength = 20;
@@ -358,6 +360,7 @@
             this.rdReceiverType_Driver.TabStop = true;
             this.rdReceiverType_Driver.Text = "Driver";
             this.rdReceiverType_Driver.UseVisualStyleBackColor = true;
+            this.rdReceiverType_Driver.CheckedChanged += new System.EventHandler(this.rdReceiverType_Driver_CheckedChanged);
             // 
             // rdReceiverType_Farmer
             // 
@@ -370,6 +373,7 @@
             this.rdReceiverType_Farmer.TabStop = true;
             this.rdReceiverType_Farmer.Text = "Farmer";
             this.rdReceiverType_Farmer.UseVisualStyleBackColor = true;
+            this.rdReceiverType_Farmer.CheckedChanged += new System.EventHandler(this.rdReceiverType_Farmer_CheckedChanged);
             // 
             // label19
             // 
@@ -477,9 +481,10 @@
             // cmbChallanItem
             // 
             this.cmbChallanItem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbChallanItem.Font = new System.Drawing.Font("Tahoma", 9F);
             this.cmbChallanItem.FormattingEnabled = true;
             this.cmbChallanItem.Items.AddRange(new object[] {
-            "US"});
+            "--Select--"});
             this.cmbChallanItem.Location = new System.Drawing.Point(195, 21);
             this.cmbChallanItem.MaxDropDownItems = 3;
             this.cmbChallanItem.MaxLength = 20;
@@ -575,12 +580,37 @@
             this.grpbLoginDetails.Text = "   Challan Vehicle  ";
             this.grpbLoginDetails.Enter += new System.EventHandler(this.grpbLoginDetails_Enter);
             // 
+            // cmbVehicleRegNo
+            // 
+            this.cmbVehicleRegNo.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbVehicleRegNo.ForeColor = System.Drawing.Color.Black;
+            this.cmbVehicleRegNo.Location = new System.Drawing.Point(441, 25);
+            this.cmbVehicleRegNo.Name = "cmbVehicleRegNo";
+            this.cmbVehicleRegNo.Size = new System.Drawing.Size(179, 22);
+            this.cmbVehicleRegNo.TabIndex = 99;
+            // 
+            // label47
+            // 
+            this.label47.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label47.AutoEllipsis = true;
+            this.label47.AutoSize = true;
+            this.label47.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label47.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
+            this.label47.Location = new System.Drawing.Point(341, 28);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(94, 14);
+            this.label47.TabIndex = 98;
+            this.label47.Text = "Vehicle Reg No:";
+            // 
             // cmbVehicleList
             // 
             this.cmbVehicleList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbVehicleList.Font = new System.Drawing.Font("Tahoma", 9F);
             this.cmbVehicleList.FormattingEnabled = true;
             this.cmbVehicleList.Items.AddRange(new object[] {
-            "US"});
+            "--Select--"});
             this.cmbVehicleList.Location = new System.Drawing.Point(137, 25);
             this.cmbVehicleList.MaxDropDownItems = 3;
             this.cmbVehicleList.MaxLength = 20;
@@ -766,6 +796,78 @@
             this.grpbPersonDetails.TabIndex = 43;
             this.grpbPersonDetails.TabStop = false;
             this.grpbPersonDetails.Text = "   Challan Details  ";
+            // 
+            // mskChallanTime
+            // 
+            this.mskChallanTime.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.mskChallanTime.ForeColor = System.Drawing.Color.Black;
+            this.mskChallanTime.Location = new System.Drawing.Point(454, 52);
+            this.mskChallanTime.Mask = "00:00:00";
+            this.mskChallanTime.Name = "mskChallanTime";
+            this.mskChallanTime.Size = new System.Drawing.Size(140, 22);
+            this.mskChallanTime.TabIndex = 87;
+            // 
+            // lblChallanTime
+            // 
+            this.lblChallanTime.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblChallanTime.AutoEllipsis = true;
+            this.lblChallanTime.AutoSize = true;
+            this.lblChallanTime.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblChallanTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
+            this.lblChallanTime.Location = new System.Drawing.Point(424, 88);
+            this.lblChallanTime.Name = "lblChallanTime";
+            this.lblChallanTime.Size = new System.Drawing.Size(82, 14);
+            this.lblChallanTime.TabIndex = 86;
+            this.lblChallanTime.Text = "lblChallanTime";
+            this.lblChallanTime.Visible = false;
+            // 
+            // lblChallanDate
+            // 
+            this.lblChallanDate.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblChallanDate.AutoEllipsis = true;
+            this.lblChallanDate.AutoSize = true;
+            this.lblChallanDate.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblChallanDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
+            this.lblChallanDate.Location = new System.Drawing.Point(512, 88);
+            this.lblChallanDate.Name = "lblChallanDate";
+            this.lblChallanDate.Size = new System.Drawing.Size(81, 14);
+            this.lblChallanDate.TabIndex = 85;
+            this.lblChallanDate.Text = "lblChallanDate";
+            this.lblChallanDate.Visible = false;
+            // 
+            // lblUserName
+            // 
+            this.lblUserName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblUserName.AutoEllipsis = true;
+            this.lblUserName.AutoSize = true;
+            this.lblUserName.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
+            this.lblUserName.Location = new System.Drawing.Point(451, 28);
+            this.lblUserName.Name = "lblUserName";
+            this.lblUserName.Size = new System.Drawing.Size(73, 14);
+            this.lblUserName.TabIndex = 84;
+            this.lblUserName.Text = "lblUserName";
+            // 
+            // lblChallanNo
+            // 
+            this.lblChallanNo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblChallanNo.AutoEllipsis = true;
+            this.lblChallanNo.AutoSize = true;
+            this.lblChallanNo.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblChallanNo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
+            this.lblChallanNo.Location = new System.Drawing.Point(137, 28);
+            this.lblChallanNo.Name = "lblChallanNo";
+            this.lblChallanNo.Size = new System.Drawing.Size(70, 14);
+            this.lblChallanNo.TabIndex = 83;
+            this.lblChallanNo.Text = "lblChallanNo";
             // 
             // label12
             // 
@@ -1077,103 +1179,6 @@
             this.panel3.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
             this.panel3.Size = new System.Drawing.Size(661, 46);
             this.panel3.TabIndex = 62;
-            // 
-            // lblChallanNo
-            // 
-            this.lblChallanNo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblChallanNo.AutoEllipsis = true;
-            this.lblChallanNo.AutoSize = true;
-            this.lblChallanNo.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblChallanNo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
-            this.lblChallanNo.Location = new System.Drawing.Point(137, 28);
-            this.lblChallanNo.Name = "lblChallanNo";
-            this.lblChallanNo.Size = new System.Drawing.Size(70, 14);
-            this.lblChallanNo.TabIndex = 83;
-            this.lblChallanNo.Text = "lblChallanNo";
-            // 
-            // lblUserName
-            // 
-            this.lblUserName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblUserName.AutoEllipsis = true;
-            this.lblUserName.AutoSize = true;
-            this.lblUserName.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
-            this.lblUserName.Location = new System.Drawing.Point(451, 28);
-            this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(73, 14);
-            this.lblUserName.TabIndex = 84;
-            this.lblUserName.Text = "lblUserName";
-            // 
-            // lblChallanDate
-            // 
-            this.lblChallanDate.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblChallanDate.AutoEllipsis = true;
-            this.lblChallanDate.AutoSize = true;
-            this.lblChallanDate.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblChallanDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
-            this.lblChallanDate.Location = new System.Drawing.Point(512, 88);
-            this.lblChallanDate.Name = "lblChallanDate";
-            this.lblChallanDate.Size = new System.Drawing.Size(81, 14);
-            this.lblChallanDate.TabIndex = 85;
-            this.lblChallanDate.Text = "lblChallanDate";
-            this.lblChallanDate.Visible = false;
-            // 
-            // lblChallanTime
-            // 
-            this.lblChallanTime.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblChallanTime.AutoEllipsis = true;
-            this.lblChallanTime.AutoSize = true;
-            this.lblChallanTime.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblChallanTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
-            this.lblChallanTime.Location = new System.Drawing.Point(424, 88);
-            this.lblChallanTime.Name = "lblChallanTime";
-            this.lblChallanTime.Size = new System.Drawing.Size(82, 14);
-            this.lblChallanTime.TabIndex = 86;
-            this.lblChallanTime.Text = "lblChallanTime";
-            this.lblChallanTime.Visible = false;
-            // 
-            // mskChallanTime
-            // 
-            this.mskChallanTime.Font = new System.Drawing.Font("Tahoma", 9F);
-            this.mskChallanTime.ForeColor = System.Drawing.Color.Black;
-            this.mskChallanTime.Location = new System.Drawing.Point(454, 52);
-            this.mskChallanTime.Mask = "00:00";
-            this.mskChallanTime.Name = "mskChallanTime";
-            this.mskChallanTime.Size = new System.Drawing.Size(140, 22);
-            this.mskChallanTime.TabIndex = 87;
-            this.mskChallanTime.ValidatingType = typeof(System.DateTime);
-            // 
-            // cmbVehicleRegNo
-            // 
-            this.cmbVehicleRegNo.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbVehicleRegNo.ForeColor = System.Drawing.Color.Black;
-            this.cmbVehicleRegNo.Location = new System.Drawing.Point(441, 25);
-            this.cmbVehicleRegNo.Name = "cmbVehicleRegNo";
-            this.cmbVehicleRegNo.Size = new System.Drawing.Size(179, 22);
-            this.cmbVehicleRegNo.TabIndex = 99;
-            // 
-            // label47
-            // 
-            this.label47.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label47.AutoEllipsis = true;
-            this.label47.AutoSize = true;
-            this.label47.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label47.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
-            this.label47.Location = new System.Drawing.Point(341, 28);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(94, 14);
-            this.label47.TabIndex = 98;
-            this.label47.Text = "Vehicle Reg No:";
             // 
             // frmChallan
             // 
