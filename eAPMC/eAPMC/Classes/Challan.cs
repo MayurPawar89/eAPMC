@@ -8,7 +8,7 @@ namespace eAPMC.Classes
 {
     public class Challan
     {
-        public Int64 challanID { get; set; }
+        public Int64 ChallanID { get; set; }
 
         public string ChallanNo { get; set; }
 
@@ -65,7 +65,7 @@ namespace eAPMC.Classes
 
         public int ItemTypeCode { get; set; }
 
-        public string OtemTypeDesc { get; set; }
+        public string ItemTypeDesc { get; set; }
 
         public decimal QunatityInKg { get; set; }
 
@@ -83,7 +83,7 @@ namespace eAPMC.Classes
 
         public int VechileTypeCode { get; set; }
 
-        public string VechileTypeDescr { get; set; }
+        public string VechileTypeDesc { get; set; }
 
         public decimal LoaddedWeight { get; set; }
 

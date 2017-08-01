@@ -63,7 +63,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.grpbLoginDetails = new System.Windows.Forms.GroupBox();
-            this.cmbVehicleRegNo = new System.Windows.Forms.TextBox();
+            this.txtVehicleRegNo = new System.Windows.Forms.TextBox();
             this.label47 = new System.Windows.Forms.Label();
             this.cmbVehicleList = new System.Windows.Forms.ComboBox();
             this.txtEmptyWeight = new System.Windows.Forms.TextBox();
@@ -142,7 +142,7 @@
             this.pnlPersonReg.Location = new System.Drawing.Point(0, 36);
             this.pnlPersonReg.Name = "pnlPersonReg";
             this.pnlPersonReg.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.pnlPersonReg.Size = new System.Drawing.Size(661, 659);
+            this.pnlPersonReg.Size = new System.Drawing.Size(661, 603);
             this.pnlPersonReg.TabIndex = 61;
             // 
             // grpbAddressDetails
@@ -155,7 +155,7 @@
             this.grpbAddressDetails.Controls.Add(this.label29);
             this.grpbAddressDetails.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpbAddressDetails.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
-            this.grpbAddressDetails.Location = new System.Drawing.Point(18, 508);
+            this.grpbAddressDetails.Location = new System.Drawing.Point(18, 486);
             this.grpbAddressDetails.Name = "grpbAddressDetails";
             this.grpbAddressDetails.Size = new System.Drawing.Size(634, 109);
             this.grpbAddressDetails.TabIndex = 90;
@@ -561,7 +561,7 @@
             // 
             // grpbLoginDetails
             // 
-            this.grpbLoginDetails.Controls.Add(this.cmbVehicleRegNo);
+            this.grpbLoginDetails.Controls.Add(this.txtVehicleRegNo);
             this.grpbLoginDetails.Controls.Add(this.label47);
             this.grpbLoginDetails.Controls.Add(this.cmbVehicleList);
             this.grpbLoginDetails.Controls.Add(this.txtEmptyWeight);
@@ -572,7 +572,7 @@
             this.grpbLoginDetails.Controls.Add(this.groupBox3);
             this.grpbLoginDetails.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpbLoginDetails.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
-            this.grpbLoginDetails.Location = new System.Drawing.Point(18, 381);
+            this.grpbLoginDetails.Location = new System.Drawing.Point(18, 375);
             this.grpbLoginDetails.Name = "grpbLoginDetails";
             this.grpbLoginDetails.Size = new System.Drawing.Size(636, 106);
             this.grpbLoginDetails.TabIndex = 44;
@@ -580,14 +580,14 @@
             this.grpbLoginDetails.Text = "   Challan Vehicle  ";
             this.grpbLoginDetails.Enter += new System.EventHandler(this.grpbLoginDetails_Enter);
             // 
-            // cmbVehicleRegNo
+            // txtVehicleRegNo
             // 
-            this.cmbVehicleRegNo.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbVehicleRegNo.ForeColor = System.Drawing.Color.Black;
-            this.cmbVehicleRegNo.Location = new System.Drawing.Point(441, 25);
-            this.cmbVehicleRegNo.Name = "cmbVehicleRegNo";
-            this.cmbVehicleRegNo.Size = new System.Drawing.Size(179, 22);
-            this.cmbVehicleRegNo.TabIndex = 99;
+            this.txtVehicleRegNo.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVehicleRegNo.ForeColor = System.Drawing.Color.Black;
+            this.txtVehicleRegNo.Location = new System.Drawing.Point(441, 25);
+            this.txtVehicleRegNo.Name = "txtVehicleRegNo";
+            this.txtVehicleRegNo.Size = new System.Drawing.Size(179, 22);
+            this.txtVehicleRegNo.TabIndex = 99;
             // 
             // label47
             // 
@@ -759,7 +759,7 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
             this.label4.Location = new System.Drawing.Point(3, 1);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(1, 654);
+            this.label4.Size = new System.Drawing.Size(1, 598);
             this.label4.TabIndex = 7;
             this.label4.Text = "label4";
             // 
@@ -770,7 +770,7 @@
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
             this.label7.Location = new System.Drawing.Point(657, 1);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(1, 654);
+            this.label7.Size = new System.Drawing.Size(1, 598);
             this.label7.TabIndex = 6;
             this.label7.Text = "label7";
             // 
@@ -968,7 +968,7 @@
             this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
             this.label8.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
-            this.label8.Location = new System.Drawing.Point(3, 655);
+            this.label8.Location = new System.Drawing.Point(3, 599);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(655, 1);
             this.label8.TabIndex = 5;
@@ -1007,7 +1007,6 @@
             this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(50)))), ((int)(((byte)(102)))));
             this.btnSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSave.Enabled = false;
             this.btnSave.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
             this.btnSave.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
             this.btnSave.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(41)))), ((int)(((byte)(146)))));
@@ -1021,6 +1020,7 @@
             this.btnSave.TabIndex = 49;
             this.btnSave.Text = "&Save";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnCancel
             // 
@@ -1040,6 +1040,7 @@
             this.btnCancel.TabIndex = 47;
             this.btnCancel.Text = "&Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // label16
             // 
@@ -1174,7 +1175,7 @@
             // 
             this.panel3.Controls.Add(this.pnlBottomButton);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 695);
+            this.panel3.Location = new System.Drawing.Point(0, 639);
             this.panel3.Name = "panel3";
             this.panel3.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
             this.panel3.Size = new System.Drawing.Size(661, 46);
@@ -1185,7 +1186,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.ClientSize = new System.Drawing.Size(661, 741);
+            this.ClientSize = new System.Drawing.Size(661, 685);
             this.Controls.Add(this.pnlPersonReg);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -1306,7 +1307,7 @@
         private System.Windows.Forms.Label lblChallanDate;
         private System.Windows.Forms.Label lblUserName;
         private System.Windows.Forms.Label lblChallanNo;
-        private System.Windows.Forms.TextBox cmbVehicleRegNo;
+        private System.Windows.Forms.TextBox txtVehicleRegNo;
         private System.Windows.Forms.Label label47;
     }
 }

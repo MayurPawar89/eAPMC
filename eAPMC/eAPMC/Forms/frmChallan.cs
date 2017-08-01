@@ -134,5 +134,74 @@ namespace eAPMC.Forms
                 pnlChallanReceiver_Farmer.BringToFront();
             }
         }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (ValidateControl())
+            {
+                List<Challan> lstChallan = new List<Challan>();
+                List<ChallanItem> lstChallanItem = new List<ChallanItem>();
+                List<ChallanDriver> lstChallanDriver = new List<ChallanDriver>();
+                List<ChallanFarmer> lstChallanFarmer = new List<ChallanFarmer>();
+                List<ChallanVehicle> lstChallanVehicle = new List<ChallanVehicle>();
+
+                Challan oChallan = new Challan();
+                oChallan.ChallanID = 0;
+                oChallan.ChallanNo = lblChallanNo.Text.Trim().ToString();
+                oChallan.ChallanDate = Convert.ToDateTime(mskChallanDate.Text);
+                oChallan.ChallanTime = Convert.ToDateTime(mskChallanTime.Text);
+                oChallan.WeighingReceiptNo = Convert.ToString(txtWeighingReceiptNo.Text);
+                oChallan.SessionID = eGlobal.LoginSessionID;
+                lstChallan.Add(oChallan);
+
+                ChallanItem oChallanItem = new ChallanItem();
+                oChallanItem.ItemTypeCode = Convert.ToInt16(cmbChallanItem.SelectedValue);
+                oChallanItem.ItemTypeDesc = Convert.ToString(cmbChallanItem.Text);
+                oChallanItem.QunatityInKg = Convert.ToDecimal(txtQuantityInKg.Text);
+                oChallanItem.Rate = Convert.ToDecimal(txtRate.Text);
+                lstChallanItem.Add(oChallanItem);
+
+                ChallanDriver oChallanDriver = null;
+                ChallanFarmer oChallanFarmer = null;
+                if (rdReceiverType_Driver.Checked)
+                {
+                    oChallanDriver = new ChallanDriver();
+                    oChallanDriver.PersonID = Convert.ToInt64(cmbDriversList.SelectedValue);
+                    lstChallanDriver.Add(oChallanDriver);
+                }
+                if (rdReceiverType_Farmer.Checked)
+                {
+                    oChallanFarmer = new ChallanFarmer();
+                    oChallanFarmer.PersonID = Convert.ToInt64(cmbFamersList.SelectedValue);
+                    lstChallanFarmer.Add(oChallanFarmer);
+                }
+
+                ChallanVehicle oChallanVehicle = new ChallanVehicle();
+                oChallanVehicle.VehicleRegNo = txtVehicleRegNo.Text;
+                oChallanVehicle.VechileTypeCode = Convert.ToInt16(cmbVehicleList.SelectedValue);
+                oChallanVehicle.VechileTypeDesc = cmbVehicleList.Text;
+                oChallanVehicle.LoaddedWeight = Convert.ToDecimal(txtLoadedWeight.Text);
+                oChallanVehicle.EmptyWeight = Convert.ToDecimal(txtEmptyWeight.Text);
+                lstChallanVehicle.Add(oChallanVehicle);
+
+                DataTable dtChallan = null, dtChallanItem = null, dtChallanDriver = null, dtChallanFarmer = null, dtChallanVehicle = null;
+
+                dtChallan = eGlobal.CreateDataTable(lstChallan);
+                dtChallanItem = eGlobal.CreateDataTable(lstChallanItem);
+                dtChallanDriver = eGlobal.CreateDataTable(lstChallanDriver.Count > 0 ? lstChallanDriver : null);
+                dtChallanFarmer = eGlobal.CreateDataTable(lstChallanFarmer.Count > 0 ? lstChallanFarmer : null);
+                dtChallanVehicle = eGlobal.CreateDataTable(lstChallanVehicle);
+            }
+        }
+
+        private bool ValidateControl()
+        {
+            return true;
+        }
     }
 }
