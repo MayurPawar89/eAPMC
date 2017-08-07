@@ -88,6 +88,9 @@ namespace eAPMC.Forms
                 ofrmChangePassword.Dispose();
                 ofrmChangePassword = null;
             }
+            TabIndexing.TabScheme oTabScheme = TabIndexing.TabScheme.AcrossFirst;
+            TabIndexing oTabIndex = new TabIndexing(this);
+            oTabIndex.SetTabOrder(oTabScheme);
         }
 
         private void tmnuTools_ChangePassword_Click(object sender, EventArgs e)

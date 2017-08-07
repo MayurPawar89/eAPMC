@@ -71,6 +71,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Challan.cs" />
+    <Compile Include="Classes\TabIndexing.cs" />
     <Compile Include="Classes\eGlobal.cs" />
     <Compile Include="Classes\MachineDetails.cs" />
     <Compile Include="Classes\Person.cs" />
