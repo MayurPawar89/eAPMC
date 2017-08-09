@@ -143,7 +143,9 @@ namespace eAPMC.Forms
                 //List<CardDetails> lstCard = new List<CardDetails>();
                 //lstCard.Add(oCard);
                 //DataTable dtCardDetails = eGlobal.CreateDataTable<CardDetails>(lstCard);
-
+                TabIndexing.TabScheme oTabScheme = TabIndexing.TabScheme.AcrossFirst;
+                TabIndexing oTabIndex = new TabIndexing(this);
+                oTabIndex.SetTabOrder(oTabScheme);
             }
         }
 

@@ -120,6 +120,9 @@ namespace eAPMC.Forms
         private void frmChangePassword_Load(object sender, EventArgs e)
         {
             sLoginName = eGlobal.LoginName;
+            TabIndexing.TabScheme oTabScheme = TabIndexing.TabScheme.AcrossFirst;
+            TabIndexing oTabIndex = new TabIndexing(this);
+            oTabIndex.SetTabOrder(oTabScheme);
         }
     }
 }

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DBLayer;
+using eAPMC.Classes;
 
 namespace eAPMC.Forms
 {
@@ -23,6 +24,9 @@ namespace eAPMC.Forms
         {
             rdAllUsers.Checked = true;
             FillUsersList(nUserType);
+            TabIndexing.TabScheme oTabScheme = TabIndexing.TabScheme.AcrossFirst;
+            TabIndexing oTabIndex = new TabIndexing(this);
+            oTabIndex.SetTabOrder(oTabScheme);
         }
 
         private void FillUsersList(int nUserType)

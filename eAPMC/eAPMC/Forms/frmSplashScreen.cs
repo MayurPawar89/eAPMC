@@ -114,5 +114,12 @@ namespace eAPMC.Forms
             }
             return LoginSessionID;
         }
+
+        private void frmSplashScreen_Load(object sender, EventArgs e)
+        {
+            TabIndexing.TabScheme oTabScheme = TabIndexing.TabScheme.AcrossFirst;
+            TabIndexing oTabIndex = new TabIndexing(this);
+            oTabIndex.SetTabOrder(oTabScheme);
+        }
     }
 }

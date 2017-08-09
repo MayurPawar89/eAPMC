@@ -26,6 +26,9 @@ namespace eAPMC.Forms
         {
             LoadChallanData();
             rdReceiverType_Farmer.Checked = true;
+            TabIndexing.TabScheme oTabScheme = TabIndexing.TabScheme.AcrossFirst;
+            TabIndexing oTabIndex = new TabIndexing(this);
+            oTabIndex.SetTabOrder(oTabScheme);
         }
 
         private void LoadChallanData()

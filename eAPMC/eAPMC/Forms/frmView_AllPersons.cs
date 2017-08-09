@@ -88,6 +88,9 @@ namespace eAPMC.Forms
         {
             rdAllPerson.Checked = true;
             FillpersonList(nPersonType);
+            TabIndexing.TabScheme oTabScheme = TabIndexing.TabScheme.AcrossFirst;
+            TabIndexing oTabIndex = new TabIndexing(this);
+            oTabIndex.SetTabOrder(oTabScheme);
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

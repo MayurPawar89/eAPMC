@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using AForge.Video;
 using AForge.Video.DirectShow;
+using eAPMC.Classes;
 
 namespace eAPMC.Forms
 {
@@ -56,34 +57,44 @@ namespace eAPMC.Forms
         private void frmWebCam_Load(object sender, EventArgs e)
         {
             getCamList();
+            TabIndexing.TabScheme oTabScheme = TabIndexing.TabScheme.AcrossFirst;
+            TabIndexing oTabIndex = new TabIndexing(this);
+            oTabIndex.SetTabOrder(oTabScheme);
         }
 
         private void btnStart_Click(object sender, EventArgs e)
         {
-            if (btnStart.Text == "Start")
+            try
             {
-                if (DeviceExist)
+                if (btnStart.Text == "Start")
                 {
-                    videoSource = new VideoCaptureDevice(videoDevices[cmbCameraList.SelectedIndex].MonikerString);
-                    videoSource.NewFrame += new NewFrameEventHandler(video_NewFrame);
-                    CloseVideoSource();
-                    videoSource.DesiredFrameSize = new Size(160, 120);
-                    videoSource.ProvideSnapshots = true;
-                    videoSource.Start();
-                    txtCameraStatus.Text = "Camera is running";
-                    btnStart.Text = "Stop";
-                    timer1.Enabled = true;
-                }
-                else
-                {
-                    if (videoSource != null && videoSource.IsRunning)
+                    if (DeviceExist)
                     {
-                        timer1.Enabled = false;
+                        videoSource = new VideoCaptureDevice(videoDevices[cmbCameraList.SelectedIndex].MonikerString);
+                        videoSource.NewFrame += new NewFrameEventHandler(video_NewFrame);
                         CloseVideoSource();
-                        txtCameraStatus.Text = "Camera is stoped";
-                        btnStart.Text = "Start";
+                        videoSource.DesiredFrameSize = new Size(160, 120);
+                        videoSource.ProvideSnapshots = true;
+                        videoSource.Start();
+                        txtCameraStatus.Text = "Camera is running";
+                        btnStart.Text = "Stop";
+                        timer1.Enabled = true;
+                    }
+                    else
+                    {
+                        if (videoSource != null && videoSource.IsRunning)
+                        {
+                            timer1.Enabled = false;
+                            CloseVideoSource();
+                            txtCameraStatus.Text = "Camera is stoped";
+                            btnStart.Text = "Start";
+                        }
                     }
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error in staring camera:" + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void CloseVideoSource()
@@ -119,24 +130,37 @@ namespace eAPMC.Forms
 
         private void btnCapture_Click(object sender, EventArgs e)
         {
-            if (pictureBox1.Image != null)
+            try
             {
-                string sImagePath = Path.Combine(Application.ExecutablePath.Substring(0, Application.ExecutablePath.LastIndexOf("\\")), "Images", "ProfileImages", PersonDetails);
-                string path = sImagePath + "_" + DateTime.Now.ToString("yyyyMMddhhmm") +"."+ Convert.ToString(ImageFormat.Png);
-                PhotoLocation = path;
-                Bitmap bmpImage = new Bitmap(pictureBox1.Image);
-                Bitmap newImg = new Bitmap(bmpImage);
-                bmpImage.Save(path,ImageFormat.Png);
-                PhotoExtention = Path.GetExtension(path);
-                PhotoHeight = bmpImage.Height;
-                PhotoWidth = bmpImage.Width;
-                PhotoSize = new FileInfo(path).Length;
-                bmpImage.Dispose();
-                bmpImage = null;
+                if (pictureBox1.Image != null)
+                {
+                    string sLocation = Path.Combine(Application.ExecutablePath.Substring(0, Application.ExecutablePath.LastIndexOf("\\")), "Images", "ProfileImages");
+                    if (Directory.Exists(sLocation) == false)
+                    {
+                        Directory.CreateDirectory(sLocation);
+                    }
+                    string sImagePath = Path.Combine(sLocation, PersonDetails);
+
+                    string path = sImagePath + "_" + DateTime.Now.ToString("yyyyMMddhhmm") + "." + Convert.ToString(ImageFormat.Png);
+                    PhotoLocation = path;
+                    Bitmap bmpImage = new Bitmap(pictureBox1.Image);
+                    Bitmap newImg = new Bitmap(bmpImage);
+                    bmpImage.Save(path, ImageFormat.Png);
+                    PhotoExtention = Path.GetExtension(path);
+                    PhotoHeight = bmpImage.Height;
+                    PhotoWidth = bmpImage.Width;
+                    PhotoSize = new FileInfo(path).Length;
+                    bmpImage.Dispose();
+                    bmpImage = null;
+                }
+                else
+                {
+                    MessageBox.Show("No image is present");
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("No image is present");
+                MessageBox.Show("Error in capturing image:" + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

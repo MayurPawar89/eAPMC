@@ -199,6 +199,7 @@
             this.Name = "frmSplashScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmSplashScreen";
+            this.Load += new System.EventHandler(this.frmSplashScreen_Load);
             this.pnlLogin.ResumeLayout(false);
             this.pnlUser.ResumeLayout(false);
             this.pnlUser.PerformLayout();

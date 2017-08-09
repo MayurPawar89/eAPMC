@@ -78,6 +78,9 @@ namespace eAPMC.Forms
                         break;
                     }
             }
+            TabIndexing.TabScheme oTabScheme = TabIndexing.TabScheme.AcrossFirst;
+            TabIndexing oTabIndex = new TabIndexing(this);
+            oTabIndex.SetTabOrder(oTabScheme);
         }
 
         private void chkAadhaarNo_CheckedChanged(object sender, EventArgs e)
@@ -379,7 +382,12 @@ namespace eAPMC.Forms
 
         private void btnWebCam_Click(object sender, EventArgs e)
         {
-            PersonDetails=txtPersonFName.Text.Trim()+txtPersonLName.Text.Trim()+Convert.ToDateTime(mskPersonDOB.Text.Trim()).ToString("ddMMyyyy");
+            PersonDetails=txtPersonFName.Text.Trim()+txtPersonLName.Text.Trim();
+            if (string.IsNullOrEmpty(PersonDetails))
+            {
+                MessageBox.Show("Please enter person First Name, Last Name", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             frmWebCam ofrmWebCam = new frmWebCam();
             ofrmWebCam.PersonDetails=PersonDetails;
             ofrmWebCam.ShowDialog(this);
@@ -396,7 +404,14 @@ namespace eAPMC.Forms
                 PersonPhotoSize = ofrmWebCam.PhotoSize;
                 if (img != null)
                 {
-                    string sImagePath = Path.Combine(Application.ExecutablePath.Substring(0, Application.ExecutablePath.LastIndexOf("\\")), "Images", "Thumbnail", PersonDetails);
+                    string sLocation = Path.Combine(Application.ExecutablePath.Substring(0, Application.ExecutablePath.LastIndexOf("\\")), "Images", "Thumbnail");
+                    
+                    if (Directory.Exists(sLocation) == false)
+                    {
+                        Directory.CreateDirectory(sLocation);
+                    }
+                    
+                    string sImagePath = Path.Combine(sLocation, PersonDetails);
                     
                     string path = sImagePath + "_" + DateTime.Now.ToString("yyyyMMddhhmm") +"."+ Convert.ToString(ImageFormat.Png);
                     Bitmap bmpImage = new Bitmap(img);

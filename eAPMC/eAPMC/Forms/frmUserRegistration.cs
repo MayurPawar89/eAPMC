@@ -24,6 +24,9 @@ namespace eAPMC.Forms
         private void frmUserRegistration_Load(object sender, EventArgs e)
         {
             FillRoles();
+            TabIndexing.TabScheme oTabScheme = TabIndexing.TabScheme.AcrossFirst;
+            TabIndexing oTabIndex = new TabIndexing(this);
+            oTabIndex.SetTabOrder(oTabScheme);
         }
 
         private void FillRoles()
